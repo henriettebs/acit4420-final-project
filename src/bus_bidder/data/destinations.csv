@@ -1,0 +1,16 @@
+city,distance_from_madrid_km,coastal,major_city
+Barcelona,620,True,True
+Valencia,350,True,True
+Seville,530,False,True
+Malaga,560,True,True
+Granada,420,False,True
+Cordoba,400,False,True
+Bilbao,400,True,True
+San Sebastian,470,True,False
+Zaragoza,320,False,True
+Alicante,420,True,True
+Murcia,400,False,True
+Salamanca,200,False,False
+Toledo,70,False,False
+Santiago de Compostela,600,False,False
+Cadiz,650,True,False
