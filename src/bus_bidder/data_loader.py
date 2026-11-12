@@ -14,7 +14,7 @@ DEPARTURE_HOURS = {
 rng = random.Random(42)
 test_date_outbound = date.today()
 test_date_inbound = date.today() + timedelta(days=7)
-res_dates = [test_date_outbound, test_date_outbound + timedelta(days=1), test_date_inbound, test_date_inbound + timedelta(days=1)]
+#res_dates = [test_date_outbound, test_date_outbound + timedelta(days=1), test_date_inbound, test_date_inbound + timedelta(days=1)]
 
 def to_bool(value):
     """Convert a string to a boolean."""
@@ -56,18 +56,18 @@ def create_dates(date_outbound, date_inbound):
     return [today + timedelta(days=i) for i in range(30)]
 
 
-def generate_offers():
+def generate_offers(res_dates):
     companies = read_csv('bus_bidder/data/companies.csv')
     destinations = read_csv('bus_bidder/data/destinations.csv')
     rows, n = [], 1
 
     for c in companies:
         name = c['company']
-        print(f"Generating offers for {name}...")
+        #print(f"Generating offers for {name}...")
         for d in destinations:
             destination = d['city']
             if not company_serves(c, d):
-                print(f"Skipping {name} for {destination} (does not serve this destination).")
+                #print(f"Skipping {name} for {destination} (does not serve this destination).")
                 continue
             km = float(d['distance_from_madrid_km'])
             #print(f"Iterating over destination: {destination} ({km} km)")
@@ -92,7 +92,7 @@ def generate_offers():
                         "price": round(base_price, 2),
                         "transfers": transfers,
                         "luggage_allowance": int(c['luggage_limit_kg']),
-                        "changeability": to_bool(c['refundable']),
+                        "changeability": to_bool(c['changable']),
                         "refundability": to_bool(c['refundable']),
                         "available_seats": rng.randint(1, int(c['max_passengers'])),
                         "customer_rating": round(float(c['base_rating']) + rng.uniform(-0.5, 0.5), 1), # Add some randomness to the rating

@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from bus_bidder.data_loader import generate_offers
-from datetime import date, datetime
+from bus_bidder.filtering import filter_relevant_offers
+from datetime import date, datetime, timedelta
 import csv
 
 ctk.set_appearance_mode("System")  # Modes: "System" (default), "Dark", "Light"
@@ -20,8 +21,8 @@ class BusBidderApp(ctk.CTk):
         # Group departure and return date and time inputs in a frame
         departure_frame = ctk.CTkFrame(self)
         departure_frame.pack(pady=10, padx=10, fill="x")
-        return_frame = ctk.CTkFrame(self)
-        return_frame.pack(pady=10, padx=10, fill="x")
+        #return_frame = ctk.CTkFrame(self)
+        #return_frame.pack(pady=10, padx=10, fill="x")
         # Departure label
         departure_label = ctk.CTkLabel(departure_frame, text="Departure Date and Time", font=("Arial", 14))
         departure_label.grid(row=0, column=0, padx=10, sticky="w")
@@ -30,18 +31,18 @@ class BusBidderApp(ctk.CTk):
         self.departure_time = ctk.CTkOptionMenu(departure_frame, values=travel_times, command=self.on_departure_time_change)
         self.departure_entry.grid(row=1, column=0, padx=10, pady=5)
         self.departure_time.grid(row=1, column=1, padx=10, pady=5)
-        self.return_checkbox = ctk.CTkCheckBox(departure_frame, text="Return Trip", font=("Arial", 12), command=self.toggle_return_trip)
-        self.return_checkbox.grid(row=1, column=2, padx=10, pady=5)
+        #self.return_checkbox = ctk.CTkCheckBox(departure_frame, text="Return Trip", font=("Arial", 12), command=self.toggle_return_trip)
+        #self.return_checkbox.grid(row=1, column=2, padx=10, pady=5)
         # Return label
-        return_label = ctk.CTkLabel(return_frame, text="Return Date and Time", font=("Arial", 14))
-        return_label.grid(row=0, column=0, padx=10, sticky="w")
+        #return_label = ctk.CTkLabel(return_frame, text="Return Date and Time", font=("Arial", 14))
+        #return_label.grid(row=0, column=0, padx=10, sticky="w")
         # Return date and time entries
-        self.return_entry = ctk.CTkEntry(return_frame, placeholder_text="YYYY-MM-DD")
-        self.return_time = ctk.CTkOptionMenu(return_frame, values=travel_times, command=self.on_return_time_change)
-        self.return_entry.grid(row=1, column=0, padx=10, pady=5)
-        self.return_time.grid(row=1, column=1, padx=10, pady=5)
-        self.return_entry.configure(state="disabled")
-        self.return_time.configure(state="disabled")
+        #self.return_entry = ctk.CTkEntry(return_frame, placeholder_text="YYYY-MM-DD")
+        #self.return_time = ctk.CTkOptionMenu(return_frame, values=travel_times, command=self.on_return_time_change)
+        #self.return_entry.grid(row=1, column=0, padx=10, pady=5)
+        #self.return_time.grid(row=1, column=1, padx=10, pady=5)
+        #self.return_entry.configure(state="disabled")
+        #self.return_time.configure(state="disabled")
 
         # Group departure and arrival city option menus in a frame
         city_frame = ctk.CTkFrame(self)
@@ -92,27 +93,27 @@ class BusBidderApp(ctk.CTk):
 
     def on_button_click(self):
         print(f"Bid was submitted!")
-        print(f"Return date:", self.return_entry.get())
+        #print(f"Return date:", self.return_entry.get())
         try:
             departure_date = datetime.strptime(self.departure_entry.get(), "%Y-%m-%d").date()
-            if self.return_entry.get() != "":
-                return_date = datetime.strptime(self.return_entry.get(), "%Y-%m-%d").date()
-            elif self.return_entry.get() == "":
-                return_date = None
+            #if self.return_entry.get() != "":
+                #return_date = datetime.strptime(self.return_entry.get(), "%Y-%m-%d").date()
+            #elif self.return_entry.get() == "":
+                #return_date = None
             if departure_date < date.today():
                 print("Departure date cannot be in the past.")
-            elif return_date is not None and return_date < departure_date:
-                print("Return date cannot be before departure date.")
+            #elif return_date is not None and return_date < departure_date:
+                #print("Return date cannot be before departure date.")
             else:
                 print(f"Departure Date and Time: {departure_date} {self.departure_time.get()}")
-                print(f"Return Date and Time: {return_date} {self.return_time.get()}")
+                #print(f"Return Date and Time: {return_date} {self.return_time.get()}")
                 print(f"Travel from {self.departure_city.get()} to {self.arrival_city.get()}")
 
             bid = {
                 "departure_date": departure_date,
                 "departure_time": self.departure_time.get(),
-                "return_date": return_date,
-                "return_time": self.return_time.get(),
+                #"return_date": return_date,
+                #"return_time": self.return_time.get(),
                 "departure_city": self.departure_city.get(),                    
                 "arrival_city": self.arrival_city.get(),
                 "budget": self.budget_entry.get(),
@@ -123,8 +124,8 @@ class BusBidderApp(ctk.CTk):
             }
             self.search_offers(bid)
 
-        except ValueError:
-            print("Invalid date format. Please use YYYY-MM-DD.")
+        except ValueError as e:
+            print(f"{e} -> Invalid date format. Please use YYYY-MM-DD.")
 
     def get_city_options(self):
         with open('bus_bidder/data/destinations.csv', mode='r', newline='', encoding='utf-8') as file:
@@ -143,15 +144,15 @@ class BusBidderApp(ctk.CTk):
     def on_slider_change(self, value):
         self.slider_label.configure(text=f"{value:.1f}")
 
-    def toggle_return_trip(self):
+    """def toggle_return_trip(self):
         if self.return_checkbox.get():
             self.return_entry.configure(state="normal")
             self.return_time.configure(state="normal")
         else:
             self.return_entry.delete(0, "end") # Removes any text in the return date entry when the checkbox is unchecked
             self.return_entry.configure(state="disabled")
-            self.return_time.configure(state="disabled")
-        
+            self.return_time.configure(state="disabled")"""
+    
     def search_offers(self, bid):
         print("Searching for offers with the following criteria:")
         for key, value in bid.items():
@@ -161,6 +162,9 @@ class BusBidderApp(ctk.CTk):
         # For now, we'll just print a placeholder message.
 
         # open new window with search results
+        travel_date = bid["departure_date"]
+        travel_dates = [travel_date, travel_date + timedelta(days=1)]  # Add the departure date to the list
+        generate_offers(travel_dates)
         self.open_results_window(bid)
     
     def open_results_window(self, bid):
@@ -171,9 +175,14 @@ class BusBidderApp(ctk.CTk):
         label = ctk.CTkLabel(results_window, text="Search Results", font=("Arial", 16))
         label.pack(pady=10)
 
+        filtered_offers = filter_relevant_offers(self.get_all_offers(), bid)
+        print(f"Found {len(filtered_offers)} relevant offers.")
+    
+    def get_all_offers(self):
+        with open('bus_bidder/data/offers.csv', mode='r', newline='', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            return [row for row in reader]
+
 if __name__ == "__main__":
     app = BusBidderApp()
     app.mainloop()
-    generate_offers()
-
-

@@ -34,11 +34,10 @@ class Booking:
 class Offer:
     """Represents a possible journey for a traveller with a bus company."""
 
-    def __init__(self, company: Company, journey: Journey, price: float, transfers: int, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float):
+    def __init__(self, company: Company, journey: Journey, price: float, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float):
         self.company = company
         self.journey = journey
         self.price = price
-        self.transfers = transfers
         self.luggage_allowance = luggage_allowance
         self.changeability = changeability
         self.refundability = refundability

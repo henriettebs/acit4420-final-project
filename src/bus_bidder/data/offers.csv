@@ -1,529 +1,261 @@
 offer_id,company,destination,travel_date,departure_time,arrival_time,arrival_date,duration,price,transfers,luggage_allowance,changeability,refundability,available_seats,customer_rating,environmental_measure
-0F0001,SolRuta,Barcelona,2026-11-09,08:30,20:05,2026-11-09,695,28.77,1,20,True,True,7,3.7,Standard
-0F0002,SolRuta,Barcelona,2026-11-09,16:00,04:52,2026-11-10,772,28.1,3,20,True,True,6,3.2,Standard
-0F0003,SolRuta,Barcelona,2026-11-10,16:15,05:49,2026-11-11,814,32.25,3,20,True,True,27,3.2,Standard
-0F0004,SolRuta,Barcelona,2026-11-10,08:30,20:39,2026-11-10,729,32.9,1,20,True,True,45,3.4,Standard
-0F0005,SolRuta,Barcelona,2026-11-16,12:15,23:53,2026-11-16,698,28.48,2,20,True,True,7,3.4,Standard
-0F0006,SolRuta,Barcelona,2026-11-16,10:30,22:49,2026-11-16,739,32.9,3,20,True,True,47,3.5,Standard
-0F0007,SolRuta,Barcelona,2026-11-17,08:00,20:25,2026-11-17,745,33.04,3,20,True,True,40,3.9,Standard
-0F0008,SolRuta,Barcelona,2026-11-17,14:30,02:37,2026-11-18,727,32.27,3,20,True,True,3,3.7,Standard
-0F0009,SolRuta,Valencia,2026-11-09,12:15,19:05,2026-11-09,410,16.72,1,20,True,True,41,3.8,Standard
-0F0010,SolRuta,Valencia,2026-11-09,08:15,15:30,2026-11-09,435,16.48,2,20,True,True,18,3.7,Standard
-0F0011,SolRuta,Valencia,2026-11-10,08:15,15:10,2026-11-10,415,17.08,1,20,True,True,41,3.7,Standard
-0F0012,SolRuta,Valencia,2026-11-10,10:15,17:51,2026-11-10,456,18.7,3,20,True,True,50,3.1,Standard
-0F0013,SolRuta,Valencia,2026-11-16,08:45,15:24,2026-11-16,399,16.49,2,20,True,True,37,3.9,Standard
-0F0014,SolRuta,Valencia,2026-11-16,12:30,19:37,2026-11-16,427,17.5,1,20,True,True,42,3.5,Standard
-0F0015,SolRuta,Valencia,2026-11-17,12:15,20:36,2026-11-17,501,17.64,3,20,True,True,48,3.6,Standard
-0F0016,SolRuta,Valencia,2026-11-17,10:45,17:44,2026-11-17,419,19.24,2,20,True,True,9,3.5,Standard
-0F0017,SolRuta,Seville,2026-11-09,08:00,18:23,2026-11-09,623,24.7,1,20,True,True,44,3.4,Standard
-0F0018,SolRuta,Seville,2026-11-09,16:00,02:36,2026-11-10,636,27.01,2,20,True,True,30,3.5,Standard
-0F0019,SolRuta,Seville,2026-11-10,16:00,03:35,2026-11-11,695,27.83,3,20,True,True,50,3.6,Standard
-0F0020,SolRuta,Seville,2026-11-10,08:00,18:42,2026-11-10,642,24.69,2,20,True,True,1,4.0,Standard
-0F0021,SolRuta,Seville,2026-11-16,12:00,22:50,2026-11-16,650,28.31,3,20,True,True,33,3.6,Standard
-0F0022,SolRuta,Seville,2026-11-16,10:15,21:39,2026-11-16,684,24.71,2,20,True,True,50,3.9,Standard
-0F0023,SolRuta,Seville,2026-11-17,08:45,18:35,2026-11-17,590,28.77,1,20,True,True,20,3.2,Standard
-0F0024,SolRuta,Seville,2026-11-17,12:15,22:23,2026-11-17,608,24.3,3,20,True,True,32,3.8,Standard
-0F0025,SolRuta,Malaga,2026-11-09,16:15,04:10,2026-11-10,715,30.5,3,20,True,True,11,3.3,Standard
-0F0026,SolRuta,Malaga,2026-11-09,10:45,21:34,2026-11-09,649,29.43,1,20,True,True,45,3.2,Standard
-0F0027,SolRuta,Malaga,2026-11-10,12:30,23:56,2026-11-10,686,27.73,2,20,True,True,16,3.2,Standard
-0F0028,SolRuta,Malaga,2026-11-10,14:30,01:22,2026-11-11,652,28.3,1,20,True,True,38,3.2,Standard
-0F0029,SolRuta,Malaga,2026-11-16,08:15,18:32,2026-11-16,617,30.01,1,20,True,True,5,3.5,Standard
-0F0030,SolRuta,Malaga,2026-11-16,16:30,04:28,2026-11-17,718,26.4,3,20,True,True,9,3.7,Standard
-0F0031,SolRuta,Malaga,2026-11-17,16:15,04:17,2026-11-18,722,27.48,2,20,True,True,7,3.1,Standard
-0F0032,SolRuta,Malaga,2026-11-17,14:45,01:59,2026-11-18,674,27.5,2,20,True,True,47,3.1,Standard
-0F0033,SolRuta,Granada,2026-11-09,08:45,17:41,2026-11-09,536,22.26,3,20,True,True,7,3.2,Standard
-0F0034,SolRuta,Granada,2026-11-09,16:15,01:32,2026-11-10,557,19.49,3,20,True,True,12,3.3,Standard
-0F0035,SolRuta,Granada,2026-11-10,10:45,18:56,2026-11-10,491,19.11,3,20,True,True,35,3.8,Standard
-0F0036,SolRuta,Granada,2026-11-10,08:00,15:53,2026-11-10,473,20.61,1,20,True,True,31,3.2,Standard
-0F0037,SolRuta,Granada,2026-11-16,14:15,22:03,2026-11-16,468,23.04,2,20,True,True,17,3.9,Standard
-0F0038,SolRuta,Granada,2026-11-16,08:45,17:27,2026-11-16,522,21.83,2,20,True,True,47,4.0,Standard
-0F0039,SolRuta,Granada,2026-11-17,16:15,00:16,2026-11-18,481,19.81,1,20,True,True,4,3.6,Standard
-0F0040,SolRuta,Granada,2026-11-17,14:00,22:53,2026-11-17,533,19.14,3,20,True,True,38,3.5,Standard
-0F0041,SolRuta,Cordoba,2026-11-09,16:00,23:46,2026-11-09,466,21.41,3,20,True,True,5,3.6,Standard
-0F0042,SolRuta,Cordoba,2026-11-09,10:15,17:55,2026-11-09,460,21.77,2,20,True,True,37,3.2,Standard
-0F0043,SolRuta,Cordoba,2026-11-10,16:00,00:50,2026-11-11,530,20.33,2,20,True,True,34,3.3,Standard
-0F0044,SolRuta,Cordoba,2026-11-10,08:30,16:33,2026-11-10,483,20.86,1,20,True,True,16,3.3,Standard
-0F0045,SolRuta,Cordoba,2026-11-16,10:45,19:47,2026-11-16,542,21.74,2,20,True,True,1,3.5,Standard
-0F0046,SolRuta,Cordoba,2026-11-16,12:00,19:55,2026-11-16,475,18.85,1,20,True,True,17,3.1,Standard
-0F0047,SolRuta,Cordoba,2026-11-17,12:15,20:17,2026-11-17,482,18.63,2,20,True,True,35,3.7,Standard
-0F0048,SolRuta,Cordoba,2026-11-17,08:00,18:07,2026-11-17,607,20.22,3,20,True,True,43,3.1,Standard
-0F0049,SolRuta,Bilbao,2026-11-09,10:00,18:08,2026-11-09,488,20.21,1,20,True,True,18,3.3,Standard
-0F0050,SolRuta,Bilbao,2026-11-09,12:15,20:49,2026-11-09,514,18.81,3,20,True,True,41,3.9,Standard
-0F0051,SolRuta,Bilbao,2026-11-10,16:30,23:56,2026-11-10,446,20.54,1,20,True,True,18,3.0,Standard
-0F0052,SolRuta,Bilbao,2026-11-10,14:30,22:31,2026-11-10,481,21.92,1,20,True,True,11,3.7,Standard
-0F0053,SolRuta,Bilbao,2026-11-16,16:00,23:25,2026-11-16,445,21.78,1,20,True,True,45,3.9,Standard
-0F0054,SolRuta,Bilbao,2026-11-16,14:00,22:40,2026-11-16,520,20.21,2,20,True,True,28,3.1,Standard
-0F0055,SolRuta,Bilbao,2026-11-17,12:00,19:52,2026-11-17,472,20.73,2,20,True,True,43,3.1,Standard
-0F0056,SolRuta,Bilbao,2026-11-17,16:45,02:37,2026-11-18,592,18.62,3,20,True,True,16,3.9,Standard
-0F0057,SolRuta,San Sebastian,2026-11-09,10:00,19:24,2026-11-09,564,25.5,1,20,True,True,27,3.8,Standard
-0F0058,SolRuta,San Sebastian,2026-11-09,14:15,23:17,2026-11-09,542,24.85,2,20,True,True,7,3.4,Standard
-0F0059,SolRuta,San Sebastian,2026-11-10,08:15,17:44,2026-11-10,569,25.47,1,20,True,True,23,3.3,Standard
-0F0060,SolRuta,San Sebastian,2026-11-10,14:15,22:53,2026-11-10,518,24.25,1,20,True,True,26,3.3,Standard
-0F0061,SolRuta,San Sebastian,2026-11-16,08:30,18:53,2026-11-16,623,23.03,3,20,True,True,35,3.3,Standard
-0F0062,SolRuta,San Sebastian,2026-11-16,12:00,20:53,2026-11-16,533,21.99,1,20,True,True,17,3.0,Standard
-0F0063,SolRuta,San Sebastian,2026-11-17,16:30,03:47,2026-11-18,677,22.62,3,20,True,True,39,4.0,Standard
-0F0064,SolRuta,San Sebastian,2026-11-17,14:00,23:54,2026-11-17,594,22.04,2,20,True,True,3,3.7,Standard
-0F0065,SolRuta,Zaragoza,2026-11-09,08:30,14:37,2026-11-09,367,17.44,2,20,True,True,22,3.6,Standard
-0F0066,SolRuta,Zaragoza,2026-11-09,10:00,17:01,2026-11-09,421,16.02,3,20,True,True,43,3.4,Standard
-0F0067,SolRuta,Zaragoza,2026-11-10,14:15,20:35,2026-11-10,380,16.53,1,20,True,True,25,3.7,Standard
-0F0068,SolRuta,Zaragoza,2026-11-10,12:15,20:07,2026-11-10,472,15.36,3,20,True,True,36,3.8,Standard
-0F0069,SolRuta,Zaragoza,2026-11-16,12:15,19:54,2026-11-16,459,16.26,2,20,True,True,42,3.3,Standard
-0F0070,SolRuta,Zaragoza,2026-11-16,16:45,00:10,2026-11-17,445,15.08,2,20,True,True,31,3.8,Standard
-0F0071,SolRuta,Zaragoza,2026-11-17,10:30,18:40,2026-11-17,490,16.43,3,20,True,True,22,3.1,Standard
-0F0072,SolRuta,Zaragoza,2026-11-17,08:15,15:16,2026-11-17,421,15.12,3,20,True,True,13,3.1,Standard
-0F0073,SolRuta,Alicante,2026-11-09,08:45,19:20,2026-11-09,635,22.13,3,20,True,True,30,3.4,Standard
-0F0074,SolRuta,Alicante,2026-11-09,10:15,20:20,2026-11-09,605,20.51,3,20,True,True,26,3.2,Standard
-0F0075,SolRuta,Alicante,2026-11-10,08:45,16:39,2026-11-10,474,22.28,1,20,True,True,45,3.5,Standard
-0F0076,SolRuta,Alicante,2026-11-10,16:00,00:38,2026-11-11,518,22.75,3,20,True,True,8,3.5,Standard
-0F0077,SolRuta,Alicante,2026-11-16,14:45,01:14,2026-11-17,629,21.92,3,20,True,True,33,3.4,Standard
-0F0078,SolRuta,Alicante,2026-11-16,12:45,21:15,2026-11-16,510,22.52,1,20,True,True,29,3.3,Standard
-0F0079,SolRuta,Alicante,2026-11-17,10:45,19:23,2026-11-17,518,20.05,3,20,True,True,5,3.7,Standard
-0F0080,SolRuta,Alicante,2026-11-17,12:15,20:45,2026-11-17,510,20.24,2,20,True,True,35,3.1,Standard
-0F0081,SolRuta,Murcia,2026-11-09,10:45,18:43,2026-11-09,478,20.83,3,20,True,True,5,3.4,Standard
-0F0082,SolRuta,Murcia,2026-11-09,16:30,01:28,2026-11-10,538,19.66,3,20,True,True,14,3.8,Standard
-0F0083,SolRuta,Murcia,2026-11-10,14:45,22:11,2026-11-10,446,21.77,2,20,True,True,20,3.8,Standard
-0F0084,SolRuta,Murcia,2026-11-10,08:45,18:37,2026-11-10,592,20.94,3,20,True,True,39,3.9,Standard
-0F0085,SolRuta,Murcia,2026-11-16,14:30,22:58,2026-11-16,508,18.12,2,20,True,True,22,3.7,Standard
-0F0086,SolRuta,Murcia,2026-11-16,10:45,18:46,2026-11-16,481,21.36,3,20,True,True,9,4.0,Standard
-0F0087,SolRuta,Murcia,2026-11-17,16:45,02:04,2026-11-18,559,20.65,3,20,True,True,6,3.6,Standard
-0F0088,SolRuta,Murcia,2026-11-17,08:15,16:03,2026-11-17,468,18.2,2,20,True,True,25,3.3,Standard
-0F0089,SolRuta,Salamanca,2026-11-09,14:30,18:08,2026-11-09,218,10.76,0,20,True,True,18,3.8,Standard
-0F0090,SolRuta,Salamanca,2026-11-09,12:45,16:23,2026-11-09,218,10.67,0,20,True,True,31,3.0,Standard
-0F0091,SolRuta,Salamanca,2026-11-10,16:30,20:08,2026-11-10,218,10.3,0,20,True,True,50,4.0,Standard
-0F0092,SolRuta,Salamanca,2026-11-10,08:00,11:38,2026-11-10,218,9.06,0,20,True,True,16,3.2,Standard
-0F0093,SolRuta,Salamanca,2026-11-16,08:15,11:53,2026-11-16,218,9.95,0,20,True,True,8,3.6,Standard
-0F0094,SolRuta,Salamanca,2026-11-16,10:15,13:53,2026-11-16,218,10.4,0,20,True,True,50,3.4,Standard
-0F0095,SolRuta,Salamanca,2026-11-17,16:15,19:53,2026-11-17,218,9.22,0,20,True,True,2,3.9,Standard
-0F0096,SolRuta,Salamanca,2026-11-17,08:45,12:23,2026-11-17,218,10.88,0,20,True,True,13,3.1,Standard
-0F0097,SolRuta,Toledo,2026-11-09,10:30,11:46,2026-11-09,76,3.63,0,20,True,True,8,3.8,Standard
-0F0098,SolRuta,Toledo,2026-11-09,08:00,09:16,2026-11-09,76,3.52,0,20,True,True,43,3.4,Standard
-0F0099,SolRuta,Toledo,2026-11-10,16:00,17:16,2026-11-10,76,3.44,0,20,True,True,32,3.1,Standard
-0F0100,SolRuta,Toledo,2026-11-10,12:30,13:46,2026-11-10,76,3.77,0,20,True,True,30,3.7,Standard
-0F0101,SolRuta,Toledo,2026-11-16,14:30,15:46,2026-11-16,76,3.72,0,20,True,True,35,3.8,Standard
-0F0102,SolRuta,Toledo,2026-11-16,10:45,12:01,2026-11-16,76,3.73,0,20,True,True,38,3.3,Standard
-0F0103,SolRuta,Toledo,2026-11-17,10:30,11:46,2026-11-17,76,3.32,0,20,True,True,30,3.6,Standard
-0F0104,SolRuta,Toledo,2026-11-17,08:45,10:01,2026-11-17,76,3.17,0,20,True,True,21,3.2,Standard
-0F0105,SolRuta,Santiago de Compostela,2026-11-09,10:30,22:08,2026-11-09,698,32.28,2,20,True,True,45,3.9,Standard
-0F0106,SolRuta,Santiago de Compostela,2026-11-09,12:00,23:45,2026-11-09,705,27.51,3,20,True,True,47,3.4,Standard
-0F0107,SolRuta,Santiago de Compostela,2026-11-10,16:45,06:09,2026-11-11,804,29.94,3,20,True,True,2,3.1,Standard
-0F0108,SolRuta,Santiago de Compostela,2026-11-10,10:15,22:47,2026-11-10,752,28.46,2,20,True,True,43,3.6,Standard
-0F0109,SolRuta,Santiago de Compostela,2026-11-16,14:45,03:39,2026-11-17,774,28.98,3,20,True,True,45,3.5,Standard
-0F0110,SolRuta,Santiago de Compostela,2026-11-16,12:30,00:02,2026-11-17,692,27.72,2,20,True,True,13,3.3,Standard
-0F0111,SolRuta,Santiago de Compostela,2026-11-17,16:15,04:01,2026-11-18,706,29.91,1,20,True,True,47,3.6,Standard
-0F0112,SolRuta,Santiago de Compostela,2026-11-17,10:30,22:22,2026-11-17,712,28.16,1,20,True,True,15,3.4,Standard
-0F0113,SolRuta,Cadiz,2026-11-09,12:15,00:18,2026-11-10,723,35.58,2,20,True,True,36,3.3,Standard
-0F0114,SolRuta,Cadiz,2026-11-09,08:15,23:04,2026-11-09,889,34.14,3,20,True,True,7,3.9,Standard
-0F0115,SolRuta,Cadiz,2026-11-10,16:45,05:40,2026-11-11,775,31.46,2,20,True,True,4,3.3,Standard
-0F0116,SolRuta,Cadiz,2026-11-10,12:45,01:31,2026-11-11,766,29.67,1,20,True,True,32,3.1,Standard
-0F0117,SolRuta,Cadiz,2026-11-16,08:15,21:16,2026-11-16,781,29.8,3,20,True,True,16,3.1,Standard
-0F0118,SolRuta,Cadiz,2026-11-16,10:45,00:43,2026-11-17,838,34.39,3,20,True,True,15,3.8,Standard
-0F0119,SolRuta,Cadiz,2026-11-17,14:45,04:34,2026-11-18,829,33.08,2,20,True,True,28,3.3,Standard
-0F0120,SolRuta,Cadiz,2026-11-17,16:00,06:25,2026-11-18,865,29.9,3,20,True,True,49,3.2,Standard
-0F0121,Camino Express,Barcelona,2026-11-09,13:00,21:16,2026-11-09,496,58.77,0,23,False,False,36,3.8,Standard
-0F0122,Camino Express,Barcelona,2026-11-09,11:00,19:16,2026-11-09,496,61.39,0,23,False,False,39,4.2,Standard
-0F0123,Camino Express,Barcelona,2026-11-10,07:30,15:46,2026-11-10,496,59.31,0,23,False,False,30,3.8,Standard
-0F0124,Camino Express,Barcelona,2026-11-10,09:15,17:31,2026-11-10,496,65.57,0,23,False,False,38,4.4,Standard
-0F0125,Camino Express,Barcelona,2026-11-16,13:00,21:16,2026-11-16,496,58.59,0,23,False,False,10,4.6,Standard
-0F0126,Camino Express,Barcelona,2026-11-16,21:15,05:31,2026-11-17,496,56.54,0,23,False,False,20,4.3,Standard
-0F0127,Camino Express,Barcelona,2026-11-17,15:00,23:16,2026-11-17,496,64.34,0,23,False,False,26,4.6,Standard
-0F0128,Camino Express,Barcelona,2026-11-17,13:45,22:01,2026-11-17,496,56.8,0,23,False,False,3,4.6,Standard
-0F0129,Camino Express,Valencia,2026-11-09,17:30,22:10,2026-11-09,280,32.14,0,23,False,False,37,4.3,Standard
-0F0130,Camino Express,Valencia,2026-11-09,15:00,19:40,2026-11-09,280,36.21,0,23,False,False,18,4.3,Standard
-0F0131,Camino Express,Valencia,2026-11-10,11:45,16:25,2026-11-10,280,32.77,0,23,False,False,38,4.1,Standard
-0F0132,Camino Express,Valencia,2026-11-10,13:45,18:25,2026-11-10,280,34.79,0,23,False,False,27,4.0,Standard
-0F0133,Camino Express,Valencia,2026-11-16,09:15,13:55,2026-11-16,280,34.38,0,23,False,False,32,4.0,Standard
-0F0134,Camino Express,Valencia,2026-11-16,19:45,00:25,2026-11-17,280,36.82,0,23,False,False,3,4.2,Standard
-0F0135,Camino Express,Valencia,2026-11-17,17:30,22:10,2026-11-17,280,38.29,0,23,False,False,26,4.6,Standard
-0F0136,Camino Express,Valencia,2026-11-17,11:00,15:40,2026-11-17,280,37.59,0,23,False,False,30,4.1,Standard
-0F0137,Camino Express,Seville,2026-11-09,13:30,20:34,2026-11-09,424,55.72,0,23,False,False,29,4.5,Standard
-0F0138,Camino Express,Seville,2026-11-09,15:15,22:19,2026-11-09,424,53.52,0,23,False,False,19,4.1,Standard
-0F0139,Camino Express,Seville,2026-11-10,21:00,04:04,2026-11-11,424,54.15,0,23,False,False,16,4.4,Standard
-0F0140,Camino Express,Seville,2026-11-10,07:30,14:34,2026-11-10,424,47.84,0,23,False,False,27,3.8,Standard
-0F0141,Camino Express,Seville,2026-11-16,09:00,16:04,2026-11-16,424,56.52,0,23,False,False,32,4.6,Standard
-0F0142,Camino Express,Seville,2026-11-16,13:30,20:34,2026-11-16,424,55.18,0,23,False,False,27,4.5,Standard
-0F0143,Camino Express,Seville,2026-11-17,21:45,04:49,2026-11-18,424,49.23,0,23,False,False,13,4.6,Standard
-0F0144,Camino Express,Seville,2026-11-17,09:15,16:19,2026-11-17,424,48.44,0,23,False,False,27,4.0,Standard
-0F0145,Camino Express,Malaga,2026-11-09,15:00,22:28,2026-11-09,448,58.53,0,23,False,False,38,4.3,Standard
-0F0146,Camino Express,Malaga,2026-11-09,19:45,03:13,2026-11-10,448,52.06,0,23,False,False,35,4.2,Standard
-0F0147,Camino Express,Malaga,2026-11-10,17:45,01:13,2026-11-11,448,60.85,0,23,False,False,13,4.7,Standard
-0F0148,Camino Express,Malaga,2026-11-10,15:15,22:43,2026-11-10,448,54.69,0,23,False,False,27,3.7,Standard
-0F0149,Camino Express,Malaga,2026-11-16,21:45,05:13,2026-11-17,448,61.47,0,23,False,False,10,4.2,Standard
-0F0150,Camino Express,Malaga,2026-11-16,17:00,00:28,2026-11-17,448,56.03,0,23,False,False,38,4.0,Standard
-0F0151,Camino Express,Malaga,2026-11-17,09:45,17:13,2026-11-17,448,56.29,0,23,False,False,30,3.7,Standard
-0F0152,Camino Express,Malaga,2026-11-17,19:15,02:43,2026-11-18,448,60.15,0,23,False,False,10,3.8,Standard
-0F0153,Camino Express,Granada,2026-11-09,15:45,21:21,2026-11-09,336,38.47,0,23,False,False,22,4.6,Standard
-0F0154,Camino Express,Granada,2026-11-09,11:45,17:21,2026-11-09,336,43.07,0,23,False,False,32,4.6,Standard
-0F0155,Camino Express,Granada,2026-11-10,07:00,12:36,2026-11-10,336,43.1,0,23,False,False,19,4.7,Standard
-0F0156,Camino Express,Granada,2026-11-10,15:00,20:36,2026-11-10,336,46.02,0,23,False,False,7,4.1,Standard
-0F0157,Camino Express,Granada,2026-11-16,15:00,20:36,2026-11-16,336,44.49,0,23,False,False,19,4.1,Standard
-0F0158,Camino Express,Granada,2026-11-16,07:45,13:21,2026-11-16,336,39.85,0,23,False,False,27,4.3,Standard
-0F0159,Camino Express,Granada,2026-11-17,11:15,16:51,2026-11-17,336,42.92,0,23,False,False,25,4.3,Standard
-0F0160,Camino Express,Granada,2026-11-17,09:15,14:51,2026-11-17,336,45.47,0,23,False,False,10,3.9,Standard
-0F0161,Camino Express,Cordoba,2026-11-09,15:30,20:50,2026-11-09,320,36.08,0,23,False,False,30,4.6,Standard
-0F0162,Camino Express,Cordoba,2026-11-09,13:15,18:35,2026-11-09,320,39.53,0,23,False,False,23,4.7,Standard
-0F0163,Camino Express,Cordoba,2026-11-10,15:45,21:05,2026-11-10,320,38.0,0,23,False,False,20,3.9,Standard
-0F0164,Camino Express,Cordoba,2026-11-10,17:45,23:05,2026-11-10,320,39.87,0,23,False,False,16,4.1,Standard
-0F0165,Camino Express,Cordoba,2026-11-16,17:30,22:50,2026-11-16,320,38.36,0,23,False,False,26,4.0,Standard
-0F0166,Camino Express,Cordoba,2026-11-16,15:00,20:20,2026-11-16,320,41.96,0,23,False,False,19,4.5,Standard
-0F0167,Camino Express,Cordoba,2026-11-17,13:30,18:50,2026-11-17,320,41.09,0,23,False,False,40,4.0,Standard
-0F0168,Camino Express,Cordoba,2026-11-17,15:15,20:35,2026-11-17,320,36.78,0,23,False,False,3,4.0,Standard
-0F0169,Camino Express,Bilbao,2026-11-09,21:30,02:50,2026-11-10,320,37.05,0,23,False,False,19,4.0,Standard
-0F0170,Camino Express,Bilbao,2026-11-09,07:45,13:05,2026-11-09,320,37.61,0,23,False,False,35,4.6,Standard
-0F0171,Camino Express,Bilbao,2026-11-10,17:30,22:50,2026-11-10,320,37.32,0,23,False,False,31,4.7,Standard
-0F0172,Camino Express,Bilbao,2026-11-10,15:30,20:50,2026-11-10,320,42.96,0,23,False,False,8,4.2,Standard
-0F0173,Camino Express,Bilbao,2026-11-16,09:15,14:35,2026-11-16,320,41.41,0,23,False,False,26,4.7,Standard
-0F0174,Camino Express,Bilbao,2026-11-16,21:30,02:50,2026-11-17,320,42.33,0,23,False,False,1,4.0,Standard
-0F0175,Camino Express,Bilbao,2026-11-17,09:30,14:50,2026-11-17,320,41.99,0,23,False,False,17,4.3,Standard
-0F0176,Camino Express,Bilbao,2026-11-17,13:30,18:50,2026-11-17,320,41.4,0,23,False,False,31,3.7,Standard
-0F0177,Camino Express,Zaragoza,2026-11-09,17:15,21:31,2026-11-09,256,29.2,0,23,False,False,30,4.6,Standard
-0F0178,Camino Express,Zaragoza,2026-11-09,15:30,19:46,2026-11-09,256,31.41,0,23,False,False,9,3.7,Standard
-0F0179,Camino Express,Zaragoza,2026-11-10,07:45,12:01,2026-11-10,256,29.42,0,23,False,False,35,3.8,Standard
-0F0180,Camino Express,Zaragoza,2026-11-10,11:45,16:01,2026-11-10,256,33.09,0,23,False,False,35,4.1,Standard
-0F0181,Camino Express,Zaragoza,2026-11-16,11:00,15:16,2026-11-16,256,31.93,0,23,False,False,27,4.6,Standard
-0F0182,Camino Express,Zaragoza,2026-11-16,13:30,17:46,2026-11-16,256,33.22,0,23,False,False,14,4.1,Standard
-0F0183,Camino Express,Zaragoza,2026-11-17,13:30,17:46,2026-11-17,256,35.08,0,23,False,False,24,4.2,Standard
-0F0184,Camino Express,Zaragoza,2026-11-17,19:30,23:46,2026-11-17,256,31.35,0,23,False,False,13,4.7,Standard
-0F0185,Camino Express,Alicante,2026-11-09,21:15,02:51,2026-11-10,336,43.17,0,23,False,False,2,3.8,Standard
-0F0186,Camino Express,Alicante,2026-11-09,07:30,13:06,2026-11-09,336,46.11,0,23,False,False,37,3.9,Standard
-0F0187,Camino Express,Alicante,2026-11-10,13:15,18:51,2026-11-10,336,45.11,0,23,False,False,22,4.5,Standard
-0F0188,Camino Express,Alicante,2026-11-10,15:00,20:36,2026-11-10,336,45.01,0,23,False,False,10,4.7,Standard
-0F0189,Camino Express,Alicante,2026-11-16,15:15,20:51,2026-11-16,336,43.35,0,23,False,False,2,3.8,Standard
-0F0190,Camino Express,Alicante,2026-11-16,19:30,01:06,2026-11-17,336,44.42,0,23,False,False,38,4.0,Standard
-0F0191,Camino Express,Alicante,2026-11-17,11:00,16:36,2026-11-17,336,44.03,0,23,False,False,34,3.8,Standard
-0F0192,Camino Express,Alicante,2026-11-17,21:00,02:36,2026-11-18,336,41.57,0,23,False,False,24,4.2,Standard
-0F0193,Camino Express,Murcia,2026-11-09,09:15,14:35,2026-11-09,320,36.35,0,23,False,False,34,4.0,Standard
-0F0194,Camino Express,Murcia,2026-11-09,13:00,18:20,2026-11-09,320,43.99,0,23,False,False,26,4.1,Standard
-0F0195,Camino Express,Murcia,2026-11-10,09:45,15:05,2026-11-10,320,43.19,0,23,False,False,21,4.3,Standard
-0F0196,Camino Express,Murcia,2026-11-10,13:00,18:20,2026-11-10,320,38.2,0,23,False,False,38,4.2,Standard
-0F0197,Camino Express,Murcia,2026-11-16,17:30,22:50,2026-11-16,320,40.04,0,23,False,False,28,3.8,Standard
-0F0198,Camino Express,Murcia,2026-11-16,13:00,18:20,2026-11-16,320,41.24,0,23,False,False,36,4.4,Standard
-0F0199,Camino Express,Murcia,2026-11-17,13:45,19:05,2026-11-17,320,39.31,0,23,False,False,30,4.1,Standard
-0F0200,Camino Express,Murcia,2026-11-17,21:00,02:20,2026-11-18,320,39.41,0,23,False,False,17,4.1,Standard
-0F0201,CostaLink,Barcelona,2026-11-09,09:00,19:20,2026-11-09,620,46.28,0,18,True,True,6,3.7,Standard
-0F0202,CostaLink,Barcelona,2026-11-09,15:30,01:50,2026-11-10,620,40.19,0,18,True,True,4,3.9,Standard
-0F0203,CostaLink,Barcelona,2026-11-10,18:30,04:50,2026-11-11,620,40.12,0,18,True,True,23,4.2,Standard
-0F0204,CostaLink,Barcelona,2026-11-10,21:45,08:05,2026-11-11,620,47.01,0,18,True,True,4,4.3,Standard
-0F0205,CostaLink,Barcelona,2026-11-16,18:30,04:50,2026-11-17,620,44.08,0,18,True,True,14,3.5,Standard
-0F0206,CostaLink,Barcelona,2026-11-16,12:45,23:05,2026-11-16,620,46.41,0,18,True,True,23,4.1,Standard
-0F0207,CostaLink,Barcelona,2026-11-17,12:30,22:50,2026-11-17,620,41.02,0,18,True,True,28,4.1,Standard
-0F0208,CostaLink,Barcelona,2026-11-17,06:00,16:20,2026-11-17,620,47.12,0,18,True,True,45,3.6,Standard
-0F0209,CostaLink,Valencia,2026-11-09,09:30,15:20,2026-11-09,350,23.77,0,18,True,True,12,4.2,Standard
-0F0210,CostaLink,Valencia,2026-11-09,12:45,18:35,2026-11-09,350,22.75,0,18,True,True,41,4.3,Standard
-0F0211,CostaLink,Valencia,2026-11-10,06:15,12:05,2026-11-10,350,24.11,0,18,True,True,22,3.5,Standard
-0F0212,CostaLink,Valencia,2026-11-10,18:30,00:20,2026-11-11,350,23.64,0,18,True,True,37,3.9,Standard
-0F0213,CostaLink,Valencia,2026-11-16,06:15,12:05,2026-11-16,350,25.08,0,18,True,True,44,3.4,Standard
-0F0214,CostaLink,Valencia,2026-11-16,09:45,15:35,2026-11-16,350,24.13,0,18,True,True,39,3.7,Standard
-0F0215,CostaLink,Valencia,2026-11-17,12:00,17:50,2026-11-17,350,24.16,0,18,True,True,19,4.0,Standard
-0F0216,CostaLink,Valencia,2026-11-17,09:45,15:35,2026-11-17,350,25.32,0,18,True,True,3,3.5,Standard
-0F0217,CostaLink,Malaga,2026-11-09,06:15,15:35,2026-11-09,560,42.69,0,18,True,True,9,4.1,Standard
-0F0218,CostaLink,Malaga,2026-11-09,21:30,06:50,2026-11-10,560,36.22,0,18,True,True,32,4.0,Standard
-0F0219,CostaLink,Malaga,2026-11-10,09:45,19:05,2026-11-10,560,40.8,0,18,True,True,33,3.9,Standard
-0F0220,CostaLink,Malaga,2026-11-10,21:30,06:50,2026-11-11,560,38.39,0,18,True,True,3,3.7,Standard
-0F0221,CostaLink,Malaga,2026-11-16,15:30,00:50,2026-11-17,560,38.65,0,18,True,True,26,4.0,Standard
-0F0222,CostaLink,Malaga,2026-11-16,06:45,16:05,2026-11-16,560,36.18,0,18,True,True,2,4.3,Standard
-0F0223,CostaLink,Malaga,2026-11-17,09:45,19:05,2026-11-17,560,40.69,0,18,True,True,24,3.4,Standard
-0F0224,CostaLink,Malaga,2026-11-17,18:00,03:20,2026-11-18,560,38.7,0,18,True,True,26,3.8,Standard
-0F0225,CostaLink,Granada,2026-11-09,12:15,21:03,2026-11-09,528,27.45,2,18,True,True,33,3.9,Standard
-0F0226,CostaLink,Granada,2026-11-09,21:15,05:09,2026-11-10,474,30.74,2,18,True,True,42,4.1,Standard
-0F0227,CostaLink,Granada,2026-11-10,09:15,16:49,2026-11-10,454,27.48,2,18,True,True,10,4.1,Standard
-0F0228,CostaLink,Granada,2026-11-10,06:00,13:54,2026-11-10,474,30.15,1,18,True,True,30,4.1,Standard
-0F0229,CostaLink,Granada,2026-11-16,18:30,01:58,2026-11-17,448,29.05,2,18,True,True,31,3.7,Standard
-0F0230,CostaLink,Granada,2026-11-16,15:30,23:54,2026-11-16,504,26.79,2,18,True,True,33,3.4,Standard
-0F0231,CostaLink,Granada,2026-11-17,15:00,22:28,2026-11-17,448,31.35,1,18,True,True,5,3.9,Standard
-0F0232,CostaLink,Granada,2026-11-17,21:00,05:08,2026-11-18,488,29.87,2,18,True,True,3,3.7,Standard
-0F0233,CostaLink,Bilbao,2026-11-09,21:30,04:10,2026-11-10,400,27.86,0,18,True,True,10,4.3,Standard
-0F0234,CostaLink,Bilbao,2026-11-09,09:45,16:25,2026-11-09,400,29.74,0,18,True,True,22,4.3,Standard
-0F0235,CostaLink,Bilbao,2026-11-10,06:15,12:55,2026-11-10,400,26.59,0,18,True,True,29,4.3,Standard
-0F0236,CostaLink,Bilbao,2026-11-10,18:15,00:55,2026-11-11,400,27.29,0,18,True,True,19,3.7,Standard
-0F0237,CostaLink,Bilbao,2026-11-16,12:00,18:40,2026-11-16,400,28.73,0,18,True,True,22,3.4,Standard
-0F0238,CostaLink,Bilbao,2026-11-16,18:00,00:40,2026-11-17,400,29.0,0,18,True,True,19,3.6,Standard
-0F0239,CostaLink,Bilbao,2026-11-17,21:15,03:55,2026-11-18,400,25.66,0,18,True,True,43,3.4,Standard
-0F0240,CostaLink,Bilbao,2026-11-17,18:30,01:10,2026-11-18,400,30.62,0,18,True,True,45,4.0,Standard
-0F0241,CostaLink,San Sebastian,2026-11-09,09:00,16:50,2026-11-09,470,33.29,0,18,True,True,42,4.1,Standard
-0F0242,CostaLink,San Sebastian,2026-11-09,18:15,02:05,2026-11-10,470,34.23,0,18,True,True,44,4.2,Standard
-0F0243,CostaLink,San Sebastian,2026-11-10,06:30,14:20,2026-11-10,470,32.0,0,18,True,True,12,4.3,Standard
-0F0244,CostaLink,San Sebastian,2026-11-10,15:30,23:20,2026-11-10,470,32.81,0,18,True,True,15,4.3,Standard
-0F0245,CostaLink,San Sebastian,2026-11-16,09:30,17:20,2026-11-16,470,34.8,0,18,True,True,33,4.1,Standard
-0F0246,CostaLink,San Sebastian,2026-11-16,06:00,13:50,2026-11-16,470,31.83,0,18,True,True,40,3.4,Standard
-0F0247,CostaLink,San Sebastian,2026-11-17,15:15,23:05,2026-11-17,470,35.08,0,18,True,True,40,4.1,Standard
-0F0248,CostaLink,San Sebastian,2026-11-17,09:15,17:05,2026-11-17,470,32.49,0,18,True,True,27,3.7,Standard
-0F0249,CostaLink,Alicante,2026-11-09,15:30,22:30,2026-11-09,420,30.86,0,18,True,True,29,3.5,Standard
-0F0250,CostaLink,Alicante,2026-11-09,18:15,01:15,2026-11-10,420,32.14,0,18,True,True,31,4.2,Standard
-0F0251,CostaLink,Alicante,2026-11-10,09:45,16:45,2026-11-10,420,30.98,0,18,True,True,25,3.8,Standard
-0F0252,CostaLink,Alicante,2026-11-10,12:45,19:45,2026-11-10,420,31.26,0,18,True,True,39,3.4,Standard
-0F0253,CostaLink,Alicante,2026-11-16,12:45,19:45,2026-11-16,420,28.64,0,18,True,True,7,4.0,Standard
-0F0254,CostaLink,Alicante,2026-11-16,06:00,13:00,2026-11-16,420,26.95,0,18,True,True,11,3.6,Standard
-0F0255,CostaLink,Alicante,2026-11-17,18:45,01:45,2026-11-18,420,32.02,0,18,True,True,15,4.1,Standard
-0F0256,CostaLink,Alicante,2026-11-17,09:30,16:30,2026-11-17,420,28.9,0,18,True,True,26,3.8,Standard
-0F0257,CostaLink,Murcia,2026-11-09,06:15,13:20,2026-11-09,425,30.41,1,18,True,True,42,3.6,Standard
-0F0258,CostaLink,Murcia,2026-11-09,12:15,19:02,2026-11-09,407,26.81,1,18,True,True,31,4.0,Standard
-0F0259,CostaLink,Murcia,2026-11-10,09:45,16:35,2026-11-10,410,25.31,1,18,True,True,14,4.1,Standard
-0F0260,CostaLink,Murcia,2026-11-10,15:45,23:19,2026-11-10,454,26.81,1,18,True,True,20,3.4,Standard
-0F0261,CostaLink,Murcia,2026-11-16,09:45,16:37,2026-11-16,412,29.89,1,18,True,True,32,3.9,Standard
-0F0262,CostaLink,Murcia,2026-11-16,15:00,22:30,2026-11-16,450,26.0,1,18,True,True,28,3.3,Standard
-0F0263,CostaLink,Murcia,2026-11-17,12:45,20:12,2026-11-17,447,28.94,1,18,True,True,34,4.3,Standard
-0F0264,CostaLink,Murcia,2026-11-17,09:00,16:09,2026-11-17,429,30.09,1,18,True,True,3,3.9,Standard
-0F0265,CostaLink,Toledo,2026-11-09,06:00,07:50,2026-11-09,110,5.13,2,18,True,True,41,3.4,Standard
-0F0266,CostaLink,Toledo,2026-11-09,12:30,13:47,2026-11-09,77,4.76,1,18,True,True,22,4.1,Standard
-0F0267,CostaLink,Toledo,2026-11-10,09:45,11:51,2026-11-10,126,4.54,1,18,True,True,30,3.3,Standard
-0F0268,CostaLink,Toledo,2026-11-10,15:15,17:20,2026-11-10,125,4.61,1,18,True,True,3,3.6,Standard
-0F0269,CostaLink,Toledo,2026-11-16,12:45,14:37,2026-11-16,112,4.45,2,18,True,True,42,3.5,Standard
-0F0270,CostaLink,Toledo,2026-11-16,18:30,20:40,2026-11-16,130,5.05,1,18,True,True,18,3.4,Standard
-0F0271,CostaLink,Toledo,2026-11-17,12:45,14:53,2026-11-17,128,4.74,2,18,True,True,12,3.8,Standard
-0F0272,CostaLink,Toledo,2026-11-17,15:45,18:47,2026-11-17,182,4.92,2,18,True,True,6,4.0,Standard
-0F0273,CostaLink,Santiago de Compostela,2026-11-09,18:30,04:52,2026-11-10,622,38.47,2,18,True,True,43,3.6,Standard
-0F0274,CostaLink,Santiago de Compostela,2026-11-09,09:45,20:15,2026-11-09,630,43.59,2,18,True,True,23,3.7,Standard
-0F0275,CostaLink,Santiago de Compostela,2026-11-10,21:45,09:15,2026-11-11,690,46.03,2,18,True,True,4,3.4,Standard
-0F0276,CostaLink,Santiago de Compostela,2026-11-10,12:45,23:59,2026-11-10,674,44.53,2,18,True,True,44,3.5,Standard
-0F0277,CostaLink,Santiago de Compostela,2026-11-16,06:45,16:58,2026-11-16,613,38.36,1,18,True,True,42,3.7,Standard
-0F0278,CostaLink,Santiago de Compostela,2026-11-16,09:45,20:28,2026-11-16,643,39.09,1,18,True,True,29,4.2,Standard
-0F0279,CostaLink,Santiago de Compostela,2026-11-17,12:00,22:38,2026-11-17,638,40.88,1,18,True,True,21,3.9,Standard
-0F0280,CostaLink,Santiago de Compostela,2026-11-17,15:15,01:21,2026-11-18,606,43.98,1,18,True,True,32,3.8,Standard
-0F0281,CostaLink,Cadiz,2026-11-09,18:30,05:20,2026-11-10,650,43.32,0,18,True,True,29,3.5,Standard
-0F0282,CostaLink,Cadiz,2026-11-09,06:30,17:20,2026-11-09,650,49.29,0,18,True,True,32,3.5,Standard
-0F0283,CostaLink,Cadiz,2026-11-10,09:45,20:35,2026-11-10,650,49.13,0,18,True,True,29,4.3,Standard
-0F0284,CostaLink,Cadiz,2026-11-10,06:30,17:20,2026-11-10,650,44.11,0,18,True,True,5,3.8,Standard
-0F0285,CostaLink,Cadiz,2026-11-16,12:15,23:05,2026-11-16,650,47.41,0,18,True,True,45,3.9,Standard
-0F0286,CostaLink,Cadiz,2026-11-16,21:30,08:20,2026-11-17,650,42.99,0,18,True,True,13,4.1,Standard
-0F0287,CostaLink,Cadiz,2026-11-17,09:00,19:50,2026-11-17,650,45.99,0,18,True,True,24,3.8,Standard
-0F0288,CostaLink,Cadiz,2026-11-17,15:15,02:05,2026-11-18,650,49.0,0,18,True,True,5,3.6,Standard
-0F0289,VerdeBus,Barcelona,2026-11-09,14:45,23:54,2026-11-09,549,68.82,2,20,True,True,21,4.6,Eco-friendly
-0F0290,VerdeBus,Barcelona,2026-11-09,16:45,02:24,2026-11-10,579,74.66,1,20,True,True,9,4.9,Eco-friendly
-0F0291,VerdeBus,Barcelona,2026-11-10,16:15,01:43,2026-11-11,568,80.51,1,20,True,True,4,4.8,Eco-friendly
-0F0292,VerdeBus,Barcelona,2026-11-10,10:15,19:21,2026-11-10,546,69.37,1,20,True,True,15,4.3,Eco-friendly
-0F0293,VerdeBus,Barcelona,2026-11-16,16:00,01:08,2026-11-17,548,76.41,1,20,True,True,36,4.3,Eco-friendly
-0F0294,VerdeBus,Barcelona,2026-11-16,12:30,22:39,2026-11-16,609,68.35,2,20,True,True,11,4.6,Eco-friendly
-0F0295,VerdeBus,Barcelona,2026-11-17,16:15,02:34,2026-11-18,619,77.68,2,20,True,True,39,4.3,Eco-friendly
-0F0296,VerdeBus,Barcelona,2026-11-17,10:00,18:51,2026-11-17,531,67.64,0,20,True,True,37,4.3,Eco-friendly
-0F0297,VerdeBus,Valencia,2026-11-09,10:00,15:45,2026-11-09,345,42.38,1,20,True,True,20,4.5,Eco-friendly
-0F0298,VerdeBus,Valencia,2026-11-09,14:45,20:19,2026-11-09,334,38.41,1,20,True,True,4,4.2,Eco-friendly
-0F0299,VerdeBus,Valencia,2026-11-10,14:45,19:45,2026-11-10,300,42.9,0,20,True,True,21,4.9,Eco-friendly
-0F0300,VerdeBus,Valencia,2026-11-10,16:30,23:30,2026-11-10,420,40.7,2,20,True,True,26,4.1,Eco-friendly
-0F0301,VerdeBus,Valencia,2026-11-16,12:30,17:30,2026-11-16,300,38.83,0,20,True,True,29,4.2,Eco-friendly
-0F0302,VerdeBus,Valencia,2026-11-16,08:00,13:00,2026-11-16,300,45.74,0,20,True,True,40,4.4,Eco-friendly
-0F0303,VerdeBus,Valencia,2026-11-17,10:30,15:30,2026-11-17,300,39.14,0,20,True,True,33,4.5,Eco-friendly
-0F0304,VerdeBus,Valencia,2026-11-17,12:30,17:36,2026-11-17,306,38.56,1,20,True,True,26,4.5,Eco-friendly
-0F0305,VerdeBus,Seville,2026-11-09,10:30,18:04,2026-11-09,454,60.82,0,20,True,True,39,4.9,Eco-friendly
-0F0306,VerdeBus,Seville,2026-11-09,16:45,00:58,2026-11-10,493,57.34,1,20,True,True,7,4.4,Eco-friendly
-0F0307,VerdeBus,Seville,2026-11-10,12:45,20:26,2026-11-10,461,62.34,1,20,True,True,37,4.6,Eco-friendly
-0F0308,VerdeBus,Seville,2026-11-10,16:30,00:50,2026-11-11,500,58.18,2,20,True,True,33,4.5,Eco-friendly
-0F0309,VerdeBus,Seville,2026-11-16,16:00,23:34,2026-11-16,454,62.25,0,20,True,True,22,4.6,Eco-friendly
-0F0310,VerdeBus,Seville,2026-11-16,12:30,20:04,2026-11-16,454,64.9,0,20,True,True,26,4.5,Eco-friendly
-0F0311,VerdeBus,Seville,2026-11-17,08:15,16:41,2026-11-17,506,67.47,2,20,True,True,34,4.5,Eco-friendly
-0F0312,VerdeBus,Seville,2026-11-17,16:15,00:33,2026-11-18,498,61.29,1,20,True,True,26,5.0,Eco-friendly
-0F0313,VerdeBus,Malaga,2026-11-09,12:45,22:07,2026-11-09,562,64.51,2,20,True,True,2,4.4,Eco-friendly
-0F0314,VerdeBus,Malaga,2026-11-09,16:00,00:42,2026-11-10,522,64.62,1,20,True,True,2,4.6,Eco-friendly
-0F0315,VerdeBus,Malaga,2026-11-10,12:00,21:10,2026-11-10,550,62.77,2,20,True,True,40,4.8,Eco-friendly
-0F0316,VerdeBus,Malaga,2026-11-10,10:45,18:45,2026-11-10,480,69.63,0,20,True,True,3,4.6,Eco-friendly
-0F0317,VerdeBus,Malaga,2026-11-16,08:00,16:25,2026-11-16,505,66.11,1,20,True,True,27,4.7,Eco-friendly
-0F0318,VerdeBus,Malaga,2026-11-16,10:45,20:33,2026-11-16,588,68.7,2,20,True,True,31,4.9,Eco-friendly
-0F0319,VerdeBus,Malaga,2026-11-17,08:15,17:05,2026-11-17,530,73.89,2,20,True,True,31,4.5,Eco-friendly
-0F0320,VerdeBus,Malaga,2026-11-17,10:30,18:30,2026-11-17,480,72.74,0,20,True,True,22,4.5,Eco-friendly
-0F0321,VerdeBus,Granada,2026-11-09,12:15,18:15,2026-11-09,360,50.99,0,20,True,True,15,4.9,Eco-friendly
-0F0322,VerdeBus,Granada,2026-11-09,14:30,21:20,2026-11-09,410,47.45,1,20,True,True,32,4.3,Eco-friendly
-0F0323,VerdeBus,Granada,2026-11-10,12:30,18:30,2026-11-10,360,52.18,0,20,True,True,25,4.9,Eco-friendly
-0F0324,VerdeBus,Granada,2026-11-10,16:45,23:39,2026-11-10,414,53.47,1,20,True,True,19,4.0,Eco-friendly
-0F0325,VerdeBus,Granada,2026-11-16,08:45,15:27,2026-11-16,402,52.89,2,20,True,True,14,4.2,Eco-friendly
-0F0326,VerdeBus,Granada,2026-11-16,12:30,20:08,2026-11-16,458,48.1,2,20,True,True,7,4.6,Eco-friendly
-0F0327,VerdeBus,Granada,2026-11-17,16:15,22:15,2026-11-17,360,54.48,0,20,True,True,15,4.6,Eco-friendly
-0F0328,VerdeBus,Granada,2026-11-17,10:00,16:00,2026-11-17,360,48.69,0,20,True,True,31,4.1,Eco-friendly
-0F0329,VerdeBus,Cordoba,2026-11-09,10:15,16:43,2026-11-09,388,52.18,1,20,True,True,31,4.5,Eco-friendly
-0F0330,VerdeBus,Cordoba,2026-11-09,08:15,14:22,2026-11-09,367,45.94,1,20,True,True,4,4.9,Eco-friendly
-0F0331,VerdeBus,Cordoba,2026-11-10,08:00,13:42,2026-11-10,342,51.67,0,20,True,True,12,4.9,Eco-friendly
-0F0332,VerdeBus,Cordoba,2026-11-10,10:00,16:37,2026-11-10,397,47.96,1,20,True,True,19,4.9,Eco-friendly
-0F0333,VerdeBus,Cordoba,2026-11-16,08:00,14:05,2026-11-16,365,47.56,1,20,True,True,35,4.5,Eco-friendly
-0F0334,VerdeBus,Cordoba,2026-11-16,12:15,19:05,2026-11-16,410,45.82,2,20,True,True,8,4.3,Eco-friendly
-0F0335,VerdeBus,Cordoba,2026-11-17,14:15,19:57,2026-11-17,342,46.44,0,20,True,True,19,4.6,Eco-friendly
-0F0336,VerdeBus,Cordoba,2026-11-17,12:15,17:57,2026-11-17,342,51.42,0,20,True,True,26,4.8,Eco-friendly
-0F0337,VerdeBus,Bilbao,2026-11-09,16:00,22:29,2026-11-09,389,44.12,1,20,True,True,9,4.5,Eco-friendly
-0F0338,VerdeBus,Bilbao,2026-11-09,12:15,17:57,2026-11-09,342,46.88,0,20,True,True,29,4.8,Eco-friendly
-0F0339,VerdeBus,Bilbao,2026-11-10,12:00,18:28,2026-11-10,388,46.65,1,20,True,True,16,4.1,Eco-friendly
-0F0340,VerdeBus,Bilbao,2026-11-10,16:00,22:06,2026-11-10,366,44.73,1,20,True,True,33,4.9,Eco-friendly
-0F0341,VerdeBus,Bilbao,2026-11-16,12:30,18:56,2026-11-16,386,45.32,1,20,True,True,9,4.5,Eco-friendly
-0F0342,VerdeBus,Bilbao,2026-11-16,08:45,15:53,2026-11-16,428,46.79,2,20,True,True,36,4.9,Eco-friendly
-0F0343,VerdeBus,Bilbao,2026-11-17,16:15,23:43,2026-11-17,448,48.92,2,20,True,True,6,4.5,Eco-friendly
-0F0344,VerdeBus,Bilbao,2026-11-17,10:30,16:12,2026-11-17,342,44.28,0,20,True,True,36,4.9,Eco-friendly
-0F0345,VerdeBus,San Sebastian,2026-11-09,10:15,17:56,2026-11-09,461,56.63,1,20,True,True,8,4.7,Eco-friendly
-0F0346,VerdeBus,San Sebastian,2026-11-09,16:45,23:27,2026-11-09,402,55.79,0,20,True,True,4,4.5,Eco-friendly
-0F0347,VerdeBus,San Sebastian,2026-11-10,16:45,23:43,2026-11-10,418,57.06,2,20,True,True,20,4.7,Eco-friendly
-0F0348,VerdeBus,San Sebastian,2026-11-10,14:45,22:24,2026-11-10,459,50.79,1,20,True,True,14,4.6,Eco-friendly
-0F0349,VerdeBus,San Sebastian,2026-11-16,08:30,15:30,2026-11-16,420,56.86,2,20,True,True,4,4.9,Eco-friendly
-0F0350,VerdeBus,San Sebastian,2026-11-16,14:00,20:49,2026-11-16,409,54.0,1,20,True,True,12,4.8,Eco-friendly
-0F0351,VerdeBus,San Sebastian,2026-11-17,14:45,22:27,2026-11-17,462,61.11,1,20,True,True,25,4.4,Eco-friendly
-0F0352,VerdeBus,San Sebastian,2026-11-17,12:15,20:57,2026-11-17,522,54.68,2,20,True,True,12,5.0,Eco-friendly
-0F0353,VerdeBus,Zaragoza,2026-11-09,14:15,18:49,2026-11-09,274,34.73,0,20,True,True,20,4.5,Eco-friendly
-0F0354,VerdeBus,Zaragoza,2026-11-09,10:45,16:17,2026-11-09,332,40.88,2,20,True,True,16,4.5,Eco-friendly
-0F0355,VerdeBus,Zaragoza,2026-11-10,10:15,16:35,2026-11-10,380,35.43,2,20,True,True,27,4.6,Eco-friendly
-0F0356,VerdeBus,Zaragoza,2026-11-10,12:00,16:34,2026-11-10,274,35.08,0,20,True,True,39,4.0,Eco-friendly
-0F0357,VerdeBus,Zaragoza,2026-11-16,16:15,21:03,2026-11-16,288,37.65,2,20,True,True,15,4.5,Eco-friendly
-0F0358,VerdeBus,Zaragoza,2026-11-16,08:00,12:34,2026-11-16,274,42.19,0,20,True,True,15,4.8,Eco-friendly
-0F0359,VerdeBus,Zaragoza,2026-11-17,16:30,21:04,2026-11-17,274,41.29,0,20,True,True,34,4.2,Eco-friendly
-0F0360,VerdeBus,Zaragoza,2026-11-17,12:30,17:12,2026-11-17,282,38.84,1,20,True,True,38,4.9,Eco-friendly
-0F0361,VerdeBus,Alicante,2026-11-09,10:45,16:45,2026-11-09,360,54.85,0,20,True,True,25,4.8,Eco-friendly
-0F0362,VerdeBus,Alicante,2026-11-09,14:30,21:32,2026-11-09,422,49.48,2,20,True,True,20,4.4,Eco-friendly
-0F0363,VerdeBus,Alicante,2026-11-10,16:15,22:15,2026-11-10,360,54.0,0,20,True,True,10,4.8,Eco-friendly
-0F0364,VerdeBus,Alicante,2026-11-10,14:00,21:02,2026-11-10,422,55.12,2,20,True,True,36,4.5,Eco-friendly
-0F0365,VerdeBus,Alicante,2026-11-16,14:30,20:30,2026-11-16,360,51.88,0,20,True,True,29,4.8,Eco-friendly
-0F0366,VerdeBus,Alicante,2026-11-16,10:00,17:42,2026-11-16,462,53.72,2,20,True,True,4,4.3,Eco-friendly
-0F0367,VerdeBus,Alicante,2026-11-17,16:00,22:00,2026-11-17,360,53.04,0,20,True,True,36,4.2,Eco-friendly
-0F0368,VerdeBus,Alicante,2026-11-17,08:15,14:39,2026-11-17,384,55.01,1,20,True,True,1,4.2,Eco-friendly
-0F0369,VerdeBus,Murcia,2026-11-09,10:45,16:27,2026-11-09,342,49.0,0,20,True,True,14,4.4,Eco-friendly
-0F0370,VerdeBus,Murcia,2026-11-09,08:15,14:47,2026-11-09,392,50.64,2,20,True,True,25,4.5,Eco-friendly
-0F0371,VerdeBus,Murcia,2026-11-10,12:30,18:49,2026-11-10,379,51.67,1,20,True,True,30,4.1,Eco-friendly
-0F0372,VerdeBus,Murcia,2026-11-10,16:45,22:45,2026-11-10,360,46.76,1,20,True,True,27,4.0,Eco-friendly
-0F0373,VerdeBus,Murcia,2026-11-16,10:00,16:22,2026-11-16,382,52.17,1,20,True,True,38,4.7,Eco-friendly
-0F0374,VerdeBus,Murcia,2026-11-16,16:30,22:12,2026-11-16,342,46.37,0,20,True,True,25,4.6,Eco-friendly
-0F0375,VerdeBus,Murcia,2026-11-17,10:30,17:05,2026-11-17,395,51.09,1,20,True,True,32,4.5,Eco-friendly
-0F0376,VerdeBus,Murcia,2026-11-17,14:30,20:12,2026-11-17,342,50.12,0,20,True,True,32,4.2,Eco-friendly
-0F0377,VerdeBus,Salamanca,2026-11-09,16:00,18:51,2026-11-09,171,24.81,0,20,True,True,1,4.4,Eco-friendly
-0F0378,VerdeBus,Salamanca,2026-11-09,08:15,11:06,2026-11-09,171,22.32,0,20,True,True,14,4.5,Eco-friendly
-0F0379,VerdeBus,Salamanca,2026-11-10,12:45,16:48,2026-11-10,243,21.68,2,20,True,True,35,4.6,Eco-friendly
-0F0380,VerdeBus,Salamanca,2026-11-10,08:00,10:51,2026-11-10,171,25.07,0,20,True,True,35,5.0,Eco-friendly
-0F0381,VerdeBus,Salamanca,2026-11-16,08:15,11:06,2026-11-16,171,24.12,0,20,True,True,16,4.2,Eco-friendly
-0F0382,VerdeBus,Salamanca,2026-11-16,14:30,17:43,2026-11-16,193,25.42,1,20,True,True,6,4.4,Eco-friendly
-0F0383,VerdeBus,Salamanca,2026-11-17,14:15,17:44,2026-11-17,209,23.04,2,20,True,True,6,4.7,Eco-friendly
-0F0384,VerdeBus,Salamanca,2026-11-17,16:00,18:51,2026-11-17,171,23.42,0,20,True,True,36,4.5,Eco-friendly
-0F0385,VerdeBus,Toledo,2026-11-09,08:00,09:59,2026-11-09,119,8.29,1,20,True,True,22,4.6,Eco-friendly
-0F0386,VerdeBus,Toledo,2026-11-09,10:00,11:14,2026-11-09,74,7.95,2,20,True,True,37,4.5,Eco-friendly
-0F0387,VerdeBus,Toledo,2026-11-10,08:30,10:52,2026-11-10,142,8.67,2,20,True,True,12,4.9,Eco-friendly
-0F0388,VerdeBus,Toledo,2026-11-10,16:30,17:30,2026-11-10,60,8.55,0,20,True,True,26,4.9,Eco-friendly
-0F0389,VerdeBus,Toledo,2026-11-16,12:15,15:11,2026-11-16,176,8.99,2,20,True,True,35,4.3,Eco-friendly
-0F0390,VerdeBus,Toledo,2026-11-16,10:15,12:57,2026-11-16,162,7.69,2,20,True,True,23,4.1,Eco-friendly
-0F0391,VerdeBus,Toledo,2026-11-17,14:00,15:43,2026-11-17,103,8.85,1,20,True,True,39,4.4,Eco-friendly
-0F0392,VerdeBus,Toledo,2026-11-17,10:30,11:30,2026-11-17,60,8.02,0,20,True,True,29,4.5,Eco-friendly
-0F0393,VerdeBus,Santiago de Compostela,2026-11-09,12:45,21:19,2026-11-09,514,73.24,0,20,True,True,25,4.1,Eco-friendly
-0F0394,VerdeBus,Santiago de Compostela,2026-11-09,14:30,23:04,2026-11-09,514,65.86,0,20,True,True,18,4.2,Eco-friendly
-0F0395,VerdeBus,Santiago de Compostela,2026-11-10,10:30,19:15,2026-11-10,525,66.12,1,20,True,True,20,4.4,Eco-friendly
-0F0396,VerdeBus,Santiago de Compostela,2026-11-10,14:30,23:04,2026-11-10,514,66.06,0,20,True,True,28,4.4,Eco-friendly
-0F0397,VerdeBus,Santiago de Compostela,2026-11-16,16:00,00:34,2026-11-17,514,69.9,0,20,True,True,6,4.6,Eco-friendly
-0F0398,VerdeBus,Santiago de Compostela,2026-11-16,14:30,23:09,2026-11-16,519,69.0,1,20,True,True,25,4.8,Eco-friendly
-0F0399,VerdeBus,Santiago de Compostela,2026-11-17,16:15,01:47,2026-11-18,572,67.24,2,20,True,True,18,4.3,Eco-friendly
-0F0400,VerdeBus,Santiago de Compostela,2026-11-17,10:45,19:19,2026-11-17,514,67.21,0,20,True,True,18,4.4,Eco-friendly
-0F0401,VerdeBus,Cadiz,2026-11-09,14:30,00:07,2026-11-10,577,81.45,1,20,True,True,32,4.6,Eco-friendly
-0F0402,VerdeBus,Cadiz,2026-11-09,08:15,17:43,2026-11-09,568,72.31,1,20,True,True,1,4.9,Eco-friendly
-0F0403,VerdeBus,Cadiz,2026-11-10,12:30,22:13,2026-11-10,583,76.92,1,20,True,True,39,4.1,Eco-friendly
-0F0404,VerdeBus,Cadiz,2026-11-10,14:30,01:25,2026-11-11,655,73.33,2,20,True,True,21,4.2,Eco-friendly
-0F0405,VerdeBus,Cadiz,2026-11-16,14:30,01:25,2026-11-17,655,80.07,2,20,True,True,37,4.8,Eco-friendly
-0F0406,VerdeBus,Cadiz,2026-11-16,12:30,22:09,2026-11-16,579,82.94,1,20,True,True,26,4.4,Eco-friendly
-0F0407,VerdeBus,Cadiz,2026-11-17,16:15,03:20,2026-11-18,665,78.78,2,20,True,True,30,4.9,Eco-friendly
-0F0408,VerdeBus,Cadiz,2026-11-17,10:15,20:28,2026-11-17,613,74.74,1,20,True,True,5,4.8,Eco-friendly
-0F0409,NocheVia,Barcelona,2026-11-09,20:15,04:20,2026-11-10,485,53.04,1,15,False,False,10,4.1,Standard
-0F0410,NocheVia,Barcelona,2026-11-09,23:45,07:30,2026-11-10,465,61.28,0,15,False,False,31,4.0,Standard
-0F0411,NocheVia,Barcelona,2026-11-10,22:45,06:30,2026-11-11,465,61.03,0,15,False,False,35,4.0,Standard
-0F0412,NocheVia,Barcelona,2026-11-10,23:00,06:45,2026-11-11,465,52.99,0,15,False,False,23,3.6,Standard
-0F0413,NocheVia,Barcelona,2026-11-16,22:45,07:25,2026-11-17,520,55.02,1,15,False,False,1,3.5,Standard
-0F0414,NocheVia,Barcelona,2026-11-16,01:15,09:00,2026-11-16,465,54.4,0,15,False,False,30,4.2,Standard
-0F0415,NocheVia,Barcelona,2026-11-17,22:15,06:06,2026-11-18,471,55.61,1,15,False,False,19,3.8,Standard
-0F0416,NocheVia,Barcelona,2026-11-17,23:00,06:45,2026-11-18,465,60.72,0,15,False,False,10,3.7,Standard
-0F0417,NocheVia,Valencia,2026-11-09,04:15,09:04,2026-11-09,289,31.35,1,15,False,False,29,4.1,Standard
-0F0418,NocheVia,Valencia,2026-11-09,20:45,01:16,2026-11-10,271,30.24,1,15,False,False,8,3.4,Standard
-0F0419,NocheVia,Valencia,2026-11-10,04:15,08:37,2026-11-10,262,29.45,0,15,False,False,11,3.7,Standard
-0F0420,NocheVia,Valencia,2026-11-10,01:45,06:26,2026-11-10,281,33.38,1,15,False,False,12,3.6,Standard
-0F0421,NocheVia,Valencia,2026-11-16,23:45,04:07,2026-11-17,262,32.22,0,15,False,False,13,3.8,Standard
-0F0422,NocheVia,Valencia,2026-11-16,20:45,01:12,2026-11-17,267,32.79,1,15,False,False,14,3.7,Standard
-0F0423,NocheVia,Valencia,2026-11-17,23:00,03:22,2026-11-18,262,30.4,0,15,False,False,30,3.5,Standard
-0F0424,NocheVia,Valencia,2026-11-17,01:45,06:50,2026-11-17,305,30.8,1,15,False,False,26,4.0,Standard
-0F0425,NocheVia,Seville,2026-11-09,04:45,11:22,2026-11-09,397,49.36,0,15,False,False,20,4.3,Standard
-0F0426,NocheVia,Seville,2026-11-09,23:00,05:37,2026-11-10,397,44.05,0,15,False,False,20,3.5,Standard
-0F0427,NocheVia,Seville,2026-11-10,04:45,12:05,2026-11-10,440,44.25,1,15,False,False,25,3.8,Standard
-0F0428,NocheVia,Seville,2026-11-10,02:45,09:22,2026-11-10,397,44.52,0,15,False,False,19,3.5,Standard
-0F0429,NocheVia,Seville,2026-11-16,04:00,10:42,2026-11-16,402,47.55,1,15,False,False,13,4.2,Standard
-0F0430,NocheVia,Seville,2026-11-16,20:45,04:10,2026-11-17,445,47.62,1,15,False,False,29,3.9,Standard
-0F0431,NocheVia,Seville,2026-11-17,01:00,07:37,2026-11-17,397,43.24,0,15,False,False,15,3.9,Standard
-0F0432,NocheVia,Seville,2026-11-17,22:15,05:33,2026-11-18,438,50.01,1,15,False,False,32,3.9,Standard
-0F0433,NocheVia,Malaga,2026-11-09,01:00,08:54,2026-11-09,474,50.83,1,15,False,False,24,3.9,Standard
-0F0434,NocheVia,Malaga,2026-11-09,22:00,05:39,2026-11-10,459,47.56,1,15,False,False,28,3.5,Standard
-0F0435,NocheVia,Malaga,2026-11-10,23:30,06:30,2026-11-11,420,48.01,0,15,False,False,6,3.8,Standard
-0F0436,NocheVia,Malaga,2026-11-10,02:00,09:00,2026-11-10,420,53.53,0,15,False,False,23,4.3,Standard
-0F0437,NocheVia,Malaga,2026-11-16,22:15,05:15,2026-11-17,420,47.44,0,15,False,False,14,4.2,Standard
-0F0438,NocheVia,Malaga,2026-11-16,20:30,04:13,2026-11-17,463,50.79,1,15,False,False,21,4.4,Standard
-0F0439,NocheVia,Malaga,2026-11-17,04:30,11:30,2026-11-17,420,55.06,0,15,False,False,27,4.3,Standard
-0F0440,NocheVia,Malaga,2026-11-17,23:30,06:30,2026-11-18,420,54.09,0,15,False,False,16,3.5,Standard
-0F0441,NocheVia,Granada,2026-11-09,04:45,10:14,2026-11-09,329,38.39,1,15,False,False,18,4.0,Standard
-0F0442,NocheVia,Granada,2026-11-09,02:45,08:09,2026-11-09,324,38.81,1,15,False,False,6,3.8,Standard
-0F0443,NocheVia,Granada,2026-11-10,23:30,05:21,2026-11-11,351,36.49,1,15,False,False,1,4.3,Standard
-0F0444,NocheVia,Granada,2026-11-10,04:00,10:00,2026-11-10,360,39.04,1,15,False,False,23,4.3,Standard
-0F0445,NocheVia,Granada,2026-11-16,22:15,04:27,2026-11-17,372,35.62,1,15,False,False,18,3.7,Standard
-0F0446,NocheVia,Granada,2026-11-16,20:30,02:25,2026-11-17,355,38.39,1,15,False,False,32,4.2,Standard
-0F0447,NocheVia,Granada,2026-11-17,23:00,04:15,2026-11-18,315,39.95,0,15,False,False,30,3.4,Standard
-0F0448,NocheVia,Granada,2026-11-17,01:15,07:04,2026-11-17,349,34.03,1,15,False,False,28,3.6,Standard
-0F0449,NocheVia,Cordoba,2026-11-09,23:30,04:30,2026-11-10,300,39.12,0,15,False,False,18,3.5,Standard
-0F0450,NocheVia,Cordoba,2026-11-09,02:30,07:40,2026-11-09,310,35.08,1,15,False,False,11,3.5,Standard
-0F0451,NocheVia,Cordoba,2026-11-10,23:15,05:01,2026-11-11,346,33.06,1,15,False,False,7,3.4,Standard
-0F0452,NocheVia,Cordoba,2026-11-10,04:45,09:45,2026-11-10,300,36.67,0,15,False,False,34,4.1,Standard
-0F0453,NocheVia,Cordoba,2026-11-16,01:30,06:30,2026-11-16,300,35.44,0,15,False,False,9,3.9,Standard
-0F0454,NocheVia,Cordoba,2026-11-16,23:15,04:25,2026-11-17,310,37.66,1,15,False,False,7,3.5,Standard
-0F0455,NocheVia,Cordoba,2026-11-17,04:15,10:09,2026-11-17,354,38.26,1,15,False,False,9,4.0,Standard
-0F0456,NocheVia,Cordoba,2026-11-17,23:15,04:15,2026-11-18,300,36.46,0,15,False,False,11,3.8,Standard
-0F0457,NocheVia,Bilbao,2026-11-09,23:15,04:59,2026-11-10,344,37.34,1,15,False,False,14,3.5,Standard
-0F0458,NocheVia,Bilbao,2026-11-09,02:00,07:00,2026-11-09,300,33.29,0,15,False,False,25,3.8,Standard
-0F0459,NocheVia,Bilbao,2026-11-10,20:15,01:15,2026-11-11,300,37.04,0,15,False,False,16,4.0,Standard
-0F0460,NocheVia,Bilbao,2026-11-10,04:30,09:30,2026-11-10,300,38.5,0,15,False,False,20,3.6,Standard
-0F0461,NocheVia,Bilbao,2026-11-16,22:15,03:38,2026-11-17,323,37.05,1,15,False,False,16,3.9,Standard
-0F0462,NocheVia,Bilbao,2026-11-16,23:00,04:00,2026-11-17,300,36.99,0,15,False,False,5,3.9,Standard
-0F0463,NocheVia,Bilbao,2026-11-17,01:30,06:30,2026-11-17,300,38.6,0,15,False,False,27,3.8,Standard
-0F0464,NocheVia,Bilbao,2026-11-17,04:15,10:09,2026-11-17,354,32.93,1,15,False,False,5,3.4,Standard
-0F0465,NocheVia,San Sebastian,2026-11-09,02:00,08:29,2026-11-09,389,40.49,1,15,False,False,33,4.2,Standard
-0F0466,NocheVia,San Sebastian,2026-11-09,01:45,07:47,2026-11-09,362,43.49,1,15,False,False,35,4.0,Standard
-0F0467,NocheVia,San Sebastian,2026-11-10,04:30,10:22,2026-11-10,352,45.86,0,15,False,False,10,3.9,Standard
-0F0468,NocheVia,San Sebastian,2026-11-10,01:45,07:37,2026-11-10,352,43.98,0,15,False,False,16,3.5,Standard
-0F0469,NocheVia,San Sebastian,2026-11-16,01:00,07:36,2026-11-16,396,43.22,1,15,False,False,20,4.1,Standard
-0F0470,NocheVia,San Sebastian,2026-11-16,20:15,02:07,2026-11-17,352,44.06,0,15,False,False,1,3.6,Standard
-0F0471,NocheVia,San Sebastian,2026-11-17,04:30,10:22,2026-11-17,352,39.14,0,15,False,False,18,4.1,Standard
-0F0472,NocheVia,San Sebastian,2026-11-17,22:00,03:52,2026-11-18,352,44.9,0,15,False,False,18,3.9,Standard
-0F0473,NocheVia,Zaragoza,2026-11-09,04:00,08:34,2026-11-09,274,28.86,1,15,False,False,4,3.9,Standard
-0F0474,NocheVia,Zaragoza,2026-11-09,22:15,02:30,2026-11-10,255,27.39,1,15,False,False,7,4.3,Standard
-0F0475,NocheVia,Zaragoza,2026-11-10,23:15,03:15,2026-11-11,240,30.87,0,15,False,False,1,3.6,Standard
-0F0476,NocheVia,Zaragoza,2026-11-10,01:45,06:14,2026-11-10,269,31.22,1,15,False,False,12,4.3,Standard
-0F0477,NocheVia,Zaragoza,2026-11-16,01:45,05:45,2026-11-16,240,27.35,0,15,False,False,21,3.7,Standard
-0F0478,NocheVia,Zaragoza,2026-11-16,22:00,02:12,2026-11-17,252,28.81,1,15,False,False,4,3.6,Standard
-0F0479,NocheVia,Zaragoza,2026-11-17,22:45,02:45,2026-11-18,240,30.91,0,15,False,False,20,3.7,Standard
-0F0480,NocheVia,Zaragoza,2026-11-17,01:45,05:45,2026-11-17,240,27.08,0,15,False,False,20,4.1,Standard
-0F0481,NocheVia,Alicante,2026-11-09,02:30,08:39,2026-11-09,369,39.89,1,15,False,False,35,4.2,Standard
-0F0482,NocheVia,Alicante,2026-11-09,20:15,01:30,2026-11-10,315,41.07,0,15,False,False,2,3.6,Standard
-0F0483,NocheVia,Alicante,2026-11-10,04:30,09:45,2026-11-10,315,38.99,0,15,False,False,20,3.5,Standard
-0F0484,NocheVia,Alicante,2026-11-10,01:15,07:06,2026-11-10,351,41.29,1,15,False,False,10,4.1,Standard
-0F0485,NocheVia,Alicante,2026-11-16,01:15,07:19,2026-11-16,364,40.79,1,15,False,False,30,4.4,Standard
-0F0486,NocheVia,Alicante,2026-11-16,23:00,04:15,2026-11-17,315,35.03,0,15,False,False,26,3.5,Standard
-0F0487,NocheVia,Alicante,2026-11-17,22:45,04:00,2026-11-18,315,36.23,0,15,False,False,21,4.3,Standard
-0F0488,NocheVia,Alicante,2026-11-17,01:45,07:25,2026-11-17,340,37.44,1,15,False,False,15,3.5,Standard
-0F0489,NocheVia,Murcia,2026-11-09,02:00,07:00,2026-11-09,300,33.58,0,15,False,False,30,3.7,Standard
-0F0490,NocheVia,Murcia,2026-11-09,23:00,04:54,2026-11-10,354,33.89,1,15,False,False,20,3.9,Standard
-0F0491,NocheVia,Murcia,2026-11-10,01:15,07:12,2026-11-10,357,37.47,1,15,False,False,3,3.6,Standard
-0F0492,NocheVia,Murcia,2026-11-10,23:30,04:30,2026-11-11,300,37.52,0,15,False,False,23,3.8,Standard
-0F0493,NocheVia,Murcia,2026-11-16,01:30,06:30,2026-11-16,300,39.26,0,15,False,False,29,4.0,Standard
-0F0494,NocheVia,Murcia,2026-11-16,04:15,09:15,2026-11-16,300,33.13,0,15,False,False,9,3.5,Standard
-0F0495,NocheVia,Murcia,2026-11-17,01:15,06:15,2026-11-17,300,35.28,0,15,False,False,6,4.0,Standard
-0F0496,NocheVia,Murcia,2026-11-17,02:30,07:30,2026-11-17,300,39.58,0,15,False,False,13,4.3,Standard
-0F0497,NocheVia,Salamanca,2026-11-09,20:00,22:42,2026-11-09,162,16.35,1,15,False,False,30,3.5,Standard
-0F0498,NocheVia,Salamanca,2026-11-09,02:45,05:51,2026-11-09,186,16.31,1,15,False,False,28,3.6,Standard
-0F0499,NocheVia,Salamanca,2026-11-10,02:30,05:33,2026-11-10,183,19.38,1,15,False,False,3,4.0,Standard
-0F0500,NocheVia,Salamanca,2026-11-10,23:15,02:21,2026-11-11,186,17.68,1,15,False,False,31,3.5,Standard
-0F0501,NocheVia,Salamanca,2026-11-16,04:15,07:02,2026-11-16,167,18.51,1,15,False,False,34,3.6,Standard
-0F0502,NocheVia,Salamanca,2026-11-16,20:00,23:25,2026-11-16,205,18.77,1,15,False,False,31,3.9,Standard
-0F0503,NocheVia,Salamanca,2026-11-17,20:30,23:22,2026-11-17,172,16.85,1,15,False,False,21,4.0,Standard
-0F0504,NocheVia,Salamanca,2026-11-17,04:00,06:38,2026-11-17,158,19.11,1,15,False,False,31,3.9,Standard
-0F0505,NocheVia,Toledo,2026-11-09,22:15,23:07,2026-11-09,52,6.5,0,15,False,False,18,3.9,Standard
-0F0506,NocheVia,Toledo,2026-11-09,02:00,02:52,2026-11-09,52,6.74,0,15,False,False,25,3.8,Standard
-0F0507,NocheVia,Toledo,2026-11-10,02:15,04:03,2026-11-10,108,6.6,1,15,False,False,23,4.3,Standard
-0F0508,NocheVia,Toledo,2026-11-10,23:00,00:33,2026-11-11,93,6.38,1,15,False,False,13,4.2,Standard
-0F0509,NocheVia,Toledo,2026-11-16,20:30,21:22,2026-11-16,52,5.72,0,15,False,False,4,3.6,Standard
-0F0510,NocheVia,Toledo,2026-11-16,22:15,23:07,2026-11-16,52,6.27,0,15,False,False,22,4.3,Standard
-0F0511,NocheVia,Toledo,2026-11-17,02:30,03:22,2026-11-17,52,6.73,0,15,False,False,21,3.5,Standard
-0F0512,NocheVia,Toledo,2026-11-17,23:15,00:07,2026-11-18,52,5.81,0,15,False,False,34,4.3,Standard
-0F0513,NocheVia,Santiago de Compostela,2026-11-09,01:45,09:15,2026-11-09,450,51.86,0,15,False,False,9,4.4,Standard
-0F0514,NocheVia,Santiago de Compostela,2026-11-09,04:45,13:01,2026-11-09,496,52.03,1,15,False,False,23,3.6,Standard
-0F0515,NocheVia,Santiago de Compostela,2026-11-10,22:45,07:06,2026-11-11,501,56.04,1,15,False,False,9,3.6,Standard
-0F0516,NocheVia,Santiago de Compostela,2026-11-10,02:00,10:29,2026-11-10,509,59.34,1,15,False,False,3,3.6,Standard
-0F0517,NocheVia,Santiago de Compostela,2026-11-16,04:15,11:45,2026-11-16,450,50.12,0,15,False,False,5,3.6,Standard
-0F0518,NocheVia,Santiago de Compostela,2026-11-16,22:30,06:00,2026-11-17,450,58.16,0,15,False,False,6,4.2,Standard
-0F0519,NocheVia,Santiago de Compostela,2026-11-17,23:45,07:15,2026-11-18,450,50.86,0,15,False,False,5,3.8,Standard
-0F0520,NocheVia,Santiago de Compostela,2026-11-17,04:00,11:30,2026-11-17,450,52.77,0,15,False,False,27,4.4,Standard
-0F0521,NocheVia,Cadiz,2026-11-09,20:45,05:31,2026-11-10,526,57.04,1,15,False,False,31,4.2,Standard
-0F0522,NocheVia,Cadiz,2026-11-09,23:15,07:22,2026-11-10,487,53.51,0,15,False,False,3,3.7,Standard
-0F0523,NocheVia,Cadiz,2026-11-10,04:00,12:07,2026-11-10,487,54.64,0,15,False,False,25,3.6,Standard
-0F0524,NocheVia,Cadiz,2026-11-10,23:00,07:07,2026-11-11,487,59.6,0,15,False,False,31,4.1,Standard
-0F0525,NocheVia,Cadiz,2026-11-16,20:45,04:52,2026-11-17,487,53.83,0,15,False,False,14,4.4,Standard
-0F0526,NocheVia,Cadiz,2026-11-16,02:45,11:39,2026-11-16,534,55.94,1,15,False,False,16,3.5,Standard
-0F0527,NocheVia,Cadiz,2026-11-17,20:45,04:52,2026-11-18,487,56.87,0,15,False,False,28,3.5,Standard
-0F0528,NocheVia,Cadiz,2026-11-17,22:45,06:52,2026-11-18,487,52.95,0,15,False,False,11,4.0,Standard
+0F0001,SolRuta,Barcelona,2026-11-27,08:30,20:05,2026-11-27,695,28.77,1,20,True,True,7,3.7,Standard
+0F0002,SolRuta,Barcelona,2026-11-27,16:00,04:52,2026-11-28,772,28.1,3,20,True,True,6,3.2,Standard
+0F0003,SolRuta,Barcelona,2026-11-28,16:15,05:49,2026-11-29,814,32.25,3,20,True,True,27,3.2,Standard
+0F0004,SolRuta,Barcelona,2026-11-28,08:30,20:39,2026-11-28,729,32.9,1,20,True,True,45,3.4,Standard
+0F0005,SolRuta,Valencia,2026-11-27,12:15,18:58,2026-11-27,403,16.07,2,20,True,True,7,3.4,Standard
+0F0006,SolRuta,Valencia,2026-11-27,10:30,17:54,2026-11-27,444,18.57,3,20,True,True,47,3.5,Standard
+0F0007,SolRuta,Valencia,2026-11-28,08:00,15:30,2026-11-28,450,18.65,3,20,True,True,40,3.9,Standard
+0F0008,SolRuta,Valencia,2026-11-28,14:30,21:42,2026-11-28,432,18.22,3,20,True,True,3,3.7,Standard
+0F0009,SolRuta,Seville,2026-11-27,12:15,22:22,2026-11-27,607,25.32,1,20,True,True,41,3.8,Standard
+0F0010,SolRuta,Seville,2026-11-27,08:15,18:47,2026-11-27,632,24.96,2,20,True,True,18,3.7,Standard
+0F0011,SolRuta,Seville,2026-11-28,08:15,18:27,2026-11-28,612,25.86,1,20,True,True,41,3.7,Standard
+0F0012,SolRuta,Seville,2026-11-28,10:15,21:08,2026-11-28,653,28.32,3,20,True,True,50,3.1,Standard
+0F0013,SolRuta,Malaga,2026-11-27,08:45,19:13,2026-11-27,628,26.38,2,20,True,True,37,3.9,Standard
+0F0014,SolRuta,Malaga,2026-11-27,12:30,23:26,2026-11-27,656,28.0,1,20,True,True,42,3.5,Standard
+0F0015,SolRuta,Malaga,2026-11-28,12:15,00:25,2026-11-29,730,28.22,3,20,True,True,48,3.6,Standard
+0F0016,SolRuta,Malaga,2026-11-28,10:45,21:33,2026-11-28,648,30.79,2,20,True,True,9,3.5,Standard
+0F0017,SolRuta,Granada,2026-11-27,08:00,16:23,2026-11-27,503,19.57,1,20,True,True,44,3.4,Standard
+0F0018,SolRuta,Granada,2026-11-27,16:00,00:36,2026-11-28,516,21.4,2,20,True,True,30,3.5,Standard
+0F0019,SolRuta,Granada,2026-11-28,16:00,01:35,2026-11-29,575,22.05,3,20,True,True,50,3.6,Standard
+0F0020,SolRuta,Granada,2026-11-28,08:00,16:42,2026-11-28,522,19.56,2,20,True,True,1,4.0,Standard
+0F0021,SolRuta,Cordoba,2026-11-27,12:00,20:28,2026-11-27,508,21.37,3,20,True,True,33,3.6,Standard
+0F0022,SolRuta,Cordoba,2026-11-27,10:15,19:17,2026-11-27,542,18.65,2,20,True,True,50,3.9,Standard
+0F0023,SolRuta,Cordoba,2026-11-28,08:45,16:13,2026-11-28,448,21.72,1,20,True,True,20,3.2,Standard
+0F0024,SolRuta,Cordoba,2026-11-28,12:15,20:01,2026-11-28,466,18.34,3,20,True,True,32,3.8,Standard
+0F0025,SolRuta,Bilbao,2026-11-27,16:15,01:16,2026-11-28,541,21.79,3,20,True,True,11,3.3,Standard
+0F0026,SolRuta,Bilbao,2026-11-27,10:45,18:40,2026-11-27,475,21.02,1,20,True,True,45,3.2,Standard
+0F0027,SolRuta,Bilbao,2026-11-28,12:30,21:02,2026-11-28,512,19.81,2,20,True,True,16,3.2,Standard
+0F0028,SolRuta,Bilbao,2026-11-28,14:30,22:28,2026-11-28,478,20.22,1,20,True,True,38,3.2,Standard
+0F0029,SolRuta,San Sebastian,2026-11-27,08:15,16:54,2026-11-27,519,25.19,1,20,True,True,5,3.5,Standard
+0F0030,SolRuta,San Sebastian,2026-11-27,16:30,02:50,2026-11-28,620,22.16,3,20,True,True,9,3.7,Standard
+0F0031,SolRuta,San Sebastian,2026-11-28,16:15,02:39,2026-11-29,624,23.06,2,20,True,True,7,3.1,Standard
+0F0032,SolRuta,San Sebastian,2026-11-28,14:45,00:21,2026-11-29,576,23.08,2,20,True,True,47,3.1,Standard
+0F0033,SolRuta,Zaragoza,2026-11-27,08:45,15:52,2026-11-27,427,16.96,3,20,True,True,7,3.2,Standard
+0F0034,SolRuta,Zaragoza,2026-11-27,16:15,23:43,2026-11-27,448,14.85,3,20,True,True,12,3.3,Standard
+0F0035,SolRuta,Zaragoza,2026-11-28,10:45,17:07,2026-11-28,382,14.56,3,20,True,True,35,3.8,Standard
+0F0036,SolRuta,Zaragoza,2026-11-28,08:00,14:04,2026-11-28,364,15.7,1,20,True,True,31,3.2,Standard
+0F0037,SolRuta,Alicante,2026-11-27,14:15,22:03,2026-11-27,468,23.04,2,20,True,True,17,3.9,Standard
+0F0038,SolRuta,Alicante,2026-11-27,08:45,17:27,2026-11-27,522,21.83,2,20,True,True,47,4.0,Standard
+0F0039,SolRuta,Alicante,2026-11-28,16:15,00:16,2026-11-29,481,19.81,1,20,True,True,4,3.6,Standard
+0F0040,SolRuta,Alicante,2026-11-28,14:00,22:53,2026-11-28,533,19.14,3,20,True,True,38,3.5,Standard
+0F0041,SolRuta,Murcia,2026-11-27,16:00,23:46,2026-11-27,466,21.41,3,20,True,True,5,3.6,Standard
+0F0042,SolRuta,Murcia,2026-11-27,10:15,17:55,2026-11-27,460,21.77,2,20,True,True,37,3.2,Standard
+0F0043,SolRuta,Murcia,2026-11-28,16:00,00:50,2026-11-29,530,20.33,2,20,True,True,34,3.3,Standard
+0F0044,SolRuta,Murcia,2026-11-28,08:30,16:33,2026-11-28,483,20.86,1,20,True,True,16,3.3,Standard
+0F0045,SolRuta,Salamanca,2026-11-27,10:45,14:23,2026-11-27,218,10.86,0,20,True,True,5,3.0,Standard
+0F0046,SolRuta,Salamanca,2026-11-27,12:00,15:38,2026-11-27,218,10.08,0,20,True,True,33,3.3,Standard
+0F0047,SolRuta,Salamanca,2026-11-28,12:15,15:53,2026-11-28,218,9.57,0,20,True,True,29,3.8,Standard
+0F0048,SolRuta,Salamanca,2026-11-28,08:30,12:08,2026-11-28,218,10.97,0,20,True,True,42,3.5,Standard
+0F0049,SolRuta,Toledo,2026-11-27,16:00,17:16,2026-11-27,76,3.34,0,20,True,True,7,3.7,Standard
+0F0050,SolRuta,Toledo,2026-11-27,12:15,13:31,2026-11-27,76,3.35,0,20,True,True,14,3.7,Standard
+0F0051,SolRuta,Toledo,2026-11-28,10:45,12:01,2026-11-28,76,3.78,0,20,True,True,4,3.1,Standard
+0F0052,SolRuta,Toledo,2026-11-28,12:45,14:01,2026-11-28,76,3.34,0,20,True,True,1,3.3,Standard
+0F0053,SolRuta,Santiago de Compostela,2026-11-27,10:15,22:48,2026-11-27,753,30.31,3,20,True,True,28,3.6,Standard
+0F0054,SolRuta,Santiago de Compostela,2026-11-27,12:00,23:43,2026-11-27,703,32.42,1,20,True,True,35,3.0,Standard
+0F0055,SolRuta,Santiago de Compostela,2026-11-28,12:45,23:46,2026-11-28,661,28.85,1,20,True,True,3,3.9,Standard
+0F0056,SolRuta,Santiago de Compostela,2026-11-28,10:15,22:09,2026-11-28,714,31.0,3,20,True,True,23,3.8,Standard
+0F0057,SolRuta,Cadiz,2026-11-27,14:15,03:00,2026-11-28,765,34.52,1,20,True,True,27,3.0,Standard
+0F0058,SolRuta,Cadiz,2026-11-27,10:30,00:11,2026-11-28,821,33.6,2,20,True,True,48,3.8,Standard
+0F0059,SolRuta,Cadiz,2026-11-28,12:00,01:49,2026-11-29,829,29.5,2,20,True,True,31,3.2,Standard
+0F0060,SolRuta,Cadiz,2026-11-28,10:45,23:22,2026-11-28,757,34.58,2,20,True,True,15,3.2,Standard
+0F0061,Camino Express,Barcelona,2026-11-27,13:30,21:46,2026-11-27,496,66.52,0,23,True,False,18,4.1,Standard
+0F0062,Camino Express,Barcelona,2026-11-27,21:45,06:01,2026-11-28,496,67.97,0,23,True,False,35,4.0,Standard
+0F0063,Camino Express,Barcelona,2026-11-28,07:30,15:46,2026-11-28,496,63.0,0,23,True,False,17,3.7,Standard
+0F0064,Camino Express,Barcelona,2026-11-28,21:45,06:01,2026-11-29,496,64.83,0,23,True,False,21,4.1,Standard
+0F0065,Camino Express,Valencia,2026-11-27,09:15,13:55,2026-11-27,280,31.81,0,23,True,False,28,3.7,Standard
+0F0066,Camino Express,Valencia,2026-11-27,13:15,17:55,2026-11-27,280,34.52,0,23,True,False,22,4.3,Standard
+0F0067,Camino Express,Valencia,2026-11-28,09:30,14:10,2026-11-28,280,33.66,0,23,True,False,27,4.0,Standard
+0F0068,Camino Express,Valencia,2026-11-28,17:30,22:10,2026-11-28,280,32.39,0,23,True,False,27,4.4,Standard
+0F0069,Camino Express,Seville,2026-11-27,19:15,02:19,2026-11-28,424,53.73,0,23,True,False,26,4.2,Standard
+0F0070,Camino Express,Seville,2026-11-27,17:00,00:04,2026-11-28,424,50.74,0,23,True,False,28,4.5,Standard
+0F0071,Camino Express,Seville,2026-11-28,17:45,00:49,2026-11-29,424,54.86,0,23,True,False,33,4.2,Standard
+0F0072,Camino Express,Seville,2026-11-28,13:15,20:19,2026-11-28,424,48.6,0,23,True,False,33,4.4,Standard
+0F0073,Camino Express,Malaga,2026-11-27,17:15,00:43,2026-11-28,448,53.88,0,23,True,False,13,3.8,Standard
+0F0074,Camino Express,Malaga,2026-11-27,07:00,14:28,2026-11-27,448,61.42,0,23,True,False,40,4.5,Standard
+0F0075,Camino Express,Malaga,2026-11-28,09:45,17:13,2026-11-28,448,56.85,0,23,True,False,25,4.2,Standard
+0F0076,Camino Express,Malaga,2026-11-28,13:15,20:43,2026-11-28,448,57.75,0,23,True,False,1,4.6,Standard
+0F0077,Camino Express,Granada,2026-11-27,09:45,15:21,2026-11-27,336,39.28,0,23,True,False,34,4.2,Standard
+0F0078,Camino Express,Granada,2026-11-27,19:15,00:51,2026-11-28,336,38.82,0,23,True,False,9,4.5,Standard
+0F0079,Camino Express,Granada,2026-11-28,17:45,23:21,2026-11-28,336,44.65,0,23,True,False,33,4.1,Standard
+0F0080,Camino Express,Granada,2026-11-28,19:45,01:21,2026-11-29,336,44.05,0,23,True,False,31,4.2,Standard
+0F0081,Camino Express,Cordoba,2026-11-27,13:30,18:50,2026-11-27,320,42.22,0,23,True,False,32,4.3,Standard
+0F0082,Camino Express,Cordoba,2026-11-27,19:30,00:50,2026-11-28,320,36.62,0,23,True,False,19,3.9,Standard
+0F0083,Camino Express,Cordoba,2026-11-28,17:00,22:20,2026-11-28,320,37.21,0,23,True,False,25,4.4,Standard
+0F0084,Camino Express,Cordoba,2026-11-28,11:15,16:35,2026-11-28,320,39.32,0,23,True,False,22,4.2,Standard
+0F0085,Camino Express,Bilbao,2026-11-27,19:15,00:35,2026-11-28,320,39.36,0,23,True,False,38,4.6,Standard
+0F0086,Camino Express,Bilbao,2026-11-27,07:00,12:20,2026-11-27,320,43.05,0,23,True,False,37,4.1,Standard
+0F0087,Camino Express,Bilbao,2026-11-28,07:30,12:50,2026-11-28,320,39.12,0,23,True,False,27,4.2,Standard
+0F0088,Camino Express,Bilbao,2026-11-28,11:15,16:35,2026-11-28,320,37.76,0,23,True,False,28,4.2,Standard
+0F0089,Camino Express,Zaragoza,2026-11-27,19:45,00:01,2026-11-28,256,29.86,0,23,True,False,30,4.6,Standard
+0F0090,Camino Express,Zaragoza,2026-11-27,11:00,15:16,2026-11-27,256,32.59,0,23,True,False,2,3.8,Standard
+0F0091,Camino Express,Zaragoza,2026-11-28,19:45,00:01,2026-11-29,256,29.12,0,23,True,False,25,4.0,Standard
+0F0092,Camino Express,Zaragoza,2026-11-28,09:45,14:01,2026-11-28,256,30.96,0,23,True,False,25,4.0,Standard
+0F0093,Camino Express,Alicante,2026-11-27,19:00,00:36,2026-11-28,336,37.96,0,23,True,False,35,3.8,Standard
+0F0094,Camino Express,Alicante,2026-11-27,11:30,17:06,2026-11-27,336,43.26,0,23,True,False,3,4.5,Standard
+0F0095,Camino Express,Alicante,2026-11-28,13:00,18:36,2026-11-28,336,39.08,0,23,True,False,9,4.2,Standard
+0F0096,Camino Express,Alicante,2026-11-28,09:00,14:36,2026-11-28,336,45.76,0,23,True,False,30,4.4,Standard
+0F0097,Camino Express,Murcia,2026-11-27,17:00,22:20,2026-11-27,320,42.55,0,23,True,False,20,3.8,Standard
+0F0098,Camino Express,Murcia,2026-11-27,09:00,14:20,2026-11-27,320,40.61,0,23,True,False,25,4.1,Standard
+0F0099,Camino Express,Murcia,2026-11-28,13:15,18:35,2026-11-28,320,41.58,0,23,True,False,20,4.6,Standard
+0F0100,Camino Express,Murcia,2026-11-28,07:00,12:20,2026-11-28,320,43.87,0,23,True,False,3,4.0,Standard
+0F0101,CostaLink,Barcelona,2026-11-27,15:00,01:20,2026-11-28,620,44.68,0,18,False,True,1,4.1,Standard
+0F0102,CostaLink,Barcelona,2026-11-27,12:45,23:05,2026-11-27,620,42.82,0,18,False,True,24,3.9,Standard
+0F0103,CostaLink,Barcelona,2026-11-28,15:45,02:05,2026-11-29,620,45.43,0,18,False,True,42,3.6,Standard
+0F0104,CostaLink,Barcelona,2026-11-28,09:45,20:05,2026-11-28,620,42.84,0,18,False,True,38,3.6,Standard
+0F0105,CostaLink,Valencia,2026-11-27,09:30,15:20,2026-11-27,350,23.24,0,18,False,True,30,3.9,Standard
+0F0106,CostaLink,Valencia,2026-11-27,06:45,12:35,2026-11-27,350,22.19,0,18,False,True,21,3.5,Standard
+0F0107,CostaLink,Valencia,2026-11-28,09:30,15:20,2026-11-28,350,23.42,0,18,False,True,39,4.0,Standard
+0F0108,CostaLink,Valencia,2026-11-28,12:30,18:20,2026-11-28,350,22.1,0,18,False,True,13,3.4,Standard
+0F0109,CostaLink,Malaga,2026-11-27,15:15,00:35,2026-11-28,560,39.01,0,18,False,True,32,3.7,Standard
+0F0110,CostaLink,Malaga,2026-11-27,18:00,03:20,2026-11-28,560,37.59,0,18,False,True,26,4.0,Standard
+0F0111,CostaLink,Malaga,2026-11-28,12:30,21:50,2026-11-28,560,39.62,0,18,False,True,23,3.7,Standard
+0F0112,CostaLink,Malaga,2026-11-28,18:30,03:50,2026-11-29,560,40.79,0,18,False,True,18,3.6,Standard
+0F0113,CostaLink,Granada,2026-11-27,21:30,05:22,2026-11-28,472,29.61,1,18,False,True,45,3.5,Standard
+0F0114,CostaLink,Granada,2026-11-27,09:15,16:59,2026-11-27,464,30.72,2,18,False,True,34,3.9,Standard
+0F0115,CostaLink,Granada,2026-11-28,06:30,13:58,2026-11-28,448,27.52,1,18,False,True,1,4.0,Standard
+0F0116,CostaLink,Granada,2026-11-28,09:15,16:29,2026-11-28,434,32.19,2,18,False,True,36,3.6,Standard
+0F0117,CostaLink,Bilbao,2026-11-27,21:00,03:40,2026-11-28,400,25.27,0,18,False,True,19,3.8,Standard
+0F0118,CostaLink,Bilbao,2026-11-27,15:45,22:25,2026-11-27,400,26.23,0,18,False,True,4,3.6,Standard
+0F0119,CostaLink,Bilbao,2026-11-28,15:00,21:40,2026-11-28,400,27.95,0,18,False,True,37,3.9,Standard
+0F0120,CostaLink,Bilbao,2026-11-28,06:00,12:40,2026-11-28,400,26.04,0,18,False,True,37,4.2,Standard
+0F0121,CostaLink,San Sebastian,2026-11-27,06:00,13:50,2026-11-27,470,34.64,0,18,False,True,39,3.9,Standard
+0F0122,CostaLink,San Sebastian,2026-11-27,09:15,17:05,2026-11-27,470,33.05,0,18,False,True,29,4.2,Standard
+0F0123,CostaLink,San Sebastian,2026-11-28,12:45,20:35,2026-11-28,470,33.35,0,18,False,True,4,3.9,Standard
+0F0124,CostaLink,San Sebastian,2026-11-28,18:00,01:50,2026-11-29,470,30.98,0,18,False,True,14,3.6,Standard
+0F0125,CostaLink,Zaragoza,2026-11-27,09:00,14:25,2026-11-27,325,21.99,1,18,False,True,45,3.9,Standard
+0F0126,CostaLink,Zaragoza,2026-11-27,21:30,03:09,2026-11-28,339,21.45,1,18,False,True,19,4.0,Standard
+0F0127,CostaLink,Zaragoza,2026-11-28,15:15,22:25,2026-11-28,430,23.7,2,18,False,True,38,4.0,Standard
+0F0128,CostaLink,Zaragoza,2026-11-28,06:15,11:59,2026-11-28,344,22.6,2,18,False,True,42,3.4,Standard
+0F0129,CostaLink,Alicante,2026-11-27,12:00,19:00,2026-11-27,420,27.44,0,18,False,True,20,3.9,Standard
+0F0130,CostaLink,Alicante,2026-11-27,09:30,16:30,2026-11-27,420,27.19,0,18,False,True,45,3.6,Standard
+0F0131,CostaLink,Alicante,2026-11-28,15:45,22:45,2026-11-28,420,26.93,0,18,False,True,3,4.2,Standard
+0F0132,CostaLink,Alicante,2026-11-28,12:30,19:30,2026-11-28,420,27.93,0,18,False,True,6,3.5,Standard
+0F0133,CostaLink,Santiago de Compostela,2026-11-27,21:00,07:35,2026-11-28,635,42.16,1,18,False,True,29,4.2,Standard
+0F0134,CostaLink,Santiago de Compostela,2026-11-27,12:15,23:45,2026-11-27,690,44.64,2,18,False,True,6,3.8,Standard
+0F0135,CostaLink,Santiago de Compostela,2026-11-28,15:30,02:29,2026-11-29,659,39.15,1,18,False,True,27,4.0,Standard
+0F0136,CostaLink,Santiago de Compostela,2026-11-28,12:30,00:24,2026-11-29,714,44.19,2,18,False,True,3,3.8,Standard
+0F0137,CostaLink,Cadiz,2026-11-27,12:30,23:20,2026-11-27,650,49.78,0,18,False,True,26,4.2,Standard
+0F0138,CostaLink,Cadiz,2026-11-27,21:00,07:50,2026-11-28,650,48.86,0,18,False,True,30,3.7,Standard
+0F0139,CostaLink,Cadiz,2026-11-28,09:30,20:20,2026-11-28,650,47.83,0,18,False,True,41,3.7,Standard
+0F0140,CostaLink,Cadiz,2026-11-28,18:00,04:50,2026-11-29,650,43.38,0,18,False,True,9,4.2,Standard
+0F0141,VerdeBus,Barcelona,2026-11-27,14:00,22:51,2026-11-27,531,76.02,0,20,True,True,16,4.7,Eco-friendly
+0F0142,VerdeBus,Barcelona,2026-11-27,16:30,01:31,2026-11-28,541,75.18,2,20,True,True,6,4.2,Eco-friendly
+0F0143,VerdeBus,Barcelona,2026-11-28,08:00,18:47,2026-11-28,647,69.25,2,20,True,True,19,4.5,Eco-friendly
+0F0144,VerdeBus,Barcelona,2026-11-28,14:30,00:19,2026-11-29,589,74.14,1,20,True,True,31,4.2,Eco-friendly
+0F0145,VerdeBus,Valencia,2026-11-27,16:45,21:45,2026-11-27,300,42.07,0,20,True,True,9,4.9,Eco-friendly
+0F0146,VerdeBus,Valencia,2026-11-27,10:30,15:56,2026-11-27,326,45.65,1,20,True,True,33,4.3,Eco-friendly
+0F0147,VerdeBus,Valencia,2026-11-28,08:30,14:54,2026-11-28,384,46.19,2,20,True,True,32,4.9,Eco-friendly
+0F0148,VerdeBus,Valencia,2026-11-28,12:45,18:55,2026-11-28,370,40.7,2,20,True,True,36,4.8,Eco-friendly
+0F0149,VerdeBus,Seville,2026-11-27,14:30,22:04,2026-11-27,454,60.28,0,20,True,True,25,4.2,Eco-friendly
+0F0150,VerdeBus,Seville,2026-11-27,16:45,00:19,2026-11-28,454,66.71,0,20,True,True,25,4.4,Eco-friendly
+0F0151,VerdeBus,Seville,2026-11-28,10:00,17:34,2026-11-28,454,69.52,0,20,True,True,22,4.9,Eco-friendly
+0F0152,VerdeBus,Seville,2026-11-28,14:45,22:19,2026-11-28,454,68.82,0,20,True,True,1,4.7,Eco-friendly
+0F0153,VerdeBus,Malaga,2026-11-27,14:00,22:55,2026-11-27,535,73.51,1,20,True,True,22,4.6,Eco-friendly
+0F0154,VerdeBus,Malaga,2026-11-27,10:45,19:05,2026-11-27,500,71.93,2,20,True,True,35,4.4,Eco-friendly
+0F0155,VerdeBus,Malaga,2026-11-28,12:00,20:18,2026-11-28,498,63.64,2,20,True,True,19,5.0,Eco-friendly
+0F0156,VerdeBus,Malaga,2026-11-28,14:00,22:11,2026-11-28,491,70.7,1,20,True,True,7,4.4,Eco-friendly
+0F0157,VerdeBus,Granada,2026-11-27,12:00,18:55,2026-11-27,415,45.93,1,20,True,True,23,4.4,Eco-friendly
+0F0158,VerdeBus,Granada,2026-11-27,08:15,14:15,2026-11-27,360,49.51,0,20,True,True,12,4.2,Eco-friendly
+0F0159,VerdeBus,Granada,2026-11-28,08:15,14:57,2026-11-28,402,46.8,1,20,True,True,30,4.6,Eco-friendly
+0F0160,VerdeBus,Granada,2026-11-28,14:45,21:32,2026-11-28,407,45.45,1,20,True,True,30,4.9,Eco-friendly
+0F0161,VerdeBus,Cordoba,2026-11-27,16:00,22:09,2026-11-27,369,52.68,1,20,True,True,20,4.6,Eco-friendly
+0F0162,VerdeBus,Cordoba,2026-11-27,10:45,17:09,2026-11-27,384,47.59,2,20,True,True,20,4.2,Eco-friendly
+0F0163,VerdeBus,Cordoba,2026-11-28,14:00,19:42,2026-11-28,342,48.69,0,20,True,True,37,4.3,Eco-friendly
+0F0164,VerdeBus,Cordoba,2026-11-28,16:30,22:12,2026-11-28,342,49.52,0,20,True,True,18,4.0,Eco-friendly
+0F0165,VerdeBus,Bilbao,2026-11-27,08:30,14:12,2026-11-27,342,50.9,0,20,True,True,15,4.6,Eco-friendly
+0F0166,VerdeBus,Bilbao,2026-11-27,14:30,21:58,2026-11-27,448,50.12,2,20,True,True,9,4.6,Eco-friendly
+0F0167,VerdeBus,Bilbao,2026-11-28,08:45,14:27,2026-11-28,342,46.7,0,20,True,True,9,4.1,Eco-friendly
+0F0168,VerdeBus,Bilbao,2026-11-28,12:30,19:04,2026-11-28,394,47.19,1,20,True,True,13,4.1,Eco-friendly
+0F0169,VerdeBus,San Sebastian,2026-11-27,16:30,23:12,2026-11-27,402,61.07,0,20,True,True,31,5.0,Eco-friendly
+0F0170,VerdeBus,San Sebastian,2026-11-27,12:30,21:12,2026-11-27,522,54.58,2,20,True,True,8,4.5,Eco-friendly
+0F0171,VerdeBus,San Sebastian,2026-11-28,08:15,16:39,2026-11-28,504,58.37,2,20,True,True,26,5.0,Eco-friendly
+0F0172,VerdeBus,San Sebastian,2026-11-28,10:30,17:12,2026-11-28,402,55.21,0,20,True,True,17,4.5,Eco-friendly
+0F0173,VerdeBus,Zaragoza,2026-11-27,14:30,20:02,2026-11-27,332,40.88,2,20,True,True,24,4.1,Eco-friendly
+0F0174,VerdeBus,Zaragoza,2026-11-27,12:15,16:55,2026-11-27,280,39.32,1,20,True,True,36,4.3,Eco-friendly
+0F0175,VerdeBus,Zaragoza,2026-11-28,16:00,22:28,2026-11-28,388,38.13,2,20,True,True,20,4.6,Eco-friendly
+0F0176,VerdeBus,Zaragoza,2026-11-28,10:00,14:34,2026-11-28,274,41.83,0,20,True,True,20,5.0,Eco-friendly
+0F0177,VerdeBus,Alicante,2026-11-27,08:15,14:41,2026-11-27,386,49.28,2,20,True,True,24,4.7,Eco-friendly
+0F0178,VerdeBus,Alicante,2026-11-27,16:45,00:29,2026-11-28,464,52.68,2,20,True,True,27,4.7,Eco-friendly
+0F0179,VerdeBus,Alicante,2026-11-28,14:30,20:30,2026-11-28,360,49.09,0,20,True,True,29,4.4,Eco-friendly
+0F0180,VerdeBus,Alicante,2026-11-28,16:15,22:26,2026-11-28,371,55.25,1,20,True,True,24,4.5,Eco-friendly
+0F0181,VerdeBus,Murcia,2026-11-27,12:45,18:44,2026-11-27,359,52.49,1,20,True,True,30,4.1,Eco-friendly
+0F0182,VerdeBus,Murcia,2026-11-27,08:15,15:27,2026-11-27,432,48.93,2,20,True,True,2,4.1,Eco-friendly
+0F0183,VerdeBus,Murcia,2026-11-28,12:15,18:33,2026-11-28,378,43.86,2,20,True,True,36,4.2,Eco-friendly
+0F0184,VerdeBus,Murcia,2026-11-28,10:15,15:57,2026-11-28,342,50.63,0,20,True,True,39,4.0,Eco-friendly
+0F0185,VerdeBus,Salamanca,2026-11-27,10:30,13:21,2026-11-27,171,24.77,0,20,True,True,2,4.1,Eco-friendly
+0F0186,VerdeBus,Salamanca,2026-11-27,16:30,19:21,2026-11-27,171,23.15,0,20,True,True,12,4.3,Eco-friendly
+0F0187,VerdeBus,Salamanca,2026-11-28,10:00,13:09,2026-11-28,189,23.89,2,20,True,True,24,4.5,Eco-friendly
+0F0188,VerdeBus,Salamanca,2026-11-28,14:00,17:28,2026-11-28,208,22.66,1,20,True,True,40,4.0,Eco-friendly
+0F0189,VerdeBus,Toledo,2026-11-27,16:45,17:57,2026-11-27,72,7.66,2,20,True,True,31,4.8,Eco-friendly
+0F0190,VerdeBus,Toledo,2026-11-27,12:45,14:07,2026-11-27,82,8.38,2,20,True,True,29,4.1,Eco-friendly
+0F0191,VerdeBus,Toledo,2026-11-28,08:15,09:15,2026-11-28,60,8.02,0,20,True,True,38,4.5,Eco-friendly
+0F0192,VerdeBus,Toledo,2026-11-28,12:30,14:13,2026-11-28,103,8.45,1,20,True,True,30,4.5,Eco-friendly
+0F0193,VerdeBus,Santiago de Compostela,2026-11-27,14:00,00:06,2026-11-28,606,77.44,2,20,True,True,36,4.7,Eco-friendly
+0F0194,VerdeBus,Santiago de Compostela,2026-11-27,08:15,17:22,2026-11-27,547,77.59,1,20,True,True,27,4.3,Eco-friendly
+0F0195,VerdeBus,Santiago de Compostela,2026-11-28,14:45,23:41,2026-11-28,536,69.3,2,20,True,True,21,4.7,Eco-friendly
+0F0196,VerdeBus,Santiago de Compostela,2026-11-28,16:30,01:04,2026-11-29,514,78.09,0,20,True,True,5,4.1,Eco-friendly
+0F0197,VerdeBus,Cadiz,2026-11-27,08:45,18:02,2026-11-27,557,81.73,0,20,True,True,9,4.6,Eco-friendly
+0F0198,VerdeBus,Cadiz,2026-11-27,16:30,02:11,2026-11-28,581,76.61,2,20,True,True,28,4.9,Eco-friendly
+0F0199,VerdeBus,Cadiz,2026-11-28,08:30,17:58,2026-11-28,568,79.22,1,20,True,True,14,4.2,Eco-friendly
+0F0200,VerdeBus,Cadiz,2026-11-28,12:45,22:02,2026-11-28,557,71.89,0,20,True,True,36,4.4,Eco-friendly
+0F0201,NocheVia,Barcelona,2026-11-27,04:15,12:59,2026-11-27,524,56.48,1,15,True,False,2,4.0,Standard
+0F0202,NocheVia,Barcelona,2026-11-27,22:30,06:15,2026-11-28,465,53.27,0,15,True,False,20,4.3,Standard
+0F0203,NocheVia,Barcelona,2026-11-28,04:15,12:00,2026-11-28,465,57.56,0,15,True,False,5,3.5,Standard
+0F0204,NocheVia,Barcelona,2026-11-28,01:00,08:45,2026-11-28,465,56.14,0,15,True,False,25,3.8,Standard
+0F0205,NocheVia,Valencia,2026-11-27,04:30,09:43,2026-11-27,313,30.39,1,15,True,False,6,4.3,Standard
+0F0206,NocheVia,Valencia,2026-11-27,02:15,06:37,2026-11-27,262,32.24,0,15,True,False,6,3.7,Standard
+0F0207,NocheVia,Valencia,2026-11-28,23:45,04:38,2026-11-29,293,30.07,1,15,True,False,33,3.5,Standard
+0F0208,NocheVia,Valencia,2026-11-28,20:45,01:07,2026-11-29,262,32.62,0,15,True,False,32,3.9,Standard
+0F0209,NocheVia,Seville,2026-11-27,04:15,11:35,2026-11-27,440,43.45,1,15,True,False,14,3.7,Standard
+0F0210,NocheVia,Seville,2026-11-27,01:15,07:52,2026-11-27,397,45.37,0,15,True,False,21,3.5,Standard
+0F0211,NocheVia,Seville,2026-11-28,20:15,02:52,2026-11-29,397,48.01,0,15,True,False,15,3.9,Standard
+0F0212,NocheVia,Seville,2026-11-28,23:30,06:07,2026-11-29,397,51.15,0,15,True,False,3,3.8,Standard
+0F0213,NocheVia,Malaga,2026-11-27,20:30,04:11,2026-11-28,461,49.44,1,15,True,False,27,3.7,Standard
+0F0214,NocheVia,Malaga,2026-11-27,01:45,08:45,2026-11-27,420,47.09,0,15,True,False,30,4.2,Standard
+0F0215,NocheVia,Malaga,2026-11-28,04:45,11:45,2026-11-28,420,49.75,0,15,True,False,26,3.9,Standard
+0F0216,NocheVia,Malaga,2026-11-28,01:45,09:37,2026-11-28,472,48.78,1,15,True,False,22,4.2,Standard
+0F0217,NocheVia,Granada,2026-11-27,01:00,06:15,2026-11-27,315,36.66,0,15,True,False,10,3.6,Standard
+0F0218,NocheVia,Granada,2026-11-27,22:15,03:47,2026-11-28,332,35.33,1,15,True,False,10,4.2,Standard
+0F0219,NocheVia,Granada,2026-11-28,23:15,05:04,2026-11-29,349,39.72,1,15,True,False,29,4.1,Standard
+0F0220,NocheVia,Granada,2026-11-28,01:30,06:59,2026-11-28,329,37.34,1,15,True,False,31,3.8,Standard
+0F0221,NocheVia,Cordoba,2026-11-27,04:00,09:37,2026-11-27,337,32.93,1,15,True,False,30,3.9,Standard
+0F0222,NocheVia,Cordoba,2026-11-27,23:00,04:58,2026-11-28,358,34.47,1,15,True,False,6,4.0,Standard
+0F0223,NocheVia,Cordoba,2026-11-28,22:45,03:45,2026-11-29,300,38.95,0,15,True,False,13,3.7,Standard
+0F0224,NocheVia,Cordoba,2026-11-28,20:45,01:45,2026-11-29,300,35.64,0,15,True,False,22,4.4,Standard
+0F0225,NocheVia,Bilbao,2026-11-27,01:15,06:15,2026-11-27,300,37.49,0,15,True,False,29,3.9,Standard
+0F0226,NocheVia,Bilbao,2026-11-27,22:15,03:43,2026-11-28,328,39.01,1,15,True,False,25,3.8,Standard
+0F0227,NocheVia,Bilbao,2026-11-28,04:00,09:09,2026-11-28,309,34.77,1,15,True,False,25,3.7,Standard
+0F0228,NocheVia,Bilbao,2026-11-28,22:15,03:25,2026-11-29,310,36.6,1,15,True,False,10,4.3,Standard
+0F0229,NocheVia,San Sebastian,2026-11-27,04:15,10:07,2026-11-27,352,42.8,0,15,True,False,22,4.2,Standard
+0F0230,NocheVia,San Sebastian,2026-11-27,20:00,02:29,2026-11-28,389,41.13,1,15,True,False,24,3.7,Standard
+0F0231,NocheVia,San Sebastian,2026-11-28,02:45,08:37,2026-11-28,352,46.53,0,15,True,False,10,3.5,Standard
+0F0232,NocheVia,San Sebastian,2026-11-28,04:00,09:52,2026-11-28,352,40.92,0,15,True,False,9,4.0,Standard
+0F0233,NocheVia,Zaragoza,2026-11-27,02:15,06:15,2026-11-27,240,28.44,0,15,True,False,27,3.8,Standard
+0F0234,NocheVia,Zaragoza,2026-11-27,23:15,03:59,2026-11-28,284,27.56,1,15,True,False,29,3.6,Standard
+0F0235,NocheVia,Zaragoza,2026-11-28,02:45,06:45,2026-11-28,240,29.83,0,15,True,False,29,3.9,Standard
+0F0236,NocheVia,Zaragoza,2026-11-28,04:30,09:07,2026-11-28,277,28.96,1,15,True,False,11,4.2,Standard
+0F0237,NocheVia,Alicante,2026-11-27,22:30,03:45,2026-11-28,315,37.65,0,15,True,False,24,4.0,Standard
+0F0238,NocheVia,Alicante,2026-11-27,02:00,07:15,2026-11-27,315,34.65,0,15,True,False,11,3.7,Standard
+0F0239,NocheVia,Alicante,2026-11-28,22:45,04:00,2026-11-29,315,40.19,0,15,True,False,23,4.3,Standard
+0F0240,NocheVia,Alicante,2026-11-28,02:45,08:00,2026-11-28,315,37.82,0,15,True,False,16,3.8,Standard
+0F0241,NocheVia,Murcia,2026-11-27,01:15,06:15,2026-11-27,300,39.1,0,15,True,False,22,4.2,Standard
+0F0242,NocheVia,Murcia,2026-11-27,04:15,09:15,2026-11-27,300,39.01,0,15,True,False,31,4.1,Standard
+0F0243,NocheVia,Murcia,2026-11-28,02:45,07:45,2026-11-28,300,32.54,0,15,True,False,14,4.2,Standard
+0F0244,NocheVia,Murcia,2026-11-28,20:45,01:45,2026-11-29,300,34.47,0,15,True,False,20,3.5,Standard
+0F0245,NocheVia,Salamanca,2026-11-27,02:45,05:15,2026-11-27,150,19.21,0,15,True,False,32,4.0,Standard
+0F0246,NocheVia,Salamanca,2026-11-27,20:00,22:30,2026-11-27,150,16.72,0,15,True,False,28,3.4,Standard
+0F0247,NocheVia,Salamanca,2026-11-28,04:45,07:15,2026-11-28,150,18.61,0,15,True,False,34,4.4,Standard
+0F0248,NocheVia,Salamanca,2026-11-28,02:00,04:30,2026-11-28,150,19.34,0,15,True,False,3,4.0,Standard
+0F0249,NocheVia,Toledo,2026-11-27,04:00,05:47,2026-11-27,107,5.76,1,15,True,False,16,4.1,Standard
+0F0250,NocheVia,Toledo,2026-11-27,23:00,00:05,2026-11-28,65,5.73,1,15,True,False,35,3.7,Standard
+0F0251,NocheVia,Toledo,2026-11-28,23:45,01:22,2026-11-29,97,5.9,1,15,True,False,9,3.5,Standard
+0F0252,NocheVia,Toledo,2026-11-28,02:45,03:37,2026-11-28,52,5.92,0,15,True,False,13,4.3,Standard
+0F0253,NocheVia,Santiago de Compostela,2026-11-27,04:45,12:36,2026-11-27,471,49.0,1,15,True,False,13,3.7,Standard
+0F0254,NocheVia,Santiago de Compostela,2026-11-27,23:00,06:52,2026-11-28,472,49.94,1,15,True,False,24,3.8,Standard
+0F0255,NocheVia,Santiago de Compostela,2026-11-28,20:45,04:31,2026-11-29,466,53.96,1,15,True,False,32,3.8,Standard
+0F0256,NocheVia,Santiago de Compostela,2026-11-28,23:30,07:00,2026-11-29,450,53.18,0,15,True,False,28,4.0,Standard
+0F0257,NocheVia,Cadiz,2026-11-27,02:30,10:48,2026-11-27,498,53.59,1,15,True,False,19,3.7,Standard
+0F0258,NocheVia,Cadiz,2026-11-27,22:45,06:52,2026-11-28,487,57.84,0,15,True,False,29,3.4,Standard
+0F0259,NocheVia,Cadiz,2026-11-28,04:45,13:37,2026-11-28,532,64.12,1,15,True,False,4,3.5,Standard
+0F0260,NocheVia,Cadiz,2026-11-28,22:45,07:29,2026-11-29,524,62.02,1,15,True,False,11,4.4,Standard
