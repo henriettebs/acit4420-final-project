@@ -13,9 +13,19 @@ class Traveller:
 class Company:
     """Represents a bus company in the bus bidder application."""
 
-    def __init__(self, name: str, suggested_profile: str):
+    def __init__(self, name: str, suggested_profile: str, base_price_per_km: float, average_speed: float, max_passengers: int, luggage_limit_kg: int, amenities: str, changable: bool, refundable: bool, eco_friendly: bool, base_rating: float, co2_per_km: float):
         self.name = name
         self.suggested_profile = suggested_profile
+        self.base_price_per_km = base_price_per_km
+        self.average_speed = average_speed
+        self.max_passengers = max_passengers
+        self.luggage_limit_kg = luggage_limit_kg
+        self.amenities = amenities
+        self.changable = changable
+        self.refundable = refundable
+        self.eco_friendly = eco_friendly
+        self.base_rating = base_rating
+        self.co2_per_km = co2_per_km
 
     def __str__(self):
         return f"Company {self.name} with {self.suggested_profile}."

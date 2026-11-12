@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from bus_bidder.data_loader import generate_offers
 from bus_bidder.filtering import filter_relevant_offers
+from bus_bidder.ranking import rank_relevant_offers
 from datetime import date, datetime, timedelta
 import csv
 
@@ -177,6 +178,9 @@ class BusBidderApp(ctk.CTk):
 
         filtered_offers = filter_relevant_offers(self.get_all_offers(), bid)
         print(f"Found {len(filtered_offers)} relevant offers.")
+        ranked_offers = rank_relevant_offers(filtered_offers)
+        for o in ranked_offers:
+            print(f"Ranked offers: {o["offer_id"]} {o["company"]} to {o["destination"]} with price {o["price"]} and rating {o["customer_rating"]}")
     
     def get_all_offers(self):
         with open('bus_bidder/data/offers.csv', mode='r', newline='', encoding='utf-8') as file:
