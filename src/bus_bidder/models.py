@@ -44,7 +44,8 @@ class Booking:
 class Offer:
     """Represents a possible journey for a traveller with a bus company."""
 
-    def __init__(self, company: Company, journey: Journey, price: float, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float):
+    def __init__(self, offer_id: str, company: str, journey: Journey, price: float, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float):
+        self.offer_id = offer_id
         self.company = company
         self.journey = journey
         self.price = price
@@ -60,14 +61,44 @@ class Offer:
                     f"Price: €{self.price:.2f}, Transfers: {self.transfers}, Luggage Allowance: {self.luggage_allowance} kg, "
                     f"Changeability: {'Yes' if self.changeability else 'No'}, Refundability: {'Yes' if self.refundability else 'No'}, "
                     f"Available Seats: {self.available_seats}, Customer Rating: {self.customer_rating}/5, Environmental Measure: {self.journey.environmental_measure}")
+    
+    """List all properties accessed through Journey and make them available on Offer objects"""
+    @property
+    def destination(self):
+        return self.journey.destination
+    @property
+    def travel_date(self):
+        return self.journey.travel_date
+    @property
+    def departure_time(self):
+        return self.journey.departure_time
+    @property
+    def arrival_time(self):
+        return self.journey.arrival_time
+    @property
+    def arrival_date(self):
+        return self.journey.arrival_date
+    @property
+    def duration(self):
+        return self.journey.duration
+    @property
+    def transfers(self):
+        return self.journey.transfers
+    @property
+    def environmental_measure(self):
+        return self.journey.environmental_measure
+    
+    
+    
 
 class Journey:
     """Represents a journey and its details"""
-    def __init__(self, destination: str, travel_date: str, departure_time: str, arrival_time: str, duration: int, transfers: int, environmental_measure: str):
+    def __init__(self, destination: str, travel_date: str, departure_time: str, arrival_time: str, arrival_date: str, duration: int, transfers: int, environmental_measure: str):
         self.destination = destination
         self.travel_date = travel_date
         self.departure_time = departure_time
         self.arrival_time = arrival_time
+        self.arrival_date = arrival_date
         self.duration = duration
         self.transfers = transfers
         self.environmental_measure = environmental_measure

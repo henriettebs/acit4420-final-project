@@ -1,8 +1,8 @@
 def rank_relevant_offers(offers, bid, weights):
     """Rank offers based on price, journey duration, transfers, departure-time convenience and ticket flexibility."""
-    prices = [o['price'] for o in offers]
-    durations = [o['duration'] for o in offers]
-    transfers = [o['transfers'] for o in offers]
+    prices = [o.price for o in offers]
+    durations = [o.journey.duration for o in offers]
+    transfers = [o.journey.transfers for o in offers]
     print(prices, durations)
     p_min, p_max = min(prices), max(prices)
     d_min, d_max = min(durations), max(durations)
@@ -10,9 +10,9 @@ def rank_relevant_offers(offers, bid, weights):
 
     print(f"Prices: [{p_min}, {p_max}]\nDurations: [{d_min}, {d_max}]")
     def score(o):
-        return scoring_model(weights['price'] * weighted_price(o['price'], p_min, p_max), 
-                      weights['duration'] * weighted_duration(o['duration'], d_min, d_max),
-                      weights['transfers'] * weighted_transfers(o['transfers'], t_min, t_max),
+        return scoring_model(weights['price'] * weighted_price(o.price, p_min, p_max), 
+                      weights['duration'] * weighted_duration(o.journey.duration, d_min, d_max),
+                      weights['transfers'] * weighted_transfers(o.journey.transfers, t_min, t_max),
                       weighted_time(o), 
                       weighted_flexibility(o))
 

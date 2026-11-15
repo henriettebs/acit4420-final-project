@@ -172,7 +172,7 @@ class BusBidderApp(ctk.CTk):
     def open_results_window(self, bid):
         results_window = ctk.CTkToplevel(self)
         results_window.title("Search Results")
-        results_window.geometry("900x800")
+        results_window.geometry("1100x1000")
 
         label = ctk.CTkLabel(results_window, text="Search Results", font=("Arial", 16))
         label.pack(pady=10)
@@ -193,27 +193,47 @@ class BusBidderApp(ctk.CTk):
         for o in ranked_offers:
             offer_frame = ctk.CTkFrame(scroll_frame, fg_color="gray20")
             offer_frame.pack(pady=15, padx=10, fill="x")
-            destination_label = ctk.CTkLabel(offer_frame, text=f"Madrid - {o['destination']}", font=("Arial", 16, "bold"))
+            destination_label = ctk.CTkLabel(offer_frame, text=f"Madrid - {o.destination}", font=("Arial", 16, "bold"))
             destination_label.grid(row=0, column=0, padx=10, sticky="w")
-            time_label = ctk.CTkLabel(offer_frame, text=f"Schedule: {o['travel_date']} {o['departure_time']} - {o['arrival_date']} {o['arrival_time']}", font=("Arial", 14))
-            time_label.grid(row=1, column=0, padx=10, sticky="w")
-            duration_label = ctk.CTkLabel(offer_frame, text=f"Duration: {o['duration']} mins", font=("Arial", 14)) #Convert to hours with Journey.minutes_to_hours() if needed
-            duration_label.grid(row=1, column=1, padx=10, sticky="w")
+            dep_label = ctk.CTkLabel(offer_frame, text=f"Departure: {o.travel_date} {o.departure_time}", font=("Arial", 14))
+            dep_label.grid(row=1, column=0, padx=10, sticky="w")
+            arr_label = ctk.CTkLabel(offer_frame, text=f"Arrival: {o.arrival_date} {o.arrival_time}", font=("Arial", 14))
+            arr_label.grid(row=1, column=1, padx=10, sticky="w")
+            duration_label = ctk.CTkLabel(offer_frame, text=f"Duration: {o.duration} mins", font=("Arial", 14)) #Convert to hours with Journey.minutes_to_hours() if needed
+            duration_label.grid(row=1, column=2, padx=10, sticky="w")
+            # Select button
             choose_button = ctk.CTkButton(offer_frame, text="Choose offer", command=lambda offer=o: self.choose_option_click(offer)) # how do i make this not trigger for each option?
             choose_button.grid(row=1, column=4, padx=10, sticky="w")
-            price_label = ctk.CTkLabel(offer_frame, text=f"Price: €{o['price']}", font=("Arial", 14, "italic"))
+
+            price_label = ctk.CTkLabel(offer_frame, text=f"Price: €{o.price}", font=("Arial", 14, "italic"))
             price_label.grid(row=2, column=0, padx=10, sticky="w")
-            transfers_label = ctk.CTkLabel(offer_frame, text=f"Transfers: {o['transfers']}", font=("Arial", 14))
+            transfers_label = ctk.CTkLabel(offer_frame, text=f"Transfers: {o.transfers}", font=("Arial", 14))
             transfers_label.grid(row=2, column=1, padx=10, sticky="w")
-            rating_label = ctk.CTkLabel(offer_frame, text=f"Customer Rating: {o['customer_rating']}/5", font=("Arial", 14))
+            rating_label = ctk.CTkLabel(offer_frame, text=f"Customer Rating: {o.customer_rating}/5", font=("Arial", 14))
             rating_label.grid(row=2, column=2, padx=10, sticky="w")
-            
-            print(f"Ranked offers: {o["offer_id"]} {o["company"]} to {o["destination"]} with price {o["price"]} and rating {o["customer_rating"]}")
+            luggage_label = ctk.CTkLabel(offer_frame, text=f"Luggage allowed: {o.luggage_allowance}kg", font=("Arial", 14))
+            luggage_label.grid(row=3, column=0, padx=10, sticky="w")
+            change_label = ctk.CTkLabel(offer_frame, text=f"Changeable: Yes {o.changeability}" if o.changeability else "Changeable: No", font=("Arial", 14))
+            change_label.grid(row=3, column=1, padx=10, sticky="w")
+            refund_label = ctk.CTkLabel(offer_frame, text=f"Refundable: Yes {o.refundability}" if o.refundability else "Refundable: No", font=("Arial", 14))
+            refund_label.grid(row=3, column=2, padx=10, sticky="w")
+            avail_seats_label = ctk.CTkLabel(offer_frame, text=f"Available seats: {o.available_seats}", font=("Arial", 14))
+            avail_seats_label.grid(row=3, column=3, padx=10, sticky="w")
+            env_meas_label = ctk.CTkLabel(offer_frame, text=f"Environmental measure: {o.environmental_measure}", font=("Arial", 14))
+            env_meas_label.grid(row=3, column=4, padx=10, sticky="w")
+            print(f"Ranked offers: {o.offer_id} {o.company} to {o.destination} with price {o.price} and rating {o.customer_rating}")
     
-    def get_all_offers(self):
+    def get_all_offers(self) -> Offer:
         with open('bus_bidder/data/offers.csv', mode='r', newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
-            return [row for row in reader]
+            offers = []
+            for row in reader:
+                journey = Journey(row['destination'], row['travel_date'], row['departure_time'], row['arrival_time'], row['arrival_date'], row['duration'], row['transfers'], row['environmental_measure'])
+                offer = Offer(row['offer_id'], row['company'], journey, row['price'], row['luggage_allowance'], row['changeability'], row['refundability'], row['available_seats'], row['customer_rating'])
+                offers.append(offer) 
+            print(offers)
+            return offers
+            #return [row for row in reader]
     
     def choose_option_click(self, offer):
         print(f"Chose offer {offer['offer_id']} departing at {offer['departure_time']}")

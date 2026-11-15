@@ -4,14 +4,14 @@ def filter_relevant_offers(offers, bid):
     """Filter offers based on the bid criteria."""    
     filtered_offers = []
     for offer in offers:
-        destination_match = offer['destination'] == bid['arrival_city']
-        correct_date = filter_offers_by_date(bid['departure_date'], offer['travel_date'])
-        in_time_range = filter_offers_by_departure_time(bid['departure_time'], offer['departure_time'])
-        in_budget = filter_offers_by_budget(bid['budget'], offer['price'])
-        below_max_transfers = filter_offers_by_transfers(bid['max_transfers'], offer['transfers'])
-        is_changeable = filter_offers_by_checkbox(bid['changeable'], offer['changeability'])
-        is_refundable = filter_offers_by_checkbox(bid['refundable'], offer['refundability'])
-        above_min_rating = filter_offers_by_customer_rating(bid['min_customer_rating'], offer['customer_rating'])
+        destination_match = offer.journey.destination == bid['arrival_city']
+        correct_date = filter_offers_by_date(bid['departure_date'], offer.journey.travel_date)
+        in_time_range = filter_offers_by_departure_time(bid['departure_time'], offer.journey.departure_time)
+        in_budget = filter_offers_by_budget(bid['budget'], offer.price)
+        below_max_transfers = filter_offers_by_transfers(bid['max_transfers'], offer.journey.transfers)
+        is_changeable = filter_offers_by_checkbox(bid['changeable'], offer.changeability)
+        is_refundable = filter_offers_by_checkbox(bid['refundable'], offer.refundability)
+        above_min_rating = filter_offers_by_customer_rating(bid['min_customer_rating'], offer.customer_rating)
 
         if (destination_match and
             correct_date and
