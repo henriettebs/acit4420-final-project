@@ -71,3 +71,9 @@ class Journey:
         self.duration = duration
         self.transfers = transfers
         self.environmental_measure = environmental_measure
+    
+    def minutes_to_hours(self):
+        """Convert duration in minutes to hours and minutes."""
+        hours = self.duration // 60
+        minutes = self.duration % 60
+        return f"{hours}h {minutes}m" if hours > 0 else f"{minutes}m"

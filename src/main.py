@@ -2,6 +2,7 @@ import customtkinter as ctk
 from bus_bidder.data_loader import generate_offers
 from bus_bidder.filtering import filter_relevant_offers
 from bus_bidder.ranking import rank_relevant_offers
+from bus_bidder.models import Traveller, Company, Booking, Offer, Journey
 from datetime import date, datetime, timedelta
 import csv
 
@@ -171,21 +172,51 @@ class BusBidderApp(ctk.CTk):
     def open_results_window(self, bid):
         results_window = ctk.CTkToplevel(self)
         results_window.title("Search Results")
-        results_window.geometry("800x800")
+        results_window.geometry("900x800")
 
         label = ctk.CTkLabel(results_window, text="Search Results", font=("Arial", 16))
         label.pack(pady=10)
 
+        scroll_frame = ctk.CTkScrollableFrame(results_window)
+        scroll_frame.pack(fill="both", expand=True, padx=10, pady=10)
+
         filtered_offers = filter_relevant_offers(self.get_all_offers(), bid)
         print(f"Found {len(filtered_offers)} relevant offers.")
-        ranked_offers = rank_relevant_offers(filtered_offers)
+        weights = {
+            "price": 0.4,
+            "duration": 0.2,
+            "transfers": 0.2,
+            "time": 0.1,
+            "flexibility": 0.1
+        }
+        ranked_offers = rank_relevant_offers(filtered_offers, bid, weights)
         for o in ranked_offers:
+            offer_frame = ctk.CTkFrame(scroll_frame, fg_color="gray20")
+            offer_frame.pack(pady=15, padx=10, fill="x")
+            destination_label = ctk.CTkLabel(offer_frame, text=f"Madrid - {o['destination']}", font=("Arial", 16, "bold"))
+            destination_label.grid(row=0, column=0, padx=10, sticky="w")
+            time_label = ctk.CTkLabel(offer_frame, text=f"Schedule: {o['travel_date']} {o['departure_time']} - {o['arrival_date']} {o['arrival_time']}", font=("Arial", 14))
+            time_label.grid(row=1, column=0, padx=10, sticky="w")
+            duration_label = ctk.CTkLabel(offer_frame, text=f"Duration: {o['duration']} mins", font=("Arial", 14)) #Convert to hours with Journey.minutes_to_hours() if needed
+            duration_label.grid(row=1, column=1, padx=10, sticky="w")
+            choose_button = ctk.CTkButton(offer_frame, text="Choose offer", command=lambda offer=o: self.choose_option_click(offer)) # how do i make this not trigger for each option?
+            choose_button.grid(row=1, column=4, padx=10, sticky="w")
+            price_label = ctk.CTkLabel(offer_frame, text=f"Price: €{o['price']}", font=("Arial", 14, "italic"))
+            price_label.grid(row=2, column=0, padx=10, sticky="w")
+            transfers_label = ctk.CTkLabel(offer_frame, text=f"Transfers: {o['transfers']}", font=("Arial", 14))
+            transfers_label.grid(row=2, column=1, padx=10, sticky="w")
+            rating_label = ctk.CTkLabel(offer_frame, text=f"Customer Rating: {o['customer_rating']}/5", font=("Arial", 14))
+            rating_label.grid(row=2, column=2, padx=10, sticky="w")
+            
             print(f"Ranked offers: {o["offer_id"]} {o["company"]} to {o["destination"]} with price {o["price"]} and rating {o["customer_rating"]}")
     
     def get_all_offers(self):
         with open('bus_bidder/data/offers.csv', mode='r', newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             return [row for row in reader]
+    
+    def choose_option_click(self, offer):
+        print(f"Chose offer {offer['offer_id']} departing at {offer['departure_time']}")
 
 if __name__ == "__main__":
     app = BusBidderApp()
