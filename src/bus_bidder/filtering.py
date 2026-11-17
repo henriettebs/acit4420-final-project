@@ -1,4 +1,4 @@
-from datetime import time, date
+from datetime import time, timedelta
 
 def filter_relevant_offers(offers, bid):
     """Filter offers based on the bid criteria."""    
@@ -6,7 +6,7 @@ def filter_relevant_offers(offers, bid):
     for offer in offers:
         destination_match = offer.journey.destination == bid['arrival_city']
         correct_date = filter_offers_by_date(bid['departure_date'], offer.journey.travel_date)
-        in_time_range = filter_offers_by_departure_time(bid['departure_time'], offer.journey.departure_time)
+        #in_time_range = filter_offers_by_departure_time(bid['departure_time'], offer.journey.departure_time)
         in_budget = filter_offers_by_budget(bid['budget'], offer.price)
         below_max_transfers = filter_offers_by_transfers(bid['max_transfers'], offer.journey.transfers)
         is_changeable = filter_offers_by_checkbox(bid['changeable'], offer.changeability)
@@ -15,7 +15,7 @@ def filter_relevant_offers(offers, bid):
 
         if (destination_match and
             correct_date and
-            in_time_range and
+            #in_time_range and
             in_budget and
             below_max_transfers and
             is_changeable and
@@ -27,14 +27,13 @@ def filter_relevant_offers(offers, bid):
 
 def filter_offers_by_date(departure_date, offer_travel_date):
     """Filter offers based on the departure date."""
-    otd = date.fromisoformat(offer_travel_date)
-    return departure_date == otd
+    return departure_date == offer_travel_date or (departure_date + timedelta(days=1)) == offer_travel_date
 
 def filter_offers_by_departure_time(departure_time, offer_departure_time):
     """Filter offers based on the departure time."""
     t1 = time(00)
     t2 = time(23)
-    ot = time.fromisoformat(offer_departure_time)
+    ot = offer_departure_time
     match departure_time:
         case "Morning (6-12)":
             t1 = time(6)
@@ -76,7 +75,7 @@ def filter_offers_by_checkbox(bid_checkbox, offer_boolean):
     """Filter offers based on the changeable and refundable checkboxes."""
     if bid_checkbox == 0:
         return True  # If no preference is specified, all offers are valid
-    elif bid_checkbox == 1 and offer_boolean == "True":
+    elif bid_checkbox == 1 and offer_boolean:
         return True  # If changeable is specified and the offer is changeable, it's valid
     return False  # If none of the above conditions are met, the offer is not valid
 

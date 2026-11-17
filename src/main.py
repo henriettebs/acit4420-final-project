@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from bus_bidder.data_loader import generate_offers
 from bus_bidder.filtering import filter_relevant_offers
-from bus_bidder.ranking import rank_relevant_offers
+from bus_bidder.ranking import rank_relevant_offers, get_cheapest_route, get_shortest_route, get_best_rated_route
 from bus_bidder.models import Traveller, Company, Booking, Offer, Journey
 from datetime import date, datetime, timedelta
 import csv
@@ -103,7 +103,7 @@ class BusBidderApp(ctk.CTk):
             #elif self.return_entry.get() == "":
                 #return_date = None
             if departure_date < date.today():
-                print("Departure date cannot be in the past.")
+                self.open_error_window(f"Departure date cannot be in the past. Please chose a date matching today ({date.today()}) or later")
             #elif return_date is not None and return_date < departure_date:
                 #print("Return date cannot be before departure date.")
             else:
@@ -111,23 +111,32 @@ class BusBidderApp(ctk.CTk):
                 #print(f"Return Date and Time: {return_date} {self.return_time.get()}")
                 print(f"Travel from {self.departure_city.get()} to {self.arrival_city.get()}")
 
-            bid = {
-                "departure_date": departure_date,
-                "departure_time": self.departure_time.get(),
-                #"return_date": return_date,
-                #"return_time": self.return_time.get(),
-                "departure_city": self.departure_city.get(),                    
-                "arrival_city": self.arrival_city.get(),
-                "budget": self.budget_entry.get(),
-                "max_transfers": self.transfers_entry.get(),
-                "changeable": self.changeability_checkbox.get(),
-                "refundable": self.refundability_checkbox.get(),
-                "min_customer_rating": self.slider.get()
-            }
-            self.search_offers(bid)
+                bid = {
+                    "departure_date": departure_date,
+                    "departure_time": self.departure_time.get(),
+                    #"return_date": return_date,
+                    #"return_time": self.return_time.get(),
+                    "departure_city": self.departure_city.get(),                    
+                    "arrival_city": self.arrival_city.get(),
+                    "budget": self.budget_entry.get(),
+                    "max_transfers": self.transfers_entry.get(),
+                    "changeable": self.changeability_checkbox.get(),
+                    "refundable": self.refundability_checkbox.get(),
+                    "min_customer_rating": self.slider.get()
+                }
+                self.search_offers(bid)
 
         except ValueError as e:
-            print(f"{e} -> Invalid date format. Please use YYYY-MM-DD.")
+            error_message = f"{e} -> Invalid date format. Please use YYYY-MM-DD."
+            self.open_error_window(error_message)
+
+    def open_error_window(self, e):
+        error_window = ctk.CTkToplevel(self)
+        error_window.title("Error!")
+        error_window.geometry("300x150")       
+
+        error_message = ctk.CTkLabel(error_window, text=e, font=("Arial", 12), text_color="red", wraplength=260)
+        error_message.pack(pady=10)
 
     def get_city_options(self):
         with open('bus_bidder/data/destinations.csv', mode='r', newline='', encoding='utf-8') as file:
@@ -190,14 +199,26 @@ class BusBidderApp(ctk.CTk):
             "flexibility": 0.1
         }
         ranked_offers = rank_relevant_offers(filtered_offers, bid, weights)
+        cheapest_offer_id = get_cheapest_route(ranked_offers).offer_id
+        shortest_offer_id = get_shortest_route(ranked_offers).offer_id
+        best_rated_offer_id = get_best_rated_route(ranked_offers).offer_id
         for o in ranked_offers:
             offer_frame = ctk.CTkFrame(scroll_frame, fg_color="gray20")
             offer_frame.pack(pady=15, padx=10, fill="x")
-            destination_label = ctk.CTkLabel(offer_frame, text=f"Madrid - {o.destination}", font=("Arial", 16, "bold"))
+            destination_label = ctk.CTkLabel(offer_frame, text=f"{o.company}: Madrid - {o.destination}", font=("Arial", 16, "bold"))
             destination_label.grid(row=0, column=0, padx=10, sticky="w")
-            dep_label = ctk.CTkLabel(offer_frame, text=f"Departure: {o.travel_date} {o.departure_time}", font=("Arial", 14))
+            if o.offer_id == cheapest_offer_id:
+                cheap_label = ctk.CTkLabel(offer_frame, text="CHEAPEST ROUTE", text_color="green", font=("Arial", 12))
+                cheap_label.grid(row=0, column=1, padx=10, sticky="w")
+            if o.offer_id == shortest_offer_id:
+                cheap_label = ctk.CTkLabel(offer_frame, text="FASTEST ROUTE", text_color="green", font=("Arial", 12))
+                cheap_label.grid(row=0, column=1, padx=10, sticky="w")
+            if o.offer_id == best_rated_offer_id:
+                cheap_label = ctk.CTkLabel(offer_frame, text="BEST CUSTOMER RATING", text_color="green", font=("Arial", 12))
+                cheap_label.grid(row=0, column=1, padx=10, sticky="w")
+            dep_label = ctk.CTkLabel(offer_frame, text=f"Departure: {o.travel_date} {o.departure_time.strftime('%H:%M')}", font=("Arial", 14))
             dep_label.grid(row=1, column=0, padx=10, sticky="w")
-            arr_label = ctk.CTkLabel(offer_frame, text=f"Arrival: {o.arrival_date} {o.arrival_time}", font=("Arial", 14))
+            arr_label = ctk.CTkLabel(offer_frame, text=f"Arrival: {o.arrival_date} {o.arrival_time.strftime('%H:%M')}", font=("Arial", 14))
             arr_label.grid(row=1, column=1, padx=10, sticky="w")
             duration_label = ctk.CTkLabel(offer_frame, text=f"Duration: {o.duration} mins", font=("Arial", 14)) #Convert to hours with Journey.minutes_to_hours() if needed
             duration_label.grid(row=1, column=2, padx=10, sticky="w")
@@ -213,15 +234,15 @@ class BusBidderApp(ctk.CTk):
             rating_label.grid(row=2, column=2, padx=10, sticky="w")
             luggage_label = ctk.CTkLabel(offer_frame, text=f"Luggage allowed: {o.luggage_allowance}kg", font=("Arial", 14))
             luggage_label.grid(row=3, column=0, padx=10, sticky="w")
-            change_label = ctk.CTkLabel(offer_frame, text=f"Changeable: Yes {o.changeability}" if o.changeability else "Changeable: No", font=("Arial", 14))
+            change_label = ctk.CTkLabel(offer_frame, text=f"Changeable: Yes" if o.changeability else "Changeable: No", font=("Arial", 14))
             change_label.grid(row=3, column=1, padx=10, sticky="w")
-            refund_label = ctk.CTkLabel(offer_frame, text=f"Refundable: Yes {o.refundability}" if o.refundability else "Refundable: No", font=("Arial", 14))
+            refund_label = ctk.CTkLabel(offer_frame, text=f"Refundable: Yes" if o.refundability else "Refundable: No", font=("Arial", 14))
             refund_label.grid(row=3, column=2, padx=10, sticky="w")
             avail_seats_label = ctk.CTkLabel(offer_frame, text=f"Available seats: {o.available_seats}", font=("Arial", 14))
             avail_seats_label.grid(row=3, column=3, padx=10, sticky="w")
             env_meas_label = ctk.CTkLabel(offer_frame, text=f"Environmental measure: {o.environmental_measure}", font=("Arial", 14))
             env_meas_label.grid(row=3, column=4, padx=10, sticky="w")
-            print(f"Ranked offers: {o.offer_id} {o.company} to {o.destination} with price {o.price} and rating {o.customer_rating}")
+            #print(f"Ranked offers: {o.offer_id} {o.company} to {o.destination} with price {o.price} and rating {o.customer_rating}")
     
     def get_all_offers(self) -> Offer:
         with open('bus_bidder/data/offers.csv', mode='r', newline='', encoding='utf-8') as file:
@@ -231,12 +252,10 @@ class BusBidderApp(ctk.CTk):
                 journey = Journey(row['destination'], row['travel_date'], row['departure_time'], row['arrival_time'], row['arrival_date'], row['duration'], row['transfers'], row['environmental_measure'])
                 offer = Offer(row['offer_id'], row['company'], journey, row['price'], row['luggage_allowance'], row['changeability'], row['refundability'], row['available_seats'], row['customer_rating'])
                 offers.append(offer) 
-            print(offers)
             return offers
-            #return [row for row in reader]
     
     def choose_option_click(self, offer):
-        print(f"Chose offer {offer['offer_id']} departing at {offer['departure_time']}")
+        print(f"Chose offer {offer.offer_id} departing at {offer.departure_time}")
 
 if __name__ == "__main__":
     app = BusBidderApp()

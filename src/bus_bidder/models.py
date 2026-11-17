@@ -1,3 +1,4 @@
+from datetime import date, time
 """Models for the bus bidder application."""
 
 class Traveller:
@@ -48,15 +49,15 @@ class Offer:
         self.offer_id = offer_id
         self.company = company
         self.journey = journey
-        self.price = price
-        self.luggage_allowance = luggage_allowance
-        self.changeability = changeability
-        self.refundability = refundability
-        self.available_seats = available_seats
-        self.customer_rating = customer_rating
+        self.price = float(price) # Converts csv string to float value
+        self.luggage_allowance = int(luggage_allowance) # Converts csv string to int value
+        self.changeability = str(changeability).strip().lower() == "true" # Checks if string is 'true', and converts to boolean value
+        self.refundability = str(refundability).strip().lower() == "true" # Checks if string is 'true', and converts to boolean value
+        self.available_seats = int(available_seats)
+        self.customer_rating = float(customer_rating)
 
     def __str__(self):
-            return (f"Offer - Company: {self.company.name}, Destination: {self.journey.destination}, Travel Date: {self.journey.travel_date}, "
+            return (f"Offer - Company: {self.company}, Destination: {self.journey.destination}, Travel Date: {self.journey.travel_date}, "
                     f"Departure Time: {self.journey.departure_time}, Arrival Time: {self.journey.arrival_time}, Duration: {self.journey.duration} mins, "
                     f"Price: €{self.price:.2f}, Transfers: {self.transfers}, Luggage Allowance: {self.luggage_allowance} kg, "
                     f"Changeability: {'Yes' if self.changeability else 'No'}, Refundability: {'Yes' if self.refundability else 'No'}, "
@@ -95,12 +96,12 @@ class Journey:
     """Represents a journey and its details"""
     def __init__(self, destination: str, travel_date: str, departure_time: str, arrival_time: str, arrival_date: str, duration: int, transfers: int, environmental_measure: str):
         self.destination = destination
-        self.travel_date = travel_date
-        self.departure_time = departure_time
-        self.arrival_time = arrival_time
-        self.arrival_date = arrival_date
-        self.duration = duration
-        self.transfers = transfers
+        self.travel_date: date = date.fromisoformat(travel_date)
+        self.departure_time = time.fromisoformat(departure_time)
+        self.arrival_time = time.fromisoformat(arrival_time)
+        self.arrival_date = date.fromisoformat(arrival_date)
+        self.duration = int(duration)
+        self.transfers = int(transfers)
         self.environmental_measure = environmental_measure
     
     def minutes_to_hours(self):
