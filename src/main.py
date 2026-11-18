@@ -4,7 +4,7 @@ from bus_bidder.filtering import filter_relevant_offers
 from bus_bidder.ranking import rank_relevant_offers, get_cheapest_route, get_shortest_route, get_best_rated_route
 from bus_bidder.models import Traveller, Company, Booking, Offer, Journey, Bid
 from bus_bidder.reporting import write_booking
-from bus_bidder.validation import validate_search_query
+from bus_bidder.validation import validate_search_query, validate_confirmation_query
 from datetime import date, datetime, timedelta
 import csv
 import uuid
@@ -351,15 +351,20 @@ class BusBidderApp(ctk.CTk):
         confirm_button.grid(row=4, column=2, padx=10, sticky="w")
 
     def confirm_booking_click(self, offer):
-        traveller: Traveller = Traveller(self.name_entry.get(), self.email_entry.get(), self.phone_entry.get())
-        print(f"Traveller: {traveller}")
-        print(f"Confirmed offer for traveller: {traveller.name}, {traveller.email} - {traveller.phone}")
-
         booking_reference =f"0B{uuid.uuid4().hex[:8].upper()}" #Unique booking ID
-        print(booking_reference)
-        booking: Booking = Booking(booking_reference, traveller, offer, self.booking_entry.get())
-        write_booking(booking)
-        self.confirm_booking_window(booking)
+        name_entry = self.name_entry.get()
+        email_entry = self.email_entry.get()
+        phone_entry = self.phone_entry.get()
+        seats = self.booking_entry.get()
+        error_message = validate_confirmation_query(booking_reference, name_entry, email_entry, phone_entry, seats, offer.available_seats)
+
+        if error_message is not None:
+            self.open_error_window(error_message)
+        else:
+            traveller: Traveller = Traveller(name_entry, email_entry, phone_entry)
+            booking: Booking = Booking(booking_reference, traveller, offer, self.booking_entry.get())
+            write_booking(booking)
+            self.confirm_booking_window(booking)
 
     def confirm_booking_window(self, booking):
         confirmed_window = ctk.CTkToplevel(self)
