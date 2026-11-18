@@ -26,8 +26,6 @@ class BusBidderApp(ctk.CTk):
         # Group departure and return date and time inputs in a frame
         departure_frame = ctk.CTkFrame(self)
         departure_frame.pack(pady=10, padx=10, fill="x")
-        #return_frame = ctk.CTkFrame(self)
-        #return_frame.pack(pady=10, padx=10, fill="x")
         # Departure label
         departure_label = ctk.CTkLabel(departure_frame, text="Departure Date and Time", font=("Arial", 14))
         departure_label.grid(row=0, column=0, padx=10, sticky="w")
@@ -36,18 +34,6 @@ class BusBidderApp(ctk.CTk):
         self.departure_time = ctk.CTkOptionMenu(departure_frame, values=travel_times, command=self.on_departure_time_change)
         self.departure_entry.grid(row=1, column=0, padx=10, pady=5)
         self.departure_time.grid(row=1, column=1, padx=10, pady=5)
-        #self.return_checkbox = ctk.CTkCheckBox(departure_frame, text="Return Trip", font=("Arial", 12), command=self.toggle_return_trip)
-        #self.return_checkbox.grid(row=1, column=2, padx=10, pady=5)
-        # Return label
-        #return_label = ctk.CTkLabel(return_frame, text="Return Date and Time", font=("Arial", 14))
-        #return_label.grid(row=0, column=0, padx=10, sticky="w")
-        # Return date and time entries
-        #self.return_entry = ctk.CTkEntry(return_frame, placeholder_text="YYYY-MM-DD")
-        #self.return_time = ctk.CTkOptionMenu(return_frame, values=travel_times, command=self.on_return_time_change)
-        #self.return_entry.grid(row=1, column=0, padx=10, pady=5)
-        #self.return_time.grid(row=1, column=1, padx=10, pady=5)
-        #self.return_entry.configure(state="disabled")
-        #self.return_time.configure(state="disabled")
 
         # Group departure and arrival city option menus in a frame
         city_frame = ctk.CTkFrame(self)
@@ -134,7 +120,6 @@ class BusBidderApp(ctk.CTk):
 
             if departure_date < date.today():
                 self.open_error_window(f"Departure date cannot be in the past. Please chose a date matching today ({date.today()}) or later")
-
             else:
                 print(f"Departure Date and Time: {departure_date} {self.departure_time.get()}")
                 print(f"Travel from {self.departure_city.get()} to {self.arrival_city.get()}")
@@ -320,7 +305,7 @@ class BusBidderApp(ctk.CTk):
         if strengths:
             text += f" because it offers {self.join_list(strengths)}"
             if len(weaknesses) == 0:
-                text += " and zero weaknesses"
+                text += ", and zero weaknesses"
         if weaknesses:
             text += f" although it has {self.join_list(weaknesses)}"
         return text + "."
@@ -390,6 +375,16 @@ class BusBidderApp(ctk.CTk):
         print(booking_reference)
         booking: Booking = Booking(booking_reference, traveller, offer, self.booking_entry.get())
         write_booking(booking)
+        self.confirm_booking_window(booking)
+
+    def confirm_booking_window(self, booking):
+        confirmed_window = ctk.CTkToplevel(self)
+        confirmed_window.geometry("550x100")
+        confirmed_window.title("Booking confirmed!")
+
+        confirmed_label = ctk.CTkLabel(confirmed_window, text=f"Booking: {booking.booking_reference} is confirmed for traveller {booking.traveller.name}.", font=("Arial", 14))
+        confirmed_label.pack(pady=10, padx=10)
+
 
 if __name__ == "__main__":
     app = BusBidderApp()
