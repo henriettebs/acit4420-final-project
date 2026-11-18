@@ -4,12 +4,17 @@ from datetime import date, time
 class Traveller:
     """Represents a traveller in the bus bidder application."""
 
-    def __init__(self, name: str, email: str):
+    def __init__(self, name: str, email: str, phone: str):
         self.name = name
         self.email = email
+        self.phone = phone
 
     def __str__(self):
-        return f"Traveller - Name: {self.name}, Email: {self.email}"
+        return f"Traveller - Name: {self.name}, Email: {self.email}, Phone: {self.phone}"
+    
+    def compare_traveller_names(self, value):
+        if value == self.name:
+            return self
     
 class Company:
     """Represents a bus company in the bus bidder application."""
@@ -30,22 +35,51 @@ class Company:
 
     def __str__(self):
         return f"Company {self.name} with {self.suggested_profile}."
+    
+    def compare_company_names(self, value):
+        if value == self.name:
+            return self
 
 class Booking:
     """Represents a booking made by a traveller with a bus company."""
 
-    def __init__(self, traveller: Traveller, offer: Offer, seats_booked: int):
+    def __init__(self, booking_reference: str, traveller: Traveller, offer: Offer, seats_booked: int):
+        self.booking_reference = booking_reference
         self.traveller = traveller
         self.offer = offer
         self.seats_booked = seats_booked
 
     def __str__(self):
         return f"Booking - Traveller: {self.traveller.name}, Company: {self.offer.company.name}, Seats Booked: {self.seats_booked}"
+
+class Bid:
+    """Represents a bid or search-query from the traveller."""
+
+    def __init__(self, departure_date: date, departure_time: time, departure_city: str, arrival_city: str, budget: float, max_transfers: int, changeable: bool, refundable: bool, min_customer_rating: float):
+        self.departure_date = departure_date
+        self.departure_time = departure_time
+        self.departure_city = departure_city
+        self.arrival_city = arrival_city
+        self.budget = self.convert_to_float(budget)
+        self.max_transfers = self.convert_to_int(max_transfers)
+        self.changeable = bool(changeable)
+        self.refundable = bool(refundable)
+        self.min_customer_rating = self.convert_to_float(min_customer_rating)
+
+    def convert_to_float(self, value):
+        if value == None or value == "":
+            return 0.0
+        return float(value)
     
+    def convert_to_int(self, value):
+        if value == None or value == "":
+            return 0
+        return int(value)
+
 class Offer:
     """Represents a possible journey for a traveller with a bus company."""
 
-    def __init__(self, offer_id: str, company: str, journey: Journey, price: float, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float):
+    def __init__(self, offer_id: str, company: str, journey: Journey, price: float, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float, ranking: dict):
         self.offer_id = offer_id
         self.company = company
         self.journey = journey
@@ -55,6 +89,7 @@ class Offer:
         self.refundability = str(refundability).strip().lower() == "true" # Checks if string is 'true', and converts to boolean value
         self.available_seats = int(available_seats)
         self.customer_rating = float(customer_rating)
+        self.ranking = ranking
 
     def __str__(self):
             return (f"Offer - Company: {self.company}, Destination: {self.journey.destination}, Travel Date: {self.journey.travel_date}, "
@@ -89,8 +124,8 @@ class Offer:
     def environmental_measure(self):
         return self.journey.environmental_measure
     
-    
-    
+    def set_ranking(self, ranking_dict):
+        self.ranking = ranking_dict
 
 class Journey:
     """Represents a journey and its details"""

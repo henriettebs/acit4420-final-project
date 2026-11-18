@@ -4,14 +4,14 @@ def filter_relevant_offers(offers, bid):
     """Filter offers based on the bid criteria."""    
     filtered_offers = []
     for offer in offers:
-        destination_match = offer.journey.destination == bid['arrival_city']
-        correct_date = filter_offers_by_date(bid['departure_date'], offer.journey.travel_date)
-        #in_time_range = filter_offers_by_departure_time(bid['departure_time'], offer.journey.departure_time)
-        in_budget = filter_offers_by_budget(bid['budget'], offer.price)
-        below_max_transfers = filter_offers_by_transfers(bid['max_transfers'], offer.journey.transfers)
-        is_changeable = filter_offers_by_checkbox(bid['changeable'], offer.changeability)
-        is_refundable = filter_offers_by_checkbox(bid['refundable'], offer.refundability)
-        above_min_rating = filter_offers_by_customer_rating(bid['min_customer_rating'], offer.customer_rating)
+        destination_match = offer.journey.destination == bid.arrival_city
+        correct_date = filter_offers_by_date(bid.departure_date, offer.journey.travel_date)
+        #in_time_range = filter_offers_by_departure_time(bid.departure_time, offer.journey.departure_time)
+        in_budget = filter_offers_by_budget(bid.budget, offer.price)
+        below_max_transfers = filter_offers_by_transfers(bid.max_transfers, offer.journey.transfers)
+        is_changeable = filter_offers_by_checkbox(bid.changeable, offer.changeability)
+        is_refundable = filter_offers_by_checkbox(bid.refundable, offer.refundability)
+        above_min_rating = filter_offers_by_customer_rating(bid.min_customer_rating, offer.customer_rating)
 
         if (destination_match and
             correct_date and
@@ -61,13 +61,13 @@ def within_time_range(t1, t2, ot):
 
 def filter_offers_by_budget(budget, offer_price):
     """Filter offers based on the budget."""
-    if budget is None or budget == "":
+    if budget is None or budget == 0.0:
         return True  # If no budget is specified, all offers are valid
     return offer_price <= budget
 
 def filter_offers_by_transfers(max_transfers, offer_transfers):
     """Filter offers based on the maximum number of transfers."""
-    if max_transfers is None or max_transfers == "":
+    if max_transfers is None or max_transfers == 0:
         return True  # If no maximum transfers are specified, all offers are valid
     return offer_transfers <= max_transfers
 
