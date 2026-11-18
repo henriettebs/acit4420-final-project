@@ -4,6 +4,7 @@ from bus_bidder.filtering import filter_relevant_offers
 from bus_bidder.ranking import rank_relevant_offers, get_cheapest_route, get_shortest_route, get_best_rated_route
 from bus_bidder.models import Traveller, Company, Booking, Offer, Journey, Bid
 from bus_bidder.reporting import write_booking
+from bus_bidder.validation import validate_search_query
 from datetime import date, datetime, timedelta
 import csv
 import uuid
@@ -114,22 +115,14 @@ class BusBidderApp(ctk.CTk):
         return {k: v / total for k, v in raw.items()}
     
     def on_button_click(self):
-        print(f"Bid was submitted!")
-        try:
-            departure_date = datetime.strptime(self.departure_entry.get(), "%Y-%m-%d").date()
-
-            if departure_date < date.today():
-                self.open_error_window(f"Departure date cannot be in the past. Please chose a date matching today ({date.today()}) or later")
-            else:
-                print(f"Departure Date and Time: {departure_date} {self.departure_time.get()}")
-                print(f"Travel from {self.departure_city.get()} to {self.arrival_city.get()}")
-
-                bid: Bid = Bid(departure_date, self.departure_time.get(), self.departure_city.get(), self.arrival_city.get(), self.budget_entry.get(), self.transfers_entry.get(), self.changeability_checkbox.get(), self.refundability_checkbox.get(), self.slider.get())
-                self.search_offers(bid)
-
-        except ValueError as e:
-            error_message = f"{e} -> Invalid date format. Please use YYYY-MM-DD."
+        error_message = validate_search_query(self.departure_entry.get(), self.budget_entry.get(), self.transfers_entry.get(), self.changeability_checkbox.get(), self.refundability_checkbox.get(), self.slider.get())
+        
+        if error_message is not None:
             self.open_error_window(error_message)
+        else:
+            departure_date = datetime.strptime(self.departure_entry.get(), "%Y-%m-%d").date()
+            bid: Bid = Bid(departure_date, self.departure_time.get(), self.departure_city.get(), self.arrival_city.get(), self.budget_entry.get(), self.transfers_entry.get(), self.changeability_checkbox.get(), self.refundability_checkbox.get(), self.slider.get())
+            self.search_offers(bid)
 
     def open_error_window(self, e):
         error_window = ctk.CTkToplevel(self)
@@ -160,15 +153,6 @@ class BusBidderApp(ctk.CTk):
         weights = self.get_weights()
         for k,w in weights.items():
             self.slider_labels[k].configure(text=f"{w * 100:.0f}%")
-
-    """def toggle_return_trip(self):
-        if self.return_checkbox.get():
-            self.return_entry.configure(state="normal")
-            self.return_time.configure(state="normal")
-        else:
-            self.return_entry.delete(0, "end") # Removes any text in the return date entry when the checkbox is unchecked
-            self.return_entry.configure(state="disabled")
-            self.return_time.configure(state="disabled")"""
     
     def search_offers(self, bid):
         print("Searching for offers with the following criteria:")
