@@ -1,8 +1,18 @@
 from datetime import date, time
-"""Models for the bus bidder application."""
 
+class Descriptor:
+    def __get__(self, instance, owner):
+        return instance._name
+    
+    def __set__(self, instance, value):
+        if not isinstance(value, str):
+            raise ValueError("Name must be a string")
+        instance._name = value # set name
+
+"""Models for the bus bidder application."""
 class Traveller:
     """Represents a traveller in the bus bidder application."""
+    name = Descriptor()
 
     def __init__(self, name: str, email: str, phone: str):
         self.name = name
@@ -22,8 +32,8 @@ class Destination:
     def __init__(self, city: str, distance_km: int, coastal_city: bool, major_city: bool):
         self.city = city
         self.distance_km = int(distance_km)
-        self.coastal_city = bool(coastal_city)
-        self.major_city = bool(major_city)
+        self.coastal_city = str(coastal_city).strip().lower() == "true"
+        self.major_city = str(major_city).strip().lower() == "true"
 
 class Company:
     """Represents a bus company in the bus bidder application."""
@@ -36,8 +46,8 @@ class Company:
         self.max_passengers = int(max_passengers)
         self.luggage_limit_kg = int(luggage_limit_kg)
         self.amenities = amenities
-        self.changeable = bool(changeable)
-        self.refundable = bool(refundable)
+        self.changeable = str(changeable).strip().lower() == "true"
+        self.refundable = str(refundable).strip().lower() == "true"
         self.eco_friendly = eco_friendly
         self.base_rating = float(base_rating)
         self.co2_per_km = float(co2_per_km)
@@ -71,8 +81,8 @@ class Bid:
         self.arrival_city = arrival_city
         self.budget = self.convert_to_float(budget)
         self.max_transfers = self.convert_to_int(max_transfers)
-        self.changeable = bool(changeable)
-        self.refundable = bool(refundable)
+        self.changeable = str(changeable).strip().lower() == "true"
+        self.refundable = str(refundable).strip().lower() == "true"
         self.min_customer_rating = self.convert_to_float(min_customer_rating)
 
     def convert_to_float(self, value):

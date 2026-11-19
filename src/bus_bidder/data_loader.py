@@ -119,7 +119,7 @@ def generate_offers():
     print(f"Wrote {len(rows)} offers ({len(error_log)} with errors) to {out_path}")
 
 def inject_errors(rows, error_rate):
-    err_rng = random.Random(7)       # separate seed
+    err_rng = random.Random(7) # separate seed
     log = []
 
     def bad_offer_id(r):     r["offer_id"] = "XX" + r["offer_id"][2:]

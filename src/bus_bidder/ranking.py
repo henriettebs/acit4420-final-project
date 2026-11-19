@@ -11,12 +11,13 @@ def rank_relevant_offers(offers, bid, weights):
 
     print(f"Weights: {weights}")
     def score(o):
-        return scoring_model(weights, weighted_price(o.price, p_min, p_max), 
-                      weighted_duration(o.journey.duration, d_min, d_max),
-                      weighted_transfers(o.journey.transfers, t_min, t_max),
-                      weighted_time(o, bid), 
-                      weighted_flexibility(o),
-                      o)
+        return scoring_model(weights, 
+                             weighted_price(o.price, p_min, p_max), 
+                             weighted_duration(o.journey.duration, d_min, d_max),
+                             weighted_transfers(o.journey.transfers, t_min, t_max),
+                             weighted_time(o, bid), 
+                             weighted_flexibility(o),
+                             o)
 
     return sorted(offers, key=score, reverse=True)
 
@@ -42,7 +43,6 @@ def scoring_model(weights, s_price, s_duration, s_transfers, s_time, s_flexibili
         "flex_weight": f"{w_flexibility:.2f}"
     }
     o.set_ranking(ranking)
-    #print(f"{score:.1f} = {w_price:.1f} + {w_duration:.1f} + {w_transfers:.1f} + {w_time:.1f} + {w_flexibility:.1f}")
     return score
 
 def weighted_price(p, low, high):
