@@ -16,22 +16,31 @@ class Traveller:
         if value == self.name:
             return self
     
+class Destination:
+    """Represents a destination and it's distance from Madrid."""
+
+    def __init__(self, city: str, distance_km: int, coastal_city: bool, major_city: bool):
+        self.city = city
+        self.distance_km = int(distance_km)
+        self.coastal_city = bool(coastal_city)
+        self.major_city = bool(major_city)
+
 class Company:
     """Represents a bus company in the bus bidder application."""
 
-    def __init__(self, name: str, suggested_profile: str, base_price_per_km: float, average_speed: float, max_passengers: int, luggage_limit_kg: int, amenities: str, changable: bool, refundable: bool, eco_friendly: bool, base_rating: float, co2_per_km: float):
+    def __init__(self, name: str, suggested_profile: str, base_price_per_km: float, average_speed: float, max_passengers: int, luggage_limit_kg: int, amenities: str, changeable: bool, refundable: bool, eco_friendly: bool, base_rating: float, co2_per_km: float):
         self.name = name
         self.suggested_profile = suggested_profile
-        self.base_price_per_km = base_price_per_km
-        self.average_speed = average_speed
-        self.max_passengers = max_passengers
-        self.luggage_limit_kg = luggage_limit_kg
+        self.base_price_per_km = float(base_price_per_km)
+        self.average_speed = float(average_speed)
+        self.max_passengers = int(max_passengers)
+        self.luggage_limit_kg = int(luggage_limit_kg)
         self.amenities = amenities
-        self.changable = changable
-        self.refundable = refundable
+        self.changeable = bool(changeable)
+        self.refundable = bool(refundable)
         self.eco_friendly = eco_friendly
-        self.base_rating = base_rating
-        self.co2_per_km = co2_per_km
+        self.base_rating = float(base_rating)
+        self.co2_per_km = float(co2_per_km)
 
     def __str__(self):
         return f"Company {self.name} with {self.suggested_profile}."
@@ -73,13 +82,13 @@ class Bid:
     
     def convert_to_int(self, value):
         if value == None or value == "":
-            return 0
+            return 100 # All transfers are possible
         return int(value)
 
 class Offer:
     """Represents a possible journey for a traveller with a bus company."""
 
-    def __init__(self, offer_id: str, company: str, journey: Journey, price: float, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float, ranking: dict):
+    def __init__(self, offer_id: str, company: Company, journey: Journey, price: float, luggage_allowance: int, changeability: bool, refundability: bool, available_seats: int, customer_rating: float, ranking: dict):
         self.offer_id = offer_id
         self.company = company
         self.journey = journey
@@ -92,16 +101,19 @@ class Offer:
         self.ranking = ranking
 
     def __str__(self):
-            return (f"Offer - Company: {self.company}, Destination: {self.journey.destination}, Travel Date: {self.journey.travel_date}, "
+            return (f"Offer - Company: {self.company_name}, Destination: {self.destination}, Travel Date: {self.journey.travel_date}, "
                     f"Departure Time: {self.journey.departure_time}, Arrival Time: {self.journey.arrival_time}, Duration: {self.journey.duration} mins, "
                     f"Price: €{self.price:.2f}, Transfers: {self.transfers}, Luggage Allowance: {self.luggage_allowance} kg, "
                     f"Changeability: {'Yes' if self.changeability else 'No'}, Refundability: {'Yes' if self.refundability else 'No'}, "
                     f"Available Seats: {self.available_seats}, Customer Rating: {self.customer_rating}/5, Environmental Measure: {self.journey.environmental_measure}")
-    
+    """List all relevant properties accessed through Offer and make them available on Offer objects"""
+    @property
+    def company_name(self):
+        return self.company.name
     """List all properties accessed through Journey and make them available on Offer objects"""
     @property
     def destination(self):
-        return self.journey.destination
+        return self.journey.destination.city
     @property
     def travel_date(self):
         return self.journey.travel_date
@@ -127,9 +139,16 @@ class Offer:
     def set_ranking(self, ranking_dict):
         self.ranking = ranking_dict
 
+    def get_co2_emissions(self):
+        km = self.journey.destination.distance_km
+        co2_per_km = self.company.co2_per_km
+        co2_emission = km * co2_per_km
+        
+        return co2_emission
+
 class Journey:
     """Represents a journey and its details"""
-    def __init__(self, destination: str, travel_date: str, departure_time: str, arrival_time: str, arrival_date: str, duration: int, transfers: int, environmental_measure: str):
+    def __init__(self, destination: Destination, travel_date: str, departure_time: str, arrival_time: str, arrival_date: str, duration: int, transfers: int, environmental_measure: str):
         self.destination = destination
         self.travel_date: date = date.fromisoformat(travel_date)
         self.departure_time = time.fromisoformat(departure_time)
@@ -138,6 +157,14 @@ class Journey:
         self.duration = int(duration)
         self.transfers = int(transfers)
         self.environmental_measure = environmental_measure
+    
+    """List properties accessed through Destination and make them available on Journey objects"""
+    @property
+    def destination_name(self):
+        return self.destination.city
+    @property
+    def distance_km(self):
+        return self.destination.distance_km
     
     def minutes_to_hours(self):
         """Convert duration in minutes to hours and minutes."""

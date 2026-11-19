@@ -1,28 +1,30 @@
 import customtkinter as ctk
-from bus_bidder.data_loader import generate_offers
+from bus_bidder.data_loader import generate_offers, get_companies, get_destinations
 from bus_bidder.filtering import filter_relevant_offers
 from bus_bidder.ranking import rank_relevant_offers, get_cheapest_route, get_shortest_route, get_best_rated_route
-from bus_bidder.models import Traveller, Company, Booking, Offer, Journey, Bid
-from bus_bidder.reporting import write_booking
-from bus_bidder.validation import validate_search_query, validate_confirmation_query
+from bus_bidder.models import Traveller, Destination, Company, Booking, Offer, Journey, Bid
+from bus_bidder.reporting import write_booking, write_invalid_offer
+from bus_bidder.validation import validate_search_query, validate_confirmation_query, validate_offer
 from datetime import date, datetime, timedelta
 import csv
 import uuid
 
+# Setting colors and theme of application
 ctk.set_appearance_mode("System")  # Modes: "System" (default), "Dark", "Light"
 ctk.set_default_color_theme("green")  # Themes: "blue" (default), "green", "dark-blue"
 color = ctk.ThemeManager.theme["CTkButton"]["fg_color"]
 
+# Keeping the application within a class BusBidderApp
 class BusBidderApp(ctk.CTk):
     def __init__(self):
         super().__init__()
-
+        #Opens a window on desktop
         self.title("Bus Bidder")
         self.geometry("800x800")
 
         label = ctk.CTkLabel(self, text="Welcome to Bus Bidder!", font=("Arial", 16))
-        label.pack(pady=10)
-
+        label.pack(pady=10) # .pack and .grid is used to place ctk items in windows and frames
+        # Possible travel times to add to search query (soft preference)
         travel_times = ["Any", "Morning (6-12)", "Afternoon (12-18)", "Evening (18-24)", "Night (0-6)"]    
         # Group departure and return date and time inputs in a frame
         departure_frame = ctk.CTkFrame(self)
@@ -31,9 +33,9 @@ class BusBidderApp(ctk.CTk):
         departure_label = ctk.CTkLabel(departure_frame, text="Departure Date and Time", font=("Arial", 14))
         departure_label.grid(row=0, column=0, padx=10, sticky="w")
         # Departure date and time entries
-        self.departure_entry = ctk.CTkEntry(departure_frame, placeholder_text="YYYY-MM-DD")
-        self.departure_time = ctk.CTkOptionMenu(departure_frame, values=travel_times, command=self.on_departure_time_change)
-        self.departure_entry.grid(row=1, column=0, padx=10, pady=5)
+        self.departure_entry = ctk.CTkEntry(departure_frame, placeholder_text="YYYY-MM-DD") # Soft preference
+        self.departure_time = ctk.CTkOptionMenu(departure_frame, values=travel_times, command=self.on_departure_time_change) # Dropdown menu with travel times
+        self.departure_entry.grid(row=1, column=0, padx=10, pady=5) 
         self.departure_time.grid(row=1, column=1, padx=10, pady=5)
 
         # Group departure and arrival city option menus in a frame
@@ -133,9 +135,8 @@ class BusBidderApp(ctk.CTk):
         error_message.pack(pady=10)
 
     def get_city_options(self):
-        with open('bus_bidder/data/destinations.csv', mode='r', newline='', encoding='utf-8') as file:
-            reader = csv.DictReader(file)
-            return [row['city'] for row in reader]
+        destinations = self.get_destinations()
+        return [d.city for d in destinations]
 
     def on_arrival_city_change(self, selected_city):
         print(f"Selected arrival city: {selected_city}")
@@ -155,12 +156,7 @@ class BusBidderApp(ctk.CTk):
             self.slider_labels[k].configure(text=f"{w * 100:.0f}%")
     
     def search_offers(self, bid):
-        print("Searching for offers with the following criteria:")
-        print(bid.changeable, bid.refundable)
-        # open new window with search results
-        travel_date = bid.departure_date
-        travel_dates = [travel_date, travel_date + timedelta(days=1)]  # Add the departure date to the list
-        generate_offers(travel_dates)
+        generate_offers()
         self.open_results_window(bid)
     
     def open_results_window(self, bid):
@@ -184,7 +180,7 @@ class BusBidderApp(ctk.CTk):
         for i, o in enumerate(ranked_offers):
             offer_frame = ctk.CTkFrame(scroll_frame, fg_color="gray20")
             offer_frame.pack(pady=15, padx=10, fill="x")
-            destination_label = ctk.CTkLabel(offer_frame, text=f"{o.company}: Madrid - {o.destination}", font=("Arial", 16, "bold"))
+            destination_label = ctk.CTkLabel(offer_frame, text=f"{o.company_name}: Madrid - {o.destination}", font=("Arial", 16, "bold"))
             destination_label.grid(row=0, column=0, padx=10, sticky="w")
             if o.offer_id == cheapest_offer_id:
                 cheap_label = ctk.CTkLabel(offer_frame, text="CHEAPEST ROUTE", text_color=color, font=("Arial", 12))
@@ -219,7 +215,7 @@ class BusBidderApp(ctk.CTk):
             refund_label.grid(row=3, column=2, padx=10, sticky="w")
             avail_seats_label = ctk.CTkLabel(offer_frame, text=f"Available seats: {o.available_seats}", font=("Arial", 14))
             avail_seats_label.grid(row=3, column=3, padx=10, sticky="w")
-            env_meas_label = ctk.CTkLabel(offer_frame, text=f"Environmental measure: {o.environmental_measure}", font=("Arial", 14))
+            env_meas_label = ctk.CTkLabel(offer_frame, text=f"Emission: {o.get_co2_emissions()} kg CO2", font=("Arial", 14))
             env_meas_label.grid(row=3, column=4, padx=10, sticky="w")
 
             ranked_frame = ctk.CTkFrame(offer_frame, fg_color=color)
@@ -256,10 +252,15 @@ class BusBidderApp(ctk.CTk):
                 explanation_label = ctk.CTkLabel(offer_frame, text=f"{self.get_explanation(o)}", font=("Arial", 12, "italic"), wraplength=1000)
                 explanation_label.grid(row=5, column=0, columnspan=5, padx=10, pady=5, sticky="w")
 
+    def get_co2_emission(self, o):
+        km = o.journey.destination.distance_km
+        co2_per_km = o.company.co2_per_km
+        co2_emission = km * co2_per_km
+        return co2_emission
+    
     def get_explanation(self, o):
         strengths, weaknesses = [], []
         r = o.ranking
-        print("Explain this:", o.ranking)
         if r['price_score'] >= 0.7:
             strengths.append(f"a low price of €{o.price:.2f}")
         elif r['price_score'] <= 0.3:
@@ -304,13 +305,39 @@ class BusBidderApp(ctk.CTk):
             reader = csv.DictReader(file)
             self.offers = []
             for row in reader:
-                journey = Journey(row['destination'], row['travel_date'], row['departure_time'], row['arrival_time'], row['arrival_date'], row['duration'], row['transfers'], row['environmental_measure'])
-                offer = Offer(row['offer_id'], row['company'], journey, row['price'], row['luggage_allowance'], row['changeability'], row['refundability'], row['available_seats'], row['customer_rating'], {})
-                self.offers.append(offer) 
+                error_message = validate_offer(row)
+                if error_message is not None:
+                    write_invalid_offer(row)
+                else:
+                    company = self.get_company_object_with_name(row['company'])
+                    destination = self.get_destination_object_with_city(row['destination'])
+                    journey = Journey(destination, row['travel_date'], row['departure_time'], row['arrival_time'], row['arrival_date'], row['duration'], row['transfers'], row['environmental_measure'])
+                    offer = Offer(row['offer_id'], company, journey, row['price'], row['luggage_allowance'], row['changeability'], row['refundability'], row['available_seats'], row['customer_rating'], {})
+                    self.offers.append(offer) 
             return self.offers
     
+    def get_company_object_with_name(self, c_name) -> Company:
+        company_rows = get_companies()
+        for r in company_rows:
+            company = Company(r['company'], r['profile'], r['base_price_per_km'], r['average_speed'], r['max_passengers'], r['luggage_limit_kg'], r['amenities'], r['changeable'], r['refundable'], r['eco_friendly'], r['base_rating'], r['co2_per_km'])
+            if company.name == c_name:
+                return company
+            
+    def get_destinations(self):
+        destination_rows = get_destinations()
+        destinations = []
+        for r in destination_rows:
+            d = Destination(r['city'], r['distance_from_madrid_km'], r['coastal'], r['major_city'])
+            destinations.append(d)
+        return destinations
+    
+    def get_destination_object_with_city(self, d_city) -> Destination:
+        destinations = self.get_destinations()
+        for d in destinations:
+            if d.city == d_city:
+                return d
+            
     def choose_option_click(self, offer):
-        print(f"Chose offer {offer.offer_id} departing at {offer.departure_time}")
         self.open_traveller_info_window(offer)
 
     def open_traveller_info_window(self, offer):
@@ -377,4 +404,6 @@ class BusBidderApp(ctk.CTk):
 
 if __name__ == "__main__":
     app = BusBidderApp()
+    offers = app.get_all_offers()
+    print(o.offer_id for o in offers)
     app.mainloop()

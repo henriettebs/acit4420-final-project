@@ -1,4 +1,4 @@
-company,profile,base_price_per_km,average_speed,max_passengers,luggage_limit_kg,amenities,changable,refundable,eco_friendly,base_rating,co2_per_km
+company,profile,base_price_per_km,average_speed,max_passengers,luggage_limit_kg,amenities,changeable,refundable,eco_friendly,base_rating,co2_per_km
 SolRuta,"Low-cost daytime services",0.05,55,50,20,"None",True,True,False,3.5,0.1
 Camino Express,"Fast direct connections between major cities",0.1,75,40,23,"Wi-Fi, Power Outlets, Reclining Seats, Toilet, Air Conditioning",True,False,False,4.2,0.09
 CostaLink,"Strong coverage of coastal destinations",0.07,60,45,18,"Wi-Fi, Reclining Seats, Air Conditioning",False,True,False,3.8,0.11

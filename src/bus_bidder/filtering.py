@@ -4,7 +4,7 @@ def filter_relevant_offers(offers, bid):
     """Filter offers based on the bid criteria."""    
     filtered_offers = []
     for offer in offers:
-        destination_match = offer.journey.destination == bid.arrival_city
+        destination_match = offer.journey.destination_name == bid.arrival_city
         correct_date = filter_offers_by_date(bid.departure_date, offer.journey.travel_date)
         #in_time_range = filter_offers_by_departure_time(bid.departure_time, offer.journey.departure_time)
         in_budget = filter_offers_by_budget(bid.budget, offer.price)
@@ -67,7 +67,7 @@ def filter_offers_by_budget(budget, offer_price):
 
 def filter_offers_by_transfers(max_transfers, offer_transfers):
     """Filter offers based on the maximum number of transfers."""
-    if max_transfers is None or max_transfers == 0:
+    if max_transfers is None or max_transfers == "" or max_transfers == 100:
         return True  # If no maximum transfers are specified, all offers are valid
     return offer_transfers <= max_transfers
 

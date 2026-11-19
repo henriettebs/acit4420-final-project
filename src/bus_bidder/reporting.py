@@ -46,3 +46,36 @@ def write_booking(booking):
         if write_header:
             writer.writeheader()
         writer.writerow(row)
+
+
+def write_invalid_offer(offer):
+    fieldnames = ["offer_id", "company", "destination", "travel_date", "departure_time", "arrival_time", 
+                  "arrival_date", "duration", "price", "transfers", "luggage_allowance", "changeability", 
+                  "refundability", "available_seats", "customer_rating", "environmental_measure"]
+    
+    row = {
+        "offer_id": offer['offer_id'], 
+        "company": offer['company'], 
+        "destination": offer['destination'], 
+        "travel_date": offer['travel_date'], 
+        "departure_time": offer['departure_time'], 
+        "arrival_time": offer['arrival_time'], 
+        "arrival_date": offer['arrival_date'], 
+        "duration": offer['duration'], 
+        "price": offer['price'], 
+        "transfers": offer['transfers'], 
+        "luggage_allowance": offer['luggage_allowance'], 
+        "changeability": offer['changeability'], 
+        "refundability": offer['refundability'], 
+        "available_seats": offer['available_seats'],
+        "customer_rating": offer['customer_rating'], 
+        "environmental_measure": offer['environmental_measure']
+    }
+    path = 'bus_bidder/data/invalid_offers.csv'
+    write_header = not os.path.exists(path) or os.path.getsize(path) == 0
+
+    with open(path, mode='a', newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        if write_header:
+            writer.writeheader()
+        writer.writerow(row)
