@@ -18,6 +18,7 @@ color = ctk.ThemeManager.theme["CTkButton"]["fg_color"]
 class BusBidderApp(ctk.CTk):
     def __init__(self):
         super().__init__()
+        self.offers = self.get_all_offers()
         #Opens a window on desktop
         self.title("Bus Bidder")
         self.geometry("800x800")
@@ -156,7 +157,7 @@ class BusBidderApp(ctk.CTk):
             self.slider_labels[k].configure(text=f"{w * 100:.0f}%")
     
     def search_offers(self, bid):
-        generate_offers()
+        #generate_offers()
         self.open_results_window(bid)
     
     def open_results_window(self, bid):
@@ -170,7 +171,7 @@ class BusBidderApp(ctk.CTk):
         scroll_frame = ctk.CTkScrollableFrame(results_window)
         scroll_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
-        filtered_offers = filter_relevant_offers(self.get_all_offers(), bid)
+        filtered_offers = filter_relevant_offers(self.offers, bid)
         print(f"Found {len(filtered_offers)} relevant offers.")
         weights = self.get_weights()
         ranked_offers = rank_relevant_offers(filtered_offers, bid, weights)
@@ -301,11 +302,13 @@ class BusBidderApp(ctk.CTk):
         return ", ".join(items[:-1]) + " and " + items[-1]
 
     def get_all_offers(self) -> Offer:
+        generate_offers()
         with open('bus_bidder/data/offers.csv', mode='r', newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             self.offers = []
+            offer_ids = []
             for row in reader:
-                error_message = validate_offer(row)
+                error_message = validate_offer(row, offer_ids)
                 if error_message is not None:
                     write_invalid_offer(row)
                 else:
@@ -313,7 +316,8 @@ class BusBidderApp(ctk.CTk):
                     destination = self.get_destination_object_with_city(row['destination'])
                     journey = Journey(destination, row['travel_date'], row['departure_time'], row['arrival_time'], row['arrival_date'], row['duration'], row['transfers'], row['environmental_measure'])
                     offer = Offer(row['offer_id'], company, journey, row['price'], row['luggage_allowance'], row['changeability'], row['refundability'], row['available_seats'], row['customer_rating'], {})
-                    self.offers.append(offer) 
+                    self.offers.append(offer)
+                    offer_ids.append(row['offer_id'])
             return self.offers
     
     def get_company_object_with_name(self, c_name) -> Company:
@@ -404,6 +408,4 @@ class BusBidderApp(ctk.CTk):
 
 if __name__ == "__main__":
     app = BusBidderApp()
-    offers = app.get_all_offers()
-    print(o.offer_id for o in offers)
     app.mainloop()

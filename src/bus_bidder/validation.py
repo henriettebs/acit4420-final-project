@@ -65,14 +65,8 @@ def validate_confirmation_query(booking_reference, name, email, phone_number, se
         return f"Incorrect value: {e}"
     except TypeError as e:
         return f"Incorrect type: {e}"
-    
-def validate_company():
-    print("company")
 
-def validate_destination():
-    print("destination")
-
-def validate_offer(o):
+def validate_offer(o, offer_ids):
     """Add ReGex expression for offer id"""
     date_pattern = r"\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])"
     try:
@@ -87,9 +81,11 @@ def validate_offer(o):
         refundable = o['refundability']
         available_seats = o['available_seats']
         customer_rating = float(o['customer_rating'])
-        
+
         if not re.fullmatch(r"0F\d{4}", offer_id):
             raise InvalidIdentifierError("Offer ID does not match the format '0F\\d{4}'")
+        if offer_id in offer_ids:
+            raise InvalidIdentifierError(f"This offer ID already exist ({offer_id})")
         if destination is None or destination == "":
             raise ValueError("Destination cannot be empty.")
         if not re.fullmatch(date_pattern, travel_date):
