@@ -1,0 +1,19 @@
+booking_reference,traveller_name,traveller_email,traveller_phone,offer_id,company,departure_city,arrival_city,departure_date,departure_time,arrival_date,arrival_time,duration,transfers,environmental_measure,price,luggage_allowance,changeability,flexibility,available_seats,customer_rating,seats_booked
+0BD6A8BEFF,quick,fix@mail,43423424,0F0243,NocheVia,Madrid,Murcia,2027-01-12,02:45:00,2027-01-12,07:45:00,300,0,Standard,32.54,15,True,False,13,4.2,1
+0B32484D3B,cheap,quick@mail.om,29194213,0F0127,CostaLink,Madrid,Zaragoza,2027-01-10,06:30:00,2027-01-10,12:40:00,370,1,Standard,20.49,18,False,True,16,3.5,2
+0BA477FFF5,Henriette,bsund@gmail.com,94949494,0F0174,VerdeBus,Madrid,Zaragoza,2026-12-12,12:15:00,2026-12-12,16:55:00,280,1,Eco-friendly,39.32,20,True,True,35,4.3,1
+0BAB1857A1,Henriette,bsu@gmail.com,94031146,0F0029,SolRuta,Madrid,San Sebastian,2026-12-12,08:15:00,2026-12-12,16:54:00,519,1,Standard,25.19,20,True,True,4,3.5,1
+0B986F182B,Henriette,bsu@gmail.com,93939021,0F0013,SolRuta,Madrid,Malaga,2026-12-12,08:45:00,2026-12-12,19:13:00,628,2,Standard,26.38,20,True,True,34,3.9,3
+0BAE48D596,Henriette,bsu@gmail.com,93939021,0F0013,SolRuta,Madrid,Malaga,2026-12-12,08:45:00,2026-12-12,19:13:00,628,2,Standard,26.38,20,True,True,34,3.9,3
+0BFEF73AC2,hey,you@mail.com,54543543523,0F0165,VerdeBus,Madrid,Bilbao,2027-01-01,08:30:00,2027-01-01,14:12:00,342,0,Eco-friendly,50.9,20,True,True,13,4.6,2
+0B6AF5897B,,,,0F0001,SolRuta,Madrid,Barcelona,2026-12-12,08:30:00,2026-12-12,20:05:00,695,1,Standard,28.77,20,True,True,5,3.7,2
+0B7CEBD9A2,,,,0F0001,SolRuta,Madrid,Barcelona,2026-12-12,08:30:00,2026-12-12,20:05:00,695,1,Standard,28.77,20,True,True,5,3.7,2
+0B195D6038,Hey,blabla,399393,0F0233,NocheVia,Madrid,Zaragoza,2026-12-12,02:15:00,2026-12-12,06:15:00,240,0,Standard,28.44,15,True,False,26,3.8,1
+0B3339A0A1,Marcus,marjo@gmail.com,4793939300,0F0141,VerdeBus,Madrid,Barcelona,2026-12-12,14:00:00,2026-12-12,22:51:00,531,0,Eco-friendly,76.02,20,True,True,14,4.7,2
+0BA964A5BA,Marcus,marjo@gmail.no,94949400,0F0001,SolRuta,Madrid,Barcelona,2026-12-12,08:30:00,2026-12-12,20:05:00,695,1,Standard,28.77,20,True,True,5,3.7,2
+0B5C01B123,Marcus,marjo@gmail.no,4794949400,0F0001,SolRuta,Madrid,Barcelona,2026-12-12,08:30:00,2026-12-12,20:05:00,695,1,Standard,28.77,20,True,True,5,3.7,2
+0B37611760,Marcus,marjo@gmail.no,004794949400,0F0001,SolRuta,Madrid,Barcelona,2026-12-12,08:30:00,2026-12-12,20:05:00,695,1,Standard,28.77,20,True,True,5,3.7,2
+0B7A8ADFDD,henri,hesu@mail.com,23230091,0F0202,NocheVia,Madrid,Barcelona,2026-12-12,22:30:00,2026-12-13,06:15:00,465,0,Standard,53.27,15,True,False,0,4.3,20
+0BEEDD501C,Fourteen,sheep@gmail.com,929290131,0F4908,Company NocheVia with Overnight and late-evening services.,Madrid,<bus_bidder.models.Destination object at 0x11bbc3d90>,2026-12-12,20:15:00,2026-12-13,04:00:00,465,0,Standard,55.49,15,True,False,0,3.5,1
+0B03E42E50,Henriette,mail@mail.no,82827312,0F5358,Company NocheVia with Overnight and late-evening services.,Madrid,<bus_bidder.models.Destination object at 0x117d32200>,2026-12-12,20:30:00,2026-12-13,01:30:00,300,0,Standard,36.88,15,True,False,30,4.0,2
+0B010BF9D8,Henriette,hesu@mail.no,98983442,0F0498,Company SolRuta with Low-cost daytime services.,Madrid,<bus_bidder.models.Destination object at 0x117f1b8c0>,2026-12-12,10:30:00,2026-12-12,18:12:00,462,2,Standard,19.68,20,True,True,39,3.9,3

@@ -1,0 +1,5 @@
+offer_id,company,destination,travel_date,departure_time,arrival_time,arrival_date,duration,price,transfers,luggage_allowance,changeability,refundability,available_seats,customer_rating,rank_score,price_weight,duration_weight,transfer_weight,time_weight,flex_weight
+0F4008,VerdeBus,Cordoba,2026-12-12,10:30:00,16:26:00,2026-12-12,356,43.45,2,20,True,True,36,4.3,0.74,0.20,0.14,0.00,0.20,0.20
+0F4009,VerdeBus,Cordoba,2026-12-13,10:30:00,16:12:00,2026-12-13,342,50.13,0,20,True,True,14,4.8,0.66,0.00,0.20,0.20,0.06,0.20
+0F4007,VerdeBus,Cordoba,2026-12-12,12:15:00,18:45:00,2026-12-12,390,47.41,1,20,True,True,17,4.8,0.58,0.08,0.00,0.10,0.20,0.20
+0F4010,VerdeBus,Cordoba,2026-12-13,12:30:00,19:00:00,2026-12-13,390,45.66,1,20,True,True,36,4.4,0.48,0.13,0.00,0.10,0.05,0.20

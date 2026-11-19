@@ -1,0 +1,7 @@
+offer_id,company,destination,travel_date,departure_time,arrival_time,arrival_date,duration,price,transfers,luggage_allowance,changeability,refundability,available_seats,customer_rating,rank_score,price_weight,duration_weight,transfer_weight,time_weight,flex_weight
+0F5358,NocheVia,Cordoba,2026-12-12,20:30:00,01:30:00,2026-12-13,300,36.88,0,15,True,False,32,4.0,0.84,0.00,0.33,0.33,0.18,0.00
+0F1848,Camino Express,Cordoba,2026-12-12,07:30:00,12:50:00,2026-12-12,320,43.8,0,23,True,False,24,4.2,0.84,0.00,0.17,0.33,0.33,0.00
+0F5360,NocheVia,Cordoba,2026-12-13,01:45:00,06:45:00,2026-12-13,300,35.28,0,15,True,False,28,3.9,0.82,0.00,0.33,0.33,0.15,0.00
+0F1849,Camino Express,Cordoba,2026-12-13,15:00:00,20:20:00,2026-12-13,320,38.95,0,23,True,False,19,4.6,0.57,0.00,0.17,0.33,0.06,0.00
+0F1850,Camino Express,Cordoba,2026-12-13,21:00:00,02:20:00,2026-12-14,320,40.87,0,23,True,False,21,4.2,0.53,0.00,0.17,0.33,0.02,0.00
+0F4009,VerdeBus,Cordoba,2026-12-13,10:30:00,16:12:00,2026-12-13,342,50.13,0,20,True,True,14,4.8,0.43,0.00,0.00,0.33,0.09,0.00
