@@ -11,6 +11,7 @@ class InvalidOutOfRangeError(ValueError):
     """Raised when a value is out of range."""
 
 def validate_search_query(departure_date, budget, max_transfers, changeable, refundable, min_customer_rating):
+    """Validates a bid object, and is required to pass before opening the results window."""
     try:
         departure_date = datetime.strptime(departure_date, "%Y-%m-%d").date() # This checks if the entry is written on the correct format YYYY-MM-DD                
         if departure_date < date.today():
@@ -33,7 +34,7 @@ def validate_search_query(departure_date, budget, max_transfers, changeable, ref
         return f"Incorrect type: {e}"
 
 def validate_confirmation_query(booking_reference, name, email, phone_number, seats, seats_available):
-    """Add ReGex expression for booking reference and traveller_email"""
+    """Validates a booking object, and is required to pass before saving the booking to csv and opening confirmed window."""
     email_regex = r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,7}"
     phone_regex = r"^(?:[0-9\-\(\)\/\.]\s?){8,12}$"
     try:
@@ -67,7 +68,7 @@ def validate_confirmation_query(booking_reference, name, email, phone_number, se
         return f"Incorrect type: {e}"
 
 def validate_offer(o, offer_ids):
-    """Add ReGex expression for offer id"""
+    """Validates a offer row, and is required to pass before creating an offer object."""
     date_pattern = r"\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])"
     try:
         offer_id = o['offer_id']

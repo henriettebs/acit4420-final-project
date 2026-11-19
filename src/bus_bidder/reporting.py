@@ -92,7 +92,6 @@ def write_ranking(offers):
         writer.writeheader()
         
         for offer in offers:
-            print("OFFER: ", offer.ranking)
             row = {
                 "offer_id": offer.offer_id, 
                 "company": offer.company.name, 

@@ -75,9 +75,9 @@ def filter_offers_by_transfers(max_transfers, offer_transfers):
 
 def filter_offers_by_checkbox(bid_checkbox, offer_boolean):
     """Filter offers based on the changeable and refundable checkboxes."""
-    if bid_checkbox == 0:
+    if not bid_checkbox:
         return True  # If no preference is specified, all offers are valid
-    elif bid_checkbox == 1 and offer_boolean:
+    elif bid_checkbox and offer_boolean:
         return True  # If changeable is specified and the offer is changeable, it's valid
     return False  # If none of the above conditions are met, the offer is not valid
 

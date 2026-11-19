@@ -58,7 +58,6 @@ def weighted_transfers(t, low, high):
 
 # Use uniform distance to check how far it is outside the range, and if in range return a high value (1.0)
 def weighted_time(o, b):
-    #print(f"Offer: {o.travel_date} {o.departure_time} and Bid: {b.departure_date} {b.departure_time}")
     t = o.departure_time.hour + o.departure_time.minute / 60
 
     if o.travel_date == b.departure_date:

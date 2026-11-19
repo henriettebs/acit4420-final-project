@@ -81,8 +81,8 @@ class Bid:
         self.arrival_city = arrival_city
         self.budget = self.convert_to_float(budget)
         self.max_transfers = self.convert_to_int(max_transfers)
-        self.changeable = str(changeable).strip().lower() == "true"
-        self.refundable = str(refundable).strip().lower() == "true"
+        self.changeable = bool(changeable)
+        self.refundable = bool(refundable)
         self.min_customer_rating = self.convert_to_float(min_customer_rating)
 
     def convert_to_float(self, value):

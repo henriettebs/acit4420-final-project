@@ -157,7 +157,6 @@ class BusBidderApp(ctk.CTk):
             self.slider_labels[k].configure(text=f"{w * 100:.0f}%")
     
     def search_offers(self, bid):
-        #generate_offers()
         self.open_results_window(bid)
     
     def open_results_window(self, bid):
@@ -172,7 +171,6 @@ class BusBidderApp(ctk.CTk):
         scroll_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
         filtered_offers = filter_relevant_offers(self.offers, bid)
-        print(f"Found {len(filtered_offers)} relevant offers.")
         weights = self.get_weights()
         ranked_offers = rank_relevant_offers(filtered_offers, bid, weights)
         write_ranking(ranked_offers)
@@ -249,7 +247,6 @@ class BusBidderApp(ctk.CTk):
             f_score_label.grid(row=1, column=5, padx=10, sticky="w")
             weight_label = ctk.CTkLabel(ranked_frame, text=f"{weights['flexibility']:.2f}/1.0", font=("Arial", 12))
             weight_label.grid(row=2, column=5, padx=10, sticky="w")
-            #print(f"Ranked offers: {o.offer_id} {o.company} to {o.destination} with price {o.price} and rating {o.customer_rating}")
             if i == 0:
                 explanation_label = ctk.CTkLabel(offer_frame, text=f"{self.get_explanation(o)}", font=("Arial", 12, "italic"), wraplength=1000)
                 explanation_label.grid(row=5, column=0, columnspan=5, padx=10, pady=5, sticky="w")
