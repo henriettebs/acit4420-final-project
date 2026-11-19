@@ -51,6 +51,8 @@ def filter_offers_by_departure_time(departure_time, offer_departure_time):
             t1 = time(00)
             t2 = time(6)
             return within_time_range(t1, t2, ot)
+        case "Any":
+            return True
     return within_time_range(t1, t2, ot)
 
 def within_time_range(t1, t2, ot):

@@ -79,3 +79,43 @@ def write_invalid_offer(offer):
         if write_header:
             writer.writeheader()
         writer.writerow(row)
+
+def write_ranking(offers):
+    fieldnames = ["offer_id", "company", "destination", "travel_date", "departure_time", "arrival_time", 
+                  "arrival_date", "duration", "price", "transfers", "luggage_allowance", "changeability", 
+                  "refundability", "available_seats", "customer_rating", "rank_score", "price_weight",
+                  "duration_weight", "transfer_weight", "time_weight", "flex_weight"]
+     
+    path = 'bus_bidder/data/ranked_offers.csv'
+    with open(path, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        
+        for offer in offers:
+            print("OFFER: ", offer.ranking)
+            row = {
+                "offer_id": offer.offer_id, 
+                "company": offer.company.name, 
+                "destination": offer.destination, 
+                "travel_date": offer.travel_date, 
+                "departure_time": offer.departure_time, 
+                "arrival_time": offer.arrival_time, 
+                "arrival_date": offer.arrival_date, 
+                "duration": offer.duration, 
+                "price": offer.price, 
+                "transfers": offer.transfers, 
+                "luggage_allowance": offer.luggage_allowance, 
+                "changeability": offer.changeability, 
+                "refundability": offer.refundability, 
+                "available_seats": offer.available_seats,
+                "customer_rating": offer.customer_rating, 
+                "rank_score": offer.ranking['total_score'],
+                "price_weight": offer.ranking['price_weight'],
+                "duration_weight": offer.ranking['duration_weight'],
+                "transfer_weight": offer.ranking['transfer_weight'],
+                "time_weight": offer.ranking['time_weight'],
+                "flex_weight": offer.ranking['flex_weight']
+
+            }
+            writer.writerow(row)
+    

@@ -9,7 +9,6 @@ def rank_relevant_offers(offers, bid, weights):
     d_min, d_max = min(durations), max(durations)
     t_min, t_max = min(transfers), max(transfers)
 
-    print(f"Weights: {weights}")
     def score(o):
         return scoring_model(weights, 
                              weighted_price(o.price, p_min, p_max), 
@@ -84,7 +83,6 @@ def calculate_uniform_distance(t, low, high, max_dist=18):
     if low <= t <= high:
         return 1.0 # Departure time within wanted time frame = good ranking
     dist = min(abs(t - low), abs(t - high))
-    #print(f"1 - {dist}/{max_dist} = {1 - dist/max_dist}")
     return max(0.0, 1 - dist/max_dist)
 
 def weighted_flexibility(o):

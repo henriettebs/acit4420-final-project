@@ -53,7 +53,7 @@ def validate_confirmation_query(booking_reference, name, email, phone_number, se
             raise ValueError("Phone number cannot be empty.")
         if not re.fullmatch(phone_regex, phone_number):
             raise ValueError("Phone number must be entered with or without country code (47/0047)")
-        if seats is None or seats == "" or seats == 0:
+        if seats is None or seats == "" or seats == 0 or int(seats) <= 0:
             raise ValueError("Atleast one seat must be booked.")
         if int(seats) > seats_available:
             raise InvalidOutOfRangeError(f"There is not enough available seats ({seats_available})")

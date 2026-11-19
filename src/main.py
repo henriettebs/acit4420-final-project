@@ -3,7 +3,7 @@ from bus_bidder.data_loader import generate_offers, get_companies, get_destinati
 from bus_bidder.filtering import filter_relevant_offers
 from bus_bidder.ranking import rank_relevant_offers, get_cheapest_route, get_shortest_route, get_best_rated_route
 from bus_bidder.models import Traveller, Destination, Company, Booking, Offer, Journey, Bid
-from bus_bidder.reporting import write_booking, write_invalid_offer
+from bus_bidder.reporting import write_booking, write_invalid_offer, write_ranking
 from bus_bidder.validation import validate_search_query, validate_confirmation_query, validate_offer
 from datetime import date, datetime, timedelta
 import csv
@@ -175,6 +175,7 @@ class BusBidderApp(ctk.CTk):
         print(f"Found {len(filtered_offers)} relevant offers.")
         weights = self.get_weights()
         ranked_offers = rank_relevant_offers(filtered_offers, bid, weights)
+        write_ranking(ranked_offers)
         cheapest_offer_id = get_cheapest_route(ranked_offers).offer_id
         shortest_offer_id = get_shortest_route(ranked_offers).offer_id
         best_rated_offer_id = get_best_rated_route(ranked_offers).offer_id
