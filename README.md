@@ -3,8 +3,8 @@
 A flexible bus-booking and weighted offer-ranking platform.
 
 ### Requirements
-Python version: 3.14<br>
-Required libraries: [...]<br>
+Python version: 3.14.7<br>
+Required libraries: [customtkinter, csv, uuid, datetime, os, sys, random, unittest, re, MagicMock, patch, SimpleNameSpace]<br>
 Program entry point: acit4420-final-project/src<br>
 Input-file location: acit4420-final-project/src/bus_bidder/data<br>
 Output-file location: acit4420-final-project/src/bus_bidder/data<br>

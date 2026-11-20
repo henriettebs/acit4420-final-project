@@ -9,31 +9,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 from main import BusBidderApp
 
 class TestBooking(unittest.TestCase):
-    correct_booking = {
-        "booking_reference": f"0B{uuid.uuid4().hex[:8].upper()}",
-        "traveller_name": "George Leavitt",
-        "traveller_email": "gele@gmail.com",
-        "traveller_phone": "004792334151",
-        "offer_id": "0F0541",
-        "company": "SolRuta",
-        "departure_city": "Madrid",
-        "arrival_city": "Bilbao",
-        "departure_date": "2026-11-29",
-        "departure_time": "10:00",
-        "arrival_date": "2026-11-29",
-        "arrival_time": "17:57",
-        "duration": "477",
-        "transfers": "1",
-        "environmental_measure": "Standard",
-        "price": "21.12",
-        "luggage_allowance": "20",
-        "changeability": "True",
-        "flexibility": "True",
-        "available_seats": "19",
-        "customer_rating": "3.9",
-        "seats_booked":"2"
-    }
-    
     def setUp(self):
         self.app = MagicMock()
         self.app.name_entry.get.return_value = "George Leavitt"
