@@ -1,0 +1,1 @@
+Requires companies.csv, destination.csv and data_loader.py to create offers.csv for the application to function and deliver results. 
