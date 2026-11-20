@@ -114,10 +114,11 @@ class BusBidderApp(ctk.CTk):
         raw = {k: s.get() for k, s in self.sliders.items()}
         total = sum(raw.values())
         if total == 0:
-            return {k: 1 / len(raw) for k in raw}
-        return {k: v / total for k, v in raw.items()}
+            return {k: 1 / len(raw) for k in raw} # If total is zero, give each weight key a value of 1 divided by number of sliders
+        return {k: v / total for k, v in raw.items()} # If total is not zero, assign each weight key to their value divided by the total sum.
     
     def on_button_click(self):
+        # Validates the search query, before the application can move forward to results window
         error_message = validate_search_query(self.departure_entry.get(), self.budget_entry.get(), self.transfers_entry.get(), self.changeability_checkbox.get(), self.refundability_checkbox.get(), self.slider.get())
         
         if error_message is not None:
@@ -177,6 +178,7 @@ class BusBidderApp(ctk.CTk):
         cheapest_offer_id = get_cheapest_route(ranked_offers).offer_id
         shortest_offer_id = get_shortest_route(ranked_offers).offer_id
         best_rated_offer_id = get_best_rated_route(ranked_offers).offer_id
+        # Iterates over ranked offers
         for i, o in enumerate(ranked_offers):
             offer_frame = ctk.CTkFrame(scroll_frame, fg_color="gray20")
             offer_frame.pack(pady=15, padx=10, fill="x")
@@ -247,6 +249,7 @@ class BusBidderApp(ctk.CTk):
             f_score_label.grid(row=1, column=5, padx=10, sticky="w")
             weight_label = ctk.CTkLabel(ranked_frame, text=f"{weights['flexibility']:.2f}/1.0", font=("Arial", 12))
             weight_label.grid(row=2, column=5, padx=10, sticky="w")
+            # Only the highest ranked offer gets an explanation
             if i == 0:
                 explanation_label = ctk.CTkLabel(offer_frame, text=f"{self.get_explanation(o)}", font=("Arial", 12, "italic"), wraplength=1000)
                 explanation_label.grid(row=5, column=0, columnspan=5, padx=10, pady=5, sticky="w")

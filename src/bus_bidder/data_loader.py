@@ -12,7 +12,7 @@ DEPARTURE_HOURS = {
 }
 
 rng = random.Random(42)
-START_DATE = date(2026,11,19)
+START_DATE = date(2026,11,20)
 END_DATE = date(2027,1,2)
 
 def to_bool(value):
